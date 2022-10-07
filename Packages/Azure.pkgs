@@ -1,0 +1,7 @@
+<Project>
+    <ItemGroup Label="Azure">
+		<PackageReference Update="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="[1.2.2,)" Source="nuget" />
+		<PackageReference Update="Azure.Identity" Version="[1.6.0,)" />
+		<PackageReference Update="Azure.Messaging.EventGrid" Version="[4.11.0,)" />
+	</ItemGroup>
+</Project>

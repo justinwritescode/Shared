@@ -1,0 +1,8 @@
+<Project>
+	<ItemGroup Label="Roslyn">
+		<PackageReference Update="Microsoft.CSharp" Version="[4.7.0,)" />
+		<PackageReference Update="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="[3.6.0,)" />
+		<PackageReference Update="Microsoft.CodeAnalysis.Analyzers" Version="[3.3.3,)" />
+		<PackageReference Update="Microsoft.CodeAnalysis.CSharp" Version="[4.2.0,)" />
+	</ItemGroup>
+</Project>

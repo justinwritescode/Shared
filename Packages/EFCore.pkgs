@@ -1,0 +1,13 @@
+<Project>
+	<ItemGroup Label="Microsoft.EntityFrameworkCore">
+		<PackageReference Update="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.Abstractions" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.Analyzers" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.Relational" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.SqlServer" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.Tools" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.Design" Version="$(EfCoreVersion)" />
+		<PackageReference Update="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="[1.1.6,)" />
+	</ItemGroup>
+</Project>

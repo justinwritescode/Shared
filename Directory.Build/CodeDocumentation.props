@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   <DocumentationFile>$(IntermediateOutputPath)$(MSBuildProjectName).xml</DocumentationFile>
+  </PropertyGroup>
+</Project>

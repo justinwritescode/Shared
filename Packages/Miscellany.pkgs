@@ -1,0 +1,6 @@
+<Project>
+   <ItemGroup>
+    <PackageReference Update="ProxyInterfaceGenerator" Version="[0.0.24,)" />
+    <PackageReference Update="ConfigurationSubstitutor" Version="[1.5.0,)" />
+   </ItemGroup>
+</Project>
