@@ -1,5 +1,6 @@
 <Project>
   <PropertyGroup>
+    <TargetFrameworks>$(TargetFramework)</TargetFrameworks>
     <Title><!-- TODO: Add this before you release the code! --></Title>
     <Description><!-- TODO: Add this before you release the code! --></Description>
     <PackageTags><!-- TODO: Add these before you release the code! --></PackageTags>
@@ -24,6 +25,7 @@
     <PackageIcon Condition="Exists('Icon.jpg')">Icon.jpg</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/justinwritescode/$(MSBuildProjectName)</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <Import Project="Directory.Build/NuGetOutputs.props" />

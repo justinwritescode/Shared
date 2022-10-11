@@ -1,0 +1,5 @@
+<Project>
+ <ItemGroup>
+  <PackageReference Update="Svg" Version="[3.4.3,)" />
+ </ItemGroup>
+</Project>
