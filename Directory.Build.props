@@ -28,6 +28,11 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <CopyDocumentationFilesFromPackages>true</CopyDocumentationFilesFromPackages>
+    <CopyDebugSymbolFilesFromPackages>true</CopyDebugSymbolFilesFromPackages>
+  </PropertyGroup>
+
   <Import Project="Directory.Build/NuGetOutputs.props" />
   <Import Project="Directory.Build/CentralPackageVersions.props" />
   <Import Project="Directory.Build/NuGetizer.props" />
