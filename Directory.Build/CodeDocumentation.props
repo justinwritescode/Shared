@@ -1,5 +1,6 @@
 <Project>
   <PropertyGroup>
+   <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    <DocumentationFile>$(IntermediateOutputPath)$(MSBuildProjectName).xml</DocumentationFile>
   </PropertyGroup>

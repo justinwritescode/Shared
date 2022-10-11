@@ -1,8 +1,8 @@
 <Project>
    <ItemGroup Label="Global Code Generators">
       <!-- Global Code Generators -->
-		<GlobalPackageReference Include="ThisAssembly" Version="[1.0.9,)" PrivateAssets="All" IncludeAssets="build; analyzers;" />
-		<GlobalPackageReference Include="FluentBuilder" Version="[0.7.1,)" PrivateAssets="All" IncludeAssets="build; analyzers;" />
-		<GlobalPackageReference Include="Supernova.Enum.Generators" Version="[1.0.12,)" PrivateAssets="All" IncludeAssets="build; analyzers;" />
+		<GlobalPackageReference Include="ThisAssembly" Version="[1.0.9,)" PrivateAssets="All" IncludeAssets="build; analyzers;" Condition="'$(ImportlobalCodeGenerators)' != 'false' And '$(ImportThisAssembly)' != 'false'" />
+		<GlobalPackageReference Include="FluentBuilder" Version="[0.7.1,)" PrivateAssets="All" IncludeAssets="build; analyzers;"  Condition="'$(ImportGlobalCodeGenerators)' != 'false' And '$(ImportFluentBuilder)' != 'false'" />
+		<GlobalPackageReference Include="Supernova.Enum.Generators" Version="[1.0.12,)" PrivateAssets="All" IncludeAssets="build; analyzers;" Condition="'$(ImportGlobalCodeGenerators)' != 'false' And '$(ImportEnumGenerator)' != 'false'" />
    </ItemGroup>
 </Project>

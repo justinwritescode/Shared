@@ -8,4 +8,4 @@
 
 ## Reporting a Vulnerability
 
-To report a security vulnerability, submit an [issue report](https://github.com/justinwritescode/common/issues/new?labels=security%2Ctriage&template=bug_report.yml).
+To report a security vulnerability, submit an [issue report](https://github.com/justinwritescode/justinwritescode/issues/new?labels=&template=security_report.yml).

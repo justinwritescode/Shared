@@ -9,6 +9,18 @@ body:
     attributes:
       value: |
         Thanks for taking the time to suggest a new feature! Please make sure to fill out the form below.
+  - type: checkboxes
+    id: preflight-checklist
+    attributes:
+      label: Preflight Checklist
+      description: Please ensure you've completed all of the following.
+      options:
+        - label: "I could not find a solution in the existing issues, docs, or discussions."
+          required: true
+        - label: "I agree to follow this project's [Code of Conduct](https://justinwritescode.com/CODE_OF_CONDUCT/)."
+          required: true
+        - label: "I have read and am following this repository's [Contribution Guidelines](https://justinwritescode.com/CONTRIBUTING/)."
+          required: true
   - type: input
     id: contact
     attributes:
@@ -28,8 +40,8 @@ body:
   - type: textarea
     id: what-would-you-like
     attributes:
-      label: Describe the solution you'd like
-      description: A clear and concise description of what you want to happen.
+      label: Describe your ideal solution
+      description: A clear and concise description of what you'd like to happen.
       placeholder: Tell us what you want!
     validations:
       required: true
@@ -40,12 +52,19 @@ body:
       description: A clear and concise description of any alternative solutions or features you've considered.
     validations:
       required: true
+  - type: input
+    id: version
+    attributes:
+      label: Which version of the repo are you using?
+      description: Please provide the version number of the repo you're using or "latest" if you're using the latest version.
+      placeholder: latest
+      value: latest
+    validations:
+      required: true
   - type: textarea
     id: additional-context
     attributes:
       label: Additional context
       description: Add any other context or screenshots about the feature request here.
-      placeholder: |
-        ![screenshot]()
     validations:
       required: false
