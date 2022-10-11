@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+ <PropertyGroup>
+   <TargetFramework>netstandard2.0</TargetFramework>
+   <Title>JustinWritesCode Common Files</Title>
+   <Description>JustinWritesCode Common Files</Description>
+   <Summary>$(Description)</Summary>
+   <PackageTags>common nuget justinwritescode</PackageTags>
+ </PropertyGroup>
+ <ItemGroup>
+    <PackageFile Include="./Directory.Build/*.*" PackagePath="Directory.Build/%(Filename)%(Extension)" />
+    <PackageFile Include="./Packages/*.pkgs" PackagePath="Packages/%(Filename)%(Extension)" />
+    <PackageFile Include="Directory.Build.*" PackagePath="Directory.Build%(Extension)" />
+    <PackageFile Include=".github/**/*.*" PackagePath=".github/%(RecursiveDir)%(Filename)%(Extension)" />
+    <PackageFile Include="global.json" PackagePath="global.json" />
+    <PackageFile Include="LICENSE.md" PackagePath="LICENSE.md" />
+    <PackageFile Include="Packages.props" PackagePath="Packages.props" />
+    <PackageFile Include="nuget.config" PackagePath="nuget.config" />
+    <PackageFile Include=".gitignore" PackagePath=".gitignore" />
+    <PackageFile Include=".netconfig" PackagePath=".netconfig" />
+  </ItemGroup>
+</Project>
