@@ -2,6 +2,7 @@
   <ItemGroup>
     <PackageReference Update="NuGet.Configuration" Version="[6.3.1,)" />
     <PackageReference Update="NuGet.Common" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Client" Version="[6.3.1,)" />
     <PackageReference Update="NuGet.Packaging" Version="[6.3.1,)" />
     <PackageReference Update="NuGet.Protocol" Version="[6.3.1,)" />
     <PackageReference Update="NuGet.Resolver" Version="[6.3.1,)" />
