@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.Build.NoTargets">
  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>JustinWritesCode.Common</PackageId>
     <Title>JustinWritesCode Common Files</Title>
     <Description>This repository contains files that are common to all of my projects. To restore the files, run the following command:
@@ -21,4 +22,9 @@ If you don't have the ```dotnet file``` tool installed, you can install it with 
   <PackageFile Include="global.json" PackagePath="global.json" />
   <PackageFile Include=".gitignore" PackagePath=".gitignore" />
  </ItemGroup>
+
+<ItemGroup>
+    <PackageTag Include="common" />
+    <PackageTag Include="justinwritescode" />
+</ItemGroup>
 </Project>
