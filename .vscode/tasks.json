@@ -30,7 +30,7 @@
             "args": [
                 "build",
                 "--configuration",
-                "local",
+                "Local",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "/nologo",

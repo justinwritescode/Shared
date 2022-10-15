@@ -3,6 +3,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.Common.Res
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.Common.RestoreCommonFiles.Tests", "tests\JustinWritesCode.Common.RestoreCommonFiles.Tests.csproj", "{00C05C01-1189-4903-B154-34A6C9F8FCC4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustinWritesCode.Versioning", "Versioning\JustinWritesCode.Versioning.csproj", "{51863C3D-969C-4DFB-8889-4E819B0D7485}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Testing|Any CPU = Testing|Any CPU
@@ -32,6 +34,16 @@ Global
 		{00C05C01-1189-4903-B154-34A6C9F8FCC4}.Staging|Any CPU.Build.0 = Staging|Any CPU
 		{00C05C01-1189-4903-B154-34A6C9F8FCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00C05C01-1189-4903-B154-34A6C9F8FCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Local|Any CPU.Build.0 = Local|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51863C3D-969C-4DFB-8889-4E819B0D7485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

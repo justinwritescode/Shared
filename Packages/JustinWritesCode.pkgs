@@ -1,5 +1,6 @@
 <Project>
+  <Import Project="../Versions/Versions.$(Configuration).props" Condition="Exists('../Versions/Versions.$(Configuration).props')" />
   <ItemGroup>
-    <PackageReference Update="JustinWritesCode.Common.RestoreCommonFiles" Version="0.0.1-local" />
+    <PackageReference Update="@(PackageVersion)" Version="%(PackageVersion.Version)" />
   </ItemGroup>
 </Project>
