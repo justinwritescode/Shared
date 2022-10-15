@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Update="JustinWritesCode.Common.RestoreCommonFiles" Version="0.0.1-local" />
+  </ItemGroup>
+</Project>
