@@ -1,0 +1,27 @@
+<Project InitialTargets="RestoreCommonFiles">
+  <PropertyGroup>
+    <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
+  </PropertyGroup>
+  <Target Name="RestoreCommonFiles">
+    <RestoreCommonFiles
+      ProjectPath="$(MSBuildProjectFullPath)"
+      Include="$(MSBuildThisFileDirectory)../common"
+      Exclude="*.cs;*.csproj">
+      <Output TaskParameter="RestoredFiles" ItemName="RestoredFile" />
+      <Output TaskParameter="RestoredDirectories" ItemName="RestoredDirectory" />
+    </RestoreCommonFiles>
+    <!-- <Message Text="%(RestoredFiles.SourceFile) -> %(RestoredFiles.Identity)
+    " Importance="High" /> -->
+    <!-- <CallTarget TargetName="Restore" Condition="'$(HasDoneRestoreOnce)' == ''" />
+    <PropertyGroup Condition="'$(HasDoneRestoreOnce)' == ''">
+      <HasDoneRestoreOnce>true</HasDoneRestoreOnce>
+    </PropertyGroup> -->
+  </Target>
+  <Target Name="Clean">
+    <CleanCommonFiles 
+      ProjectPath="$(MSBuildProjectFullPath)" >
+      <Output TaskParameter="CleansedDirectories" ItemName="CleansedDirectory" />
+      <Output TaskParameter="CleansedFiles" ItemName="CleansedFile" />
+    </CleanCommonFiles>
+  </Target>
+</Project>

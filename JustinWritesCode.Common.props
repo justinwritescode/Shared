@@ -1,0 +1,18 @@
+<Project>
+  <UsingTask TaskName="RestoreCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.dll" />
+  <UsingTask TaskName="CleanCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.dll" />
+  <ItemGroup>
+    <CommonFile Include="$(MSBuildThisFileDirectory)Directory.Build.*" PackagePath="common/Directory.Build%(Extension)" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)Packages.props" PackagePath="common/Packages.props" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)NuGet.config" PackagePath="common/NuGet.config" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)docs/*.*" PackagePath="common/docs/%(Filename)%(Extension)" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)global.json" PackagePath="common/global.json" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)assets/*.*" PackagePath="common/assets/%(Filename)%(Extension)" />
+    <CommonFile Include="$(MSBuildThisFileDirectory).gitignore" PackagePath="common/.gitignore" />
+    <CommonFile Include="$(MSBuildThisFileDirectory).github/**/*.*" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" />
+    <CommonFile Include="$(MSBuildThisFileDirectory).vscode/tasks.json" PackagePath="common/.vscode/tasks.json" />
+    <CommonFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
+ </ItemGroup>
+</Project>
