@@ -14,7 +14,7 @@ using Microsoft.Build.Utilities;
 
 public class CleansedDirectory : CleansedFile
 {
-    public CleansedDirectory(DirectoryInfo projectDirectory, FileSystemInfo cleanedDirectory, CleansedFileStatus status = CleansedFileStatus.Deleted)
+    public CleansedDirectory(DirectoryInfo projectDirectory, FileSystemInfo cleanedDirectory, CleansedFileStatus status = CleansedFileStatus.Cleansed)
         : base(projectDirectory, new FileInfo(cleanedDirectory.FullName), status) { }
 
     public override ITaskItem ToProjectItem()

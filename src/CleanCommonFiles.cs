@@ -49,7 +49,7 @@ public partial class CleanCommonFiles : MSBTask
             }
             else
             {
-                cleansedFiles.Add(new CleansedFile(ProjectDirectoryInfo, file.Destination, CleansedFileStatus.Skipped_DidNotExist));
+                cleansedFiles.Add(new CleansedFile(ProjectDirectoryInfo, file.Destination, CleansedFileStatus.SkippedDidNotExist));
                 Log.LogTelemetry("SkippedCleaningFile", new Dictionary<string, string> { { "File", file.Destination.FullName } });
                 Log.LogMessage($"Skipped cleaning file '{file.Destination.FullName}' because it did not exist.");
             }
@@ -66,13 +66,13 @@ public partial class CleanCommonFiles : MSBTask
             }
             else if (!directory.Destination.Exists)
             {
-                cleansedDirectories.Add(new CleansedDirectory(ProjectDirectoryInfo, directory.Destination, CleansedFileStatus.Skipped_DidNotExist));
+                cleansedDirectories.Add(new CleansedDirectory(ProjectDirectoryInfo, directory.Destination, CleansedFileStatus.SkippedDidNotExist));
                 Log.LogTelemetry("SkippedCleaningDirectory_Exists", new Dictionary<string, string> { { "Directory", directory.Destination.FullName } });
                 Log.LogMessage($"Skipped cleaning directory '{directory.Destination.FullName}' because it did not exist.");
             }
             else if (new DirectoryInfo(directory.Destination.FullName).GetFileSystemInfos().Length > 0)
             {
-                cleansedDirectories.Add(new CleansedDirectory(ProjectDirectoryInfo, directory.Destination, CleansedFileStatus.Skipped_NotEmpty));
+                cleansedDirectories.Add(new CleansedDirectory(ProjectDirectoryInfo, directory.Destination, CleansedFileStatus.SkippedNotEmpty));
                 Log.LogTelemetry("SkippedCleaningDirectory_NotEmpty", new Dictionary<string, string> { { "Directory", directory.Destination.FullName } });
                 Log.LogMessage($"Skipped cleaning directory '{directory.Destination.FullName}' because it was not empty.");
             }

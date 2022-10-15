@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <PackageId>JustinWritesCode.Common</PackageId>
+        <PackageId>JustinWritesCode.Common.RestoreCommonFiles</PackageId>
         <Title>JustinWritesCode Common Files</Title>
         <ImplicitUsings>enable</ImplicitUsings>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -14,7 +14,7 @@
     ```dotnet tool install -g dotnet-file```</Description>
     </PropertyGroup>
 
-    <Import Project="../JustinWritesCode.Common.props" />
+    <Import Project="JustinWritesCode.Common.RestoreCommonFiles.props" />
 
     <ItemGroup Label="Global Usings">
         <Using Include="Microsoft.Build.Framework" />
@@ -26,8 +26,8 @@
 
     <ItemGroup>
       <PackageFile Include="@(CommonFile)" PackagePath="%(PackagePath)" />
-      <PackageFile Include="../JustinWritesCode.Common.props" PackagePath="build/JustinWritesCode.Common.props" />
-      <PackageFile Include="../JustinWritesCode.Common.targets" PackagePath="build/JustinWritesCode.Common.targets" />
+      <PackageFile Include="JustinWritesCode.Common.RestoreCommonFiles.props" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.props" />
+      <PackageFile Include="JustinWritesCode.Common.RestoreCommonFiles.targets" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.targets" />
       <PackageFile Include="$(OutputPath)*.dll" PackagePath="lib/%(Filename)%(Extension)" />
       <PackageFile Include="$(OutputPath)*.pdb" PackagePath="lib/%(Filename)%(Extension)" />
     </ItemGroup>

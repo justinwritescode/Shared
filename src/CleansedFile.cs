@@ -12,7 +12,7 @@ using Microsoft.Build.Utilities;
 
 public class CleansedFile
 {
-    public CleansedFile(DirectoryInfo projectDirectory, FileSystemInfo destination, CleansedFileStatus status = CleansedFileStatus.Deleted)
+    public CleansedFile(DirectoryInfo projectDirectory, FileSystemInfo destination, CleansedFileStatus status = CleansedFileStatus.Cleansed)
     {
         ProjectDirectory = projectDirectory;
         CleansedDestination = destination;

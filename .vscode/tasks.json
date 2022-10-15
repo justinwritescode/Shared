@@ -54,7 +54,8 @@
                 "--configuration",
                 "Debug",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "${file}"
             ],
             "group": "build",
             "presentation": {
@@ -71,7 +72,8 @@
                 "--configuration",
                 "Staging",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "${file}"
             ],
             "group": "build",
             "presentation": {
@@ -88,7 +90,8 @@
                 "--configuration",
                 "Release",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "${file}"
             ],
             "group": "build",
             "presentation": {
@@ -105,7 +108,8 @@
                 "--configuration",
                 "local",
                 "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary"
+                "/consoleloggerparameters:NoSummary",
+                "${file}"
             ],
             "group": "build",
             "presentation": {

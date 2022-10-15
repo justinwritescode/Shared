@@ -3,6 +3,9 @@
     <ItemGroup>
       <PackageVersion Update="$(PackageId)" Version="$(Version)" />
     </ItemGroup>
+    <PropertyGroup>
+      <PackageVersion Condition="'$(PackageVersion)' == ''">$(Version)</PackageVersion>
+    </PropertyGroup>
    </Target>
 
     <Target Name="PushNuGetPackageToLocal" AfterTargets="Pack" Condition="'$(Configuration)' == 'Local'">

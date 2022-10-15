@@ -9,7 +9,7 @@ using System.Linq;
 
 public enum CleansedFileStatus
 {
-    Deleted,
-    Skipped_DidNotExist,
-    Skipped_NotEmpty
+    Cleansed,
+    SkippedDidNotExist,
+    SkippedNotEmpty
 }

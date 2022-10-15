@@ -3,7 +3,7 @@
     <IncludeInSolutionFile>false</IncludeInSolutionFile>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="src/JustinWritesCode.Common.csproj" />
-    <ProjectReference Include="tests/JustinWritesCode.Common.Tests.csproj" />
+    <ProjectReference Include="src/JustinWritesCode.Common.RestoreCommonFiles.csproj" />
+    <ProjectReference Include="tests/JustinWritesCode.Common.RestoreCommonFiles.Tests.csproj" />
   </ItemGroup>
 </Project>
