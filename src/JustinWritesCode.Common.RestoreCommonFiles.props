@@ -13,5 +13,6 @@
     <CommonFile Include="$(MSBuildThisFileDirectory)../.gitignore" PackagePath="common/.gitignore" />
     <CommonFile Include="$(MSBuildThisFileDirectory)../.github/**/*.*" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" />
     <CommonFile Include="$(MSBuildThisFileDirectory)../.vscode/tasks.json" PackagePath="common/.vscode/tasks.json" />
+    <CommonFile Include="$(MSBuildThisFileDirectory)../Versions/*.*" PackagePath="common/Versions/%(Filename)%(Extension)" />
  </ItemGroup>
 </Project>

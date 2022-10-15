@@ -3,4 +3,7 @@
   <ItemGroup>
     <PackageReference Update="@(PackageVersion)" Version="%(PackageVersion.Version)" />
   </ItemGroup>
+  <ItemGroup>
+    <GlobalPackageReference Include="JustinWritesCode.Versioning" Version="$(JustinWritesCodeVersioningVersion)" Condition="'$(PackageId)' != 'JustinWritesCode.Versioning'" /> 
+  </ItemGroup>
 </Project>

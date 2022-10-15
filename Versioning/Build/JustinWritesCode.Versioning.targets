@@ -1,8 +1,9 @@
 <Project>
- <UsingTask TaskName="SaveVersionNumberCentrally" AssemblyFile="$(MSBuildThisFileDirectory)../lib/Backroom.Versioning.dll" />
- <Target Name="SaveVersionNumberCentrally" AfterTargets="MinVer">
+ <UsingTask TaskName="SaveVersionNumberCentrally" AssemblyFile="$(MSBuildThisFileDirectory)../lib/JustinWritesCode.Versioning.dll" />
+ <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion">
   <SaveVersionNumberCentrally
       PackageName="$(MSBuildProjectName)"
-      Version="$(PackageVersion)" />
+      Version="$(PackageVersion)" 
+      Configuration="$(Configuration)" />
  </Target>
 </Project>

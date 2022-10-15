@@ -11,7 +11,7 @@ public partial class RestoreCommonFiles
     {
         if (GitIgnoreFile.Exists)
         {
-            var newGitIgnoreLines = restoredFiles.Files.Where(f => f.Status == RestoredFileStatus.RestoredNew).Select(f => f.Destination.FullName);
+            var newGitIgnoreLines = restoredFiles.Files.Where(f => f.Status == RestoredFileStatus.RestoredNew).Select(f => f.Destination.FullName).Where(line => !line.Contains(".github"));
             var gitIgnore = File.ReadAllLines(GitIgnoreFile.FullName).ToList();
             var gitIgnoreLine = gitIgnore.IndexOf(GitIgnoreComment);
             if (gitIgnoreLine >= 0)
