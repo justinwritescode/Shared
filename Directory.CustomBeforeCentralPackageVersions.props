@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <ImportMinVer>false</ImportMinVer>
+		<ImportGlobalCodeGenerators>false</ImportGlobalCodeGenerators>
+  </PropertyGroup>
+</Project>

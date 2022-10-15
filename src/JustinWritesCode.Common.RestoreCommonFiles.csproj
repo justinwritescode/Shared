@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <PackageId>JustinWritesCode.Common.RestoreCommonFiles</PackageId>
+        <Title>JustinWritesCode Common Files</Title>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Description>This repository contains files that are common to all of my projects. To restore the files, run the following command:
+
+    ```dotnet file sync```
+
+    If you don't have the ```dotnet file``` tool installed, you can install it with the following command:
+
+    ```dotnet tool install -g dotnet-file```</Description>
+    </PropertyGroup>
+
+    <Import Project="JustinWritesCode.Common.RestoreCommonFiles.props" />
+
+    <ItemGroup Label="Global Usings">
+        <Using Include="Microsoft.Build.Framework" />
+        <Using Include="Microsoft.Build.Execution" />
+        <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
+        <Using Include="System.Text.RegularExpressions" />
+        <Using Include="System.Text.Json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageFile Include="@(CommonFile)" PackagePath="%(PackagePath)" />
+      <PackageFile Include="JustinWritesCode.Common.RestoreCommonFiles.props" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.props" />
+      <PackageFile Include="JustinWritesCode.Common.RestoreCommonFiles.targets" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.targets" />
+      <PackageFile Include="$(OutputPath)*.dll" PackagePath="lib/%(Filename)%(Extension)" />
+      <PackageFile Include="$(OutputPath)*.pdb" PackagePath="lib/%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageTag Include="common" />
+        <PackageTag Include="justinwritescode" />
+    </ItemGroup>
+
+    <ItemGroup>
+       <PackageReference Include="Microsoft.Build.Utilities.Core" />
+       <PackageReference Include="Microsoft.Build" />
+       <PackageReference Include="System.Text.Json" />
+    </ItemGroup>
+</Project>

@@ -1,5 +1,6 @@
 <Project>
   <ItemGroup Label="MSBuild">
    <PackageReference Update="Microsoft.Build.Utilities.Core" Version="[17.3.1,)" PrivateAssets="All" />
+   <PackageReference Update="Microsoft.Build" Version="[17.3.1,)" PrivateAssets="All" />
   </ItemGroup>
 </Project>

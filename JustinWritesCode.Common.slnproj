@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <IncludeInSolutionFile>false</IncludeInSolutionFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="src/JustinWritesCode.Common.RestoreCommonFiles.csproj" />
+    <ProjectReference Include="tests/JustinWritesCode.Common.RestoreCommonFiles.Tests.csproj" />
+  </ItemGroup>
+</Project>
