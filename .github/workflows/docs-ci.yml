@@ -44,12 +44,12 @@ jobs:
           # Directory to push
           push_dir: docs
           # User to commit
-          commit_user: 
+          commit_user: justinwritescode
           # Email of the user to commit
-          commit_email: 
+          commit_email: justin@justinwritescode.com
           # Destination branch to push changes
-          branch: # optional, default is master
+          branch: main # optional, default is master
           # Keep commit history
-          keep_history: # optional
+          keep_history: true # optional
           # Commit messgae
-          commit_message: # optional
+          commit_message: "CI for GH Pages" # optional
