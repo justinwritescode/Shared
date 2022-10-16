@@ -12,7 +12,7 @@ using System.Linq;
 using Microsoft.Build.Utilities;
 using Microsoft.Build.Evaluation;
 using Microsoft.Build.Construction;
-using JustinWritesCode.IO.Extensions;
+using global::JustinWritesCode.IO.Extensions;
 
 public partial class RestoreCommonFiles : MSBTask
 {
@@ -81,14 +81,22 @@ public partial class RestoreCommonFiles : MSBTask
                 Log.LogTelemetry("RestoredDirectory", new Dictionary<string, string> { { "Destination", destinationDirectory } });
             }
 
-            if (File.Exists(destination) &&
-                restoredFilesRecords.ContainsDestination(destination) &&
-                restoredFilesRecords.DestinationFiles[destination].FileHash != file.GetFileHash())
+            if (File.Exists(destination))
             {
-                Log.LogMessage($"File '{destination}' already exists and is being overwritten with newer version");
-                Log.LogTelemetry("OverwrittenFile", new Dictionary<string, string> { { "Destination", destination }, { "Source", file.FullName } });
-                File.Copy(file.FullName, destination, true);
-                restoredFilesRecords.DestinationFiles[destination].Status = RestoredFileStatus.Overwritten;
+                if (!restoredFilesRecords.ContainsDestination(destination))
+                {
+                    Log.LogMessage($"File '{destination}' already exists and is being overwritten with newer version");
+                    Log.LogTelemetry("OverwrittenFile", new Dictionary<string, string> { { "Destination", destination }, { "Source", file.FullName } });
+                    File.Copy(file.FullName, destination, true);
+                    restoredFilesRecords.Files.Add(new RestoredFile(ProjectDirectoryInfo, _include, file, new FileInfo(destination)));
+                }
+                else
+                {
+                    Log.LogMessage($"File '{destination}' already exists and is being overwritten with newer version");
+                    Log.LogTelemetry("OverwrittenFile", new Dictionary<string, string> { { "Destination", destination }, { "Source", file.FullName } });
+                    File.Copy(file.FullName, destination, true);
+                    restoredFilesRecords.DestinationFiles[destination].Status = RestoredFileStatus.Overwritten;
+                }
             }
             else if (!File.Exists(destination))
             {
@@ -98,14 +106,14 @@ public partial class RestoreCommonFiles : MSBTask
                     restoredFilesRecords.Files.Add(new RestoredFile(ProjectDirectoryInfo, _include, file, new FileInfo(destination)));
                     restoredFilesRecords.DestinationFiles[destination].Status = RestoredFileStatus.RestoredNew;
                 }
-                else
+                else if (restoredFilesRecords.DestinationFiles.ContainsKey(destination))
                 {
                     restoredFilesRecords.DestinationFiles[destination].Status = RestoredFileStatus.RestoredMissing;
                 }
                 Log.LogMessage("Restored file '{0}' to '{1}'", file.FullName, destination);
                 Log.LogTelemetry("RestoredFile", new Dictionary<string, string> { { "Destination", destination }, { "Source", file.FullName } });
             }
-            else
+            else if (restoredFilesRecords.DestinationFiles.ContainsKey(destination))
             {
                 restoredFilesRecords.DestinationFiles[new FileInfo(destination).FullName].Status = RestoredFileStatus.SkippedAlreadyExists;
                 Log.LogMessage($"File '{destination}' already exists. Skipping.");

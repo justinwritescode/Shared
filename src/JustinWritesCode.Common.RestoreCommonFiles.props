@@ -1,6 +1,6 @@
 <Project>
-  <UsingTask TaskName="RestoreCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.dll" />
-  <UsingTask TaskName="CleanCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.dll" />
+  <UsingTask TaskName="RestoreCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.RestoreCommonFiles.dll" />
+  <UsingTask TaskName="CleanCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.RestoreCommonFiles.dll" />
   <ItemGroup>
     <CommonFile Include="$(MSBuildThisFileDirectory)../Directory.Build.*" PackagePath="common/Directory.Build%(Extension)" />
     <CommonFile Include="$(MSBuildThisFileDirectory)../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" />

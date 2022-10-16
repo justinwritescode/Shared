@@ -9,7 +9,7 @@ using Microsoft.Build.Utilities;
 using Microsoft.Build.Evaluation;
 using Microsoft.Build.Construction;
 using System.Text.Json.Serialization;
-using JustinWritesCode.IO.Extensions;
+using global::JustinWritesCode.IO.Extensions;
 
 public class RestoredFile
 {

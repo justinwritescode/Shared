@@ -8,6 +8,7 @@
       <Description>No descripion</Description>
       <Category>None</Category>
       <Off>false</Off>
+      <Reason>None</Reason>
     </NoWarn>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -73,7 +74,4 @@
   <Target Name="NoWarn">
     <Telemetry EventName="NoWarn" EventData="NoWarn=$(NoWarn)" />
   </Target> 
-  <PropertyGroup>
-    <NoWarn_props>$(NoWarn)</NoWarn_props>
-  </PropertyGroup>
 </Project>

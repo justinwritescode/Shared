@@ -5,5 +5,11 @@
 		<PackageReference Update="Microsoft.CodeAnalysis.Analyzers" Version="[3.3.3,)" />
 		<PackageReference Update="Microsoft.CodeAnalysis.CSharp" Version="[4.3.1,)" />
 		<PackageReference Update="Microsoft.CodeAnalysis.Common" Version="[4.3.1,)" />
+		<PackageReference Update="CodeGeneration.Roslyn" Version="[0.7.63,)" />
+		<PackageReference Update="CodeGeneration.Roslyn.Tool" Version="[0.7.63,)" />
+		<PackageReference Update="CodeGeneration.Roslyn.Attributes" Version="[0.7.63,)" />
+		<PackageReference Update="CodeGeneration.Roslyn.Engine" Version="[0.7.63,)" />
+		<PackageReference Update="CodeGeneration.Roslyn.Plugin.Sdk" Version="[0.7.63,)" />
+		<PackageReference Update="CodeGeneration.Roslyn.Plugin.Metapackage.Sdk" Version="[0.7.63,)" />
 	</ItemGroup>
 </Project>
