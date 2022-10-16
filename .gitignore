@@ -1151,3 +1151,4 @@ $RECYCLE.BIN/
 *.nuget.g.targets
 *.dll
 */site/*
+*site/*
