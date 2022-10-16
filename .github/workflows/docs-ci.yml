@@ -53,20 +53,3 @@ jobs:
           keep_history: # optional
           # Commit messgae
           commit_message: # optional
-      
-      
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-      - run: sh ./install-mkdocs-plugins.sh
-      - run: mkdocs build
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload the contents of the "site" folder
-          path: 'site'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
