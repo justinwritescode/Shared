@@ -15,33 +15,6 @@
       "status": "RestoredNew",
       "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
       "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
-      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Directory.Build.props",
-      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/Directory.Build.props",
-      "fileHash": "afa8c66ab26d40a8a053cf83b1f5fd2cbae9c4f4",
-      "timestamp": "2022-10-15T14:46:55.936617Z"
-    },
-    {
-      "status": "RestoredNew",
-      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
-      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
-      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Packages.props",
-      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/Packages.props",
-      "fileHash": "29b5b799b586b4d3426b04ebf1c24882354b5420",
-      "timestamp": "2022-10-15T14:46:55.936958Z"
-    },
-    {
-      "status": "RestoredNew",
-      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
-      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
-      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Directory.Build.targets",
-      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/Directory.Build.targets",
-      "fileHash": "a3521910d5c430a737c3bee18ad79d34d6c0d6c4",
-      "timestamp": "2022-10-15T14:46:55.937271Z"
-    },
-    {
-      "status": "RestoredNew",
-      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
-      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
       "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.gitignore",
       "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/.gitignore",
       "fileHash": "963e56880cb4954eef0727391092c7022d79d840",
@@ -768,12 +741,229 @@
       "timestamp": "2022-10-15T14:46:55.955275Z"
     },
     {
-      "status": "RestoredNew",
+      "status": "Overwritten",
       "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
       "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
       "source": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/.restored-files",
       "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/.restored-files",
+      "fileHash": "0b90188f1dd6e6913e5f723c93b49a829ba42ca6",
       "timestamp": "2022-10-15T14:46:55.955541Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/NuGet.config",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/uGet.config",
+      "fileHash": "831b91678af83c9b6994c1552a3c696244201f5e",
+      "timestamp": "2022-10-17T21:16:18.10966Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.gitignore",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/gitignore",
+      "fileHash": "098d51c37671cfa2df096e8b99b0d15c5e2415a7",
+      "timestamp": "2022-10-17T21:16:18.110595Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/global.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/lobal.json",
+      "fileHash": "a4ea4362f59345fe63d3d4b725da98619f001cb1",
+      "timestamp": "2022-10-17T21:16:18.111673Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Local.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions/Versions.Local.json",
+      "fileHash": "7540eaaf0d4a717b644a6a5cb9fd96ed442829bf",
+      "timestamp": "2022-10-17T21:16:18.112154Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Debug.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions/Versions.Debug.props",
+      "fileHash": "0a395a6e24981aac69154e22e367c21e0a55c061",
+      "timestamp": "2022-10-17T21:16:18.112489Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Local.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions/Versions.Local.props",
+      "fileHash": "77d931fa8e2cc980135e0c243408b8199322b989",
+      "timestamp": "2022-10-17T21:16:18.112821Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions/Versions.Debug.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions/Versions.Debug.json",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa",
+      "timestamp": "2022-10-17T21:16:18.11323Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/CODE_OF_CONDUCT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs/CODE_OF_CONDUCT.md",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49",
+      "timestamp": "2022-10-17T21:16:18.11372Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/LICENSE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs/LICENSE.md",
+      "fileHash": "47e4d2d1a736382680c7a66c1ea3c8444ec2a683",
+      "timestamp": "2022-10-17T21:16:18.114219Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/CODEOWNERS",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs/CODEOWNERS",
+      "fileHash": "c883b50012ae86d0d52dfefb84c4446c140d94ea",
+      "timestamp": "2022-10-17T21:16:18.114698Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/SUPPORT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs/SUPPORT.md",
+      "fileHash": "adb516463629d04d2a22e1eccafc552050569b9b",
+      "timestamp": "2022-10-17T21:16:18.115066Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/index.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs/index.md",
+      "fileHash": "a7354f8baa4315356a8634fce108ce54680b3f10",
+      "timestamp": "2022-10-17T21:16:18.115472Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs/CONTRIBUTING.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs/CONTRIBUTING.md",
+      "fileHash": "aaad5e1720ceee95aaa74d03b849ec44a5dc31a0",
+      "timestamp": "2022-10-17T21:16:18.115846Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/funding.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/funding.yml",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395",
+      "timestamp": "2022-10-17T21:16:18.116469Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/PULL_REQUEST_TEMPLATE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/PULL_REQUEST_TEMPLATE.md",
+      "fileHash": "f62f062ded733c9471d7c32fe351708cd19556b5",
+      "timestamp": "2022-10-17T21:16:18.117069Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/pull_request_template.yaml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/pull_request_template.yaml",
+      "fileHash": "1fa4c20bdbf538304b9fdac0eef2e15f40104db4",
+      "timestamp": "2022-10-17T21:16:18.117431Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/SECURITY.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/SECURITY.md",
+      "fileHash": "58914098e784f0aa2bbc7de42cc745217491fa09",
+      "timestamp": "2022-10-17T21:16:18.117848Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.vscode/tasks.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/vscode/tasks.json",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728",
+      "timestamp": "2022-10-17T21:16:18.118409Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows/docs-ci.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/workflows/docs-ci.yml",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1",
+      "timestamp": "2022-10-17T21:16:18.118822Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE/feature_request.yml",
+      "fileHash": "cc787ad93c440413866d8538bd03b0fbc807668a",
+      "timestamp": "2022-10-17T21:16:18.119247Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE/bug_report.yml",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426",
+      "timestamp": "2022-10-17T21:16:18.119625Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/security_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE/security_report.yml",
+      "fileHash": "11128a7c79719786a15d1d6d70232924f33350aa",
+      "timestamp": "2022-10-17T21:16:18.11996Z"
+    },
+    {
+      "status": "RestoredMissing",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE/config.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE/config.yml",
+      "fileHash": "39fdca8a77241a421ddc006f868c7943dd7d3aa2",
+      "timestamp": "2022-10-17T21:16:18.121504Z"
+    },
+    {
+      "status": "RestoredNew",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.DS_Store",
+      "destination": "file:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/DS_Store",
+      "fileHash": "857a4f8d55aec171f5c9b7e91d950ce20024c510",
+      "timestamp": "2022-10-17T21:33:19.406934Z"
     }
   ],
   "directories": [
@@ -838,6 +1028,168 @@
       "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common",
       "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE",
       "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/.github/ISSUE_TEMPLATE",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa"
+    },
+    {
+      "timestamp": "2022-10-17T21:16:18.111815Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa-0a395a6e24981aac69154e22e367c21e0a55c061-7540eaaf0d4a717b644a6a5cb9fd96ed442829bf-77d931fa8e2cc980135e0c243408b8199322b989"
+    },
+    {
+      "timestamp": "2022-10-17T21:16:18.113318Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49-c883b50012ae86d0d52dfefb84c4446c140d94ea-aaad5e1720ceee95aaa74d03b849ec44a5dc31a0-a7354f8baa4315356a8634fce108ce54680b3f10-47e4d2d1a736382680c7a66c1ea3c8444ec2a683-adb516463629d04d2a22e1eccafc552050569b9b"
+    },
+    {
+      "timestamp": "2022-10-17T21:16:18.115965Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395-c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa-f62f062ded733c9471d7c32fe351708cd19556b5-1fa4c20bdbf538304b9fdac0eef2e15f40104db4-58914098e784f0aa2bbc7de42cc745217491fa09-d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:16:18.117938Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.vscode",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/vscode",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728"
+    },
+    {
+      "timestamp": "2022-10-17T21:16:18.118494Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/workflows",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:16:18.118897Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa"
+    },
+    {
+      "timestamp": "2022-10-17T21:30:21.518531Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa-0a395a6e24981aac69154e22e367c21e0a55c061-7540eaaf0d4a717b644a6a5cb9fd96ed442829bf-77d931fa8e2cc980135e0c243408b8199322b989"
+    },
+    {
+      "timestamp": "2022-10-17T21:30:21.523056Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49-c883b50012ae86d0d52dfefb84c4446c140d94ea-aaad5e1720ceee95aaa74d03b849ec44a5dc31a0-a7354f8baa4315356a8634fce108ce54680b3f10-47e4d2d1a736382680c7a66c1ea3c8444ec2a683-adb516463629d04d2a22e1eccafc552050569b9b"
+    },
+    {
+      "timestamp": "2022-10-17T21:30:21.527366Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395-c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa-f62f062ded733c9471d7c32fe351708cd19556b5-1fa4c20bdbf538304b9fdac0eef2e15f40104db4-58914098e784f0aa2bbc7de42cc745217491fa09-d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:30:21.53248Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.vscode",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/vscode",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728"
+    },
+    {
+      "timestamp": "2022-10-17T21:30:21.533208Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/workflows",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:30:21.533851Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa"
+    },
+    {
+      "timestamp": "2022-10-17T21:33:19.408222Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/Versions",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ersions",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa-0a395a6e24981aac69154e22e367c21e0a55c061-7540eaaf0d4a717b644a6a5cb9fd96ed442829bf-77d931fa8e2cc980135e0c243408b8199322b989"
+    },
+    {
+      "timestamp": "2022-10-17T21:33:19.410005Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/docs",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/ocs",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49-c883b50012ae86d0d52dfefb84c4446c140d94ea-aaad5e1720ceee95aaa74d03b849ec44a5dc31a0-a7354f8baa4315356a8634fce108ce54680b3f10-47e4d2d1a736382680c7a66c1ea3c8444ec2a683-adb516463629d04d2a22e1eccafc552050569b9b"
+    },
+    {
+      "timestamp": "2022-10-17T21:33:19.416007Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395-c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa-f62f062ded733c9471d7c32fe351708cd19556b5-1fa4c20bdbf538304b9fdac0eef2e15f40104db4-58914098e784f0aa2bbc7de42cc745217491fa09-d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:33:19.417738Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.vscode",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/vscode",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728"
+    },
+    {
+      "timestamp": "2022-10-17T21:33:19.418332Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/workflows",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/workflows",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1"
+    },
+    {
+      "timestamp": "2022-10-17T21:33:19.41892Z",
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/",
+      "source": "dir:///Users/david/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local/common/.github/ISSUE_TEMPLATE",
+      "destination": "dir:///Users/david/GitHub/justinwritescode/common/RestoredCommonRepo/github/ISSUE_TEMPLATE",
       "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426-39fdca8a77241a421ddc006f868c7943dd7d3aa2-cc787ad93c440413866d8538bd03b0fbc807668a-11128a7c79719786a15d1d6d70232924f33350aa"
     }
   ]

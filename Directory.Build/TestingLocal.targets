@@ -12,7 +12,7 @@
     </PropertyGroup>
    </Target>
 
-    <Target Name="PushNuGetPackageToLocal" AfterTargets="Pack" Condition="'$(Configuration)' == 'Local'">
+    <Target Name="PushNuGetPackageToLocal" AfterTargets="Pack" Condition="'$(Configuration)' == 'Local' And '$(GeneratePackageOnBuild)' == 'true'">
         <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Local --non-interactive" ContinueOnError="true" />
         <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local" />
     </Target>

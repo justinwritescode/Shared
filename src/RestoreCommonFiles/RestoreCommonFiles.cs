@@ -131,6 +131,8 @@ public partial class RestoreCommonFiles : MSBTask
         {
             restoredFilesRecords.DestinationFiles[restoredFilesFileInfo.FullName].Status = RestoredFileStatus.Overwritten;
         }
+
+        RestoreDirectoryBuild(restoredFilesRecords);
         File.WriteAllText(Constants.RestoredFilesRecordsFileName(ProjectDirectory), JsonSerializer.Serialize(restoredFilesRecords, Constants.JsonSerializerOptions));
 
         AddCommonItemsToGitignore(restoredFilesRecords);

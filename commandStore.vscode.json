@@ -1,0 +1,30 @@
+{
+  "commands": [
+    {
+      "command": "set",
+      "target": "name=login",
+      "value": "admin"
+    },
+    {
+      "command": "set",
+      "target": "name=password",
+      "value": "admin"
+    },
+    {
+      "command": "click",
+      "target": "name=login"
+    },
+    {
+      "command": "waitForPageToLoad",
+      "target": "30000"
+    },
+    {
+      "command": "click",
+      "target": "link=Logout"
+    },
+    {
+      "command": "waitForPageToLoad",
+      "target": "30000"
+    }
+  ]
+}

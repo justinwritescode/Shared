@@ -1,7 +1,7 @@
 <Project>
   <Target Name="SetPackageDescription" BeforeTargets="GetPackageMetadata" DependsOnTargets="SetLastMinutePackageMetadata">
     <PropertyGroup>
-      <BuildMessage>This package was built on $(GitCommitDate) from the source code at $(GitRepositoryUrl.Replace('.git', ''))/tree/$(GitSha)</BuildMessage>
+      <BuildMessage>Built from commit $(GitCommit) on branch $(GitBranch) at $(GitCommitDate)</BuildMessage>
       <Description>$(Description)
       
 $(BuildMessage)</Description>

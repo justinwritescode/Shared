@@ -2,10 +2,10 @@
   <PropertyGroup>
     <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
   </PropertyGroup>
-  <Target Name="RestoreCommonFiles">
+  <Target Name="RestoreCommonFiles" DependsOnTargets="Restore">
     <RestoreCommonFiles
       ProjectPath="$(MSBuildProjectFullPath)"
-      Include="$(MSBuildThisFileDirectory)../common"
+      Include="$(MSBuildThisFileDirectory)../common/"
       Exclude="*.cs;*.csproj">
       <Output TaskParameter="RestoredFiles" ItemName="RestoredFile" />
       <Output TaskParameter="RestoredDirectories" ItemName="RestoredDirectory" />

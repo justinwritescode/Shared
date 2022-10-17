@@ -1,9 +1,9 @@
 <Project Sdk="MSBuild.SolutionSdk.SlnGen">
+  <Sdk Name="MSBuild.SolutionSdk" />
   <PropertyGroup>
     <EnableDefaultProjectItems>false</EnableDefaultProjectItems>
     <EnableCentralPackageVersions>false</EnableCentralPackageVersions> 
   </PropertyGroup>
-  <Sdk Name="MSBuild.SolutionSdk" />
   <ItemGroup>
     <Project Include="src/JustinWritesCode.Common.RestoreCommonFiles.csproj" />
     <Project Include="tests/JustinWritesCode.Common.RestoreCommonFiles.Tests.csproj" />
