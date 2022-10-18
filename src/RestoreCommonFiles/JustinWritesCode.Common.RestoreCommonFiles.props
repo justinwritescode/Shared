@@ -9,7 +9,7 @@
     <CommonFile Include="$(MSBuildThisFileDirectory)../../global.json" PackagePath="common/global.json" />
     <CommonFile Include="$(MSBuildThisFileDirectory)../../NuGet.config" PackagePath="common/NuGet.config" />
     <CommonFile Include="$(MSBuildThisFileDirectory)../../Versions/*.*" PackagePath="common/Versions/%(Filename)%(Extension)" />
-    <CommonFile Include="$(MSBuildThisFileDirectory)../../Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" />
+    <!-- <CommonFile Include="$(MSBuildThisFileDirectory)../../Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" /> -->
     <CommonFile Include="$(MSBuildThisFileDirectory)../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" />
     <CommonFile Include="$(MSBuildThisFileDirectory)../../assets/*.*" PackagePath="common/assets/%(Filename)%(Extension)" />
     <CommonFile Include="$(MSBuildThisFileDirectory)common/*.*" PackagePath="common/%(Filename)%(Extension)" />
