@@ -1,4 +1,4 @@
-<Project InitialTargets="RestoreCommonFiles">
+<Project>
   <PropertyGroup>
     <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
   </PropertyGroup>
@@ -17,7 +17,7 @@
       <HasDoneRestoreOnce>true</HasDoneRestoreOnce>
     </PropertyGroup> -->
   </Target>
-  <Target Name="Clean">
+  <Target Name="CleanCommonFiles">
     <CleanCommonFiles 
       ProjectPath="$(MSBuildProjectFullPath)" >
       <Output TaskParameter="CleansedDirectories" ItemName="CleansedDirectory" />

@@ -1,5 +1,4 @@
 #pragma warning disable
-#pragma warning disable
 namespace JustinWritesCode.Common;
 
 using System.Collections;

@@ -5,11 +5,13 @@
     "presentation": {
         "echo": true,
         "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
+        "focus": true,
+        "panel": "dedicated",
+        "showReuseMessage": false,
         "clear": false
     },
+    "runOptions": {"reevaluateOnRerun": true},
+    "echoCommand": true,
     "command": "dotnet",
     "type": "shell",
     "tasks": [
@@ -26,19 +28,16 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "Build (Local)",
+            "label": "Build",
             "args": [
                 "build",
                 "--configuration",
-                "Local",
+                "${input:Configuration}",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "/nologo",
-                "${file}"
+                "${input:Project}"
             ],
-            "options": {
-                "cwd": "${workspaceFolder}/src"
-            },
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -46,124 +45,17 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "Build (Debug)",
+            "label": "Restore Common Files",
             "command": "dotnet",
             "type": "shell",
             "args": [
                 "build",
                 "--configuration",
-                "Debug",
+                "${input:Configuration}",
+                "-t:RestoreCommonFiles",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
-                "${file}"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Build (Staging)",
-            "command": "dotnet",
-            "type": "shell",
-            "args": [
-                "build",
-                "--configuration",
-                "Staging",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "${file}"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Build (Release)",
-            "command": "dotnet",
-            "type": "shell",
-            "args": [
-                "build",
-                "--configuration",
-                "Release",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "${file}"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Restore Common Files (Local)",
-            "command": "dotnet",
-            "type": "shell",
-            "args": [
-                "build",
-                "--configuration",
-                "Local",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "$(workspaceFolder)/RestoreCommonFiles.restoreproj"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Restore Common Files (Debug)",
-            "command": "dotnet",
-            "type": "shell",
-            "args": [
-                "build",
-                "--configuration",
-                "Debug",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "$(workspaceFolder)/RestoreCommonFiles.restoreproj"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Restore Common Files (Staging)",
-            "command": "dotnet",
-            "type": "shell",
-            "args": [
-                "build",
-                "--configuration",
-                "Staging",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "$(workspaceFolder)/RestoreCommonFiles.restoreproj"
-            ],
-            "group": "build",
-            "presentation": {
-                "reveal": "silent"
-            },
-            "problemMatcher": "$msCompile"
-        },
-        {
-            "label": "Restore Common Files (Release)",
-            "command": "dotnet",
-            "type": "shell",
-            "args": [
-                "build",
-                "--configuration",
-                "Release",
-                "/property:GenerateFullPaths=true",
-                "/consoleloggerparameters:NoSummary",
-                "$(workspaceFolder)/RestoreCommonFiles.restoreproj"
+                "${workspaceFolder}/RestoreCommonFiles.restoreproj"
             ],
             "group": "build",
             "presentation": {
@@ -177,7 +69,7 @@
             "type": "shell",
             "args": [
                 "clean",
-                "--configuration",
+                "${input:Configuration}",
                 "local",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
@@ -214,6 +106,39 @@
             "options": {
                 "cwd": "${workspaceFolder}/.vscode"
             },
+        }
+    ],
+    "inputs": [
+        {
+            "id": "Configuration",
+            "description": "The build configuration",
+            "default": "Local",
+            "options": ["Local", "Debug", "Staging", "Release"],
+            "type": "pickString"
+        },
+        {
+            "id":"Project",
+            "type":"command",
+            "command": "extension.commandvariable.file.pickFile",
+            "default": "${file}",
+            "Description":"Select a project",
+            "args": {
+                "include":"**/*.*proj",
+                "display":"fileName",
+                "addAsk":true
+            }
+        },
+        {
+            "id": "Target",
+            "description": "The build target",
+            "default": "Build",
+            "type": "pickString",
+            "command": "msbuild",
+            "args": [
+                "${file}",
+                "/nologo",
+                "-targets"
+            ]
         }
     ]
 }

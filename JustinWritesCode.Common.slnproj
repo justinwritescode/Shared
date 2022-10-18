@@ -1,6 +1,6 @@
-<Project Sdk="MSBuild.SolutionSdk.SlnGen">
+<Project Sdk="Microsoft.Build.Traversal">
   <ItemGroup>
-    <ProjectReference Include="src/JustinWritesCode.Common.RestoreCommonFiles.csproj" />
+    <ProjectReference Include="src/RestoreCommonFiles/JustinWritesCode.Common.RestoreCommonFiles.csproj" />
     <ProjectReference Include="tests/JustinWritesCode.Common.RestoreCommonFiles.Tests.csproj" />
   </ItemGroup>
   <Import Project="./src/RestoreCommonFiles/JustinWritesCode.Common.RestoreCommonFiles.props" />

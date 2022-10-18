@@ -65,7 +65,7 @@ public partial class RestoreCommonFiles : MSBTask
             {
                 continue;
             }
-            var relativePath = file.FullName.Substring(_include.FullName.Length + 1);
+            var relativePath = file.FullName.Substring(_include.FullName.Length);
             var destination = Path.Combine(projectDirectory.FullName, relativePath);
             var destinationDirectory = Path.GetDirectoryName(destination);
             if (destinationDirectory is null)
@@ -132,7 +132,7 @@ public partial class RestoreCommonFiles : MSBTask
             restoredFilesRecords.DestinationFiles[restoredFilesFileInfo.FullName].Status = RestoredFileStatus.Overwritten;
         }
 
-        RestoreDirectoryBuild(restoredFilesRecords);
+        //RestoreDirectoryBuild(restoredFilesRecords);
         File.WriteAllText(Constants.RestoredFilesRecordsFileName(ProjectDirectory), JsonSerializer.Serialize(restoredFilesRecords, Constants.JsonSerializerOptions));
 
         AddCommonItemsToGitignore(restoredFilesRecords);
