@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageFile Include="@(CommonFile)" PackagePath="%(PackagePath)" />
+      <PackageFile Include="@(CommonFileGlob)" PackagePath="%(PackagePath)" RestorePath="%(RestorePath)" />
       <PackageFile Include="./JustinWritesCode.Common.RestoreCommonFiles.props" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.props" PackFolder="build" />
       <PackageFile Include="./JustinWritesCode.Common.RestoreCommonFiles.targets" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.targets" PackFolder="build" />
       <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />

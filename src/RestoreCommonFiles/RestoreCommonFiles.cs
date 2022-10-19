@@ -39,7 +39,7 @@ public partial class RestoreCommonFiles : MSBTask
             new RestoredFiles { ProjectDirectoryInfo = ProjectDirectoryInfo };
 
         var commonFiles = string.Join(", ", Include.Select(i => new FileInfo(i.ItemSpec)).ToList());
-        Log.LogMessage($"Restoring common files: {commonFiles} to {ProjectDirectory}...");
+        Console.WriteLine($"Restoring common files: {commonFiles} to {ProjectDirectory}...");
 
         if (IncludeRootPath is null || ProjectDirectory is null)
         {
