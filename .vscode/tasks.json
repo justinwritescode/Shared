@@ -52,7 +52,7 @@
                 "build",
                 "--configuration",
                 "${input:Configuration}",
-                "-t:CommonFilesRestorer",
+                "-t:RestoreCommonFiles",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
                 "${workspaceFolder}/*.sln"

@@ -1,0 +1,19 @@
+<Project>
+  <UsingTask TaskName="RestoreCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.RestoreCommonFiles.dll" />
+  <UsingTask TaskName="CleanCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.RestoreCommonFiles.dll" />
+  <ItemGroup>
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../.github/**/*.*" PackagePath="@(Identity->'common/.github/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../.gitignore" PackagePath="common/.gitignore" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../.vscode/tasks.json" PackagePath="common/.vscode/tasks.json" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../docs/*.*" PackagePath="@(Identity->'common/docs/%(Filename)%(Extension)')" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../global.json" PackagePath="common/global.json" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../NuGet.config" PackagePath="common/NuGet.config" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../Versions/*.*" PackagePath="@(Identity->'common/Versions/%(Filename)%(Extension)')" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../Packages/*.pkgs" PackagePath="@(Identity->'common/Packages/%(Filename)%(Extension)')" Restore="false" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" Restore="false" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../assets/*.*" PackagePath="@(Identity->'common/assets/%(Filename)%(Extension)')" Restore="false" />
+    <CommonFileGlob Include="$(MSBuildThisFileDirectory)common/*.*" PackagePath="@(Identity->'common/%(Filename)%(Extension)')" />
+    <!-- <CommonFile Include="$(MSBuildThisFileDirectory)../Directory.Build.*" PackagePath="common/Directory.Build%(Extension)" /> -->
+    <!-- <CommonFile Include="$(MSBuildThisFileDirectory)../Packages.props" PackagePath="common/Packages.props" /> -->
+  </ItemGroup>
+</Project>

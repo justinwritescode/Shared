@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.Build.Traversal">
   <ItemGroup>
-    <ProjectReference Include="src/CommonFilesRestorer/CommonFilesRestorer.csproj" />
-    <ProjectReference Include="tests/CommonFilesRestorer.Tests.csproj" />
+    <ProjectReference Include="src/RestoreCommonFiles/RestoreCommonFiles.csproj" />
+    <ProjectReference Include="tests/RestoreCommonFiles.Tests.csproj" />
   </ItemGroup>
-  <Import Project="./src/CommonFilesRestorer/JustinWritesCode.Common.CommonFilesRestorer.props" />
+  <Import Project="./src/RestoreCommonFiles/JustinWritesCode.Common.RestoreCommonFiles.props" />
   <ItemGroup>
     <SlnGenSolutionItem Include="@(CommonFile)" />
     <SlnGenSolutionItem Include="./Directory.Build/" />

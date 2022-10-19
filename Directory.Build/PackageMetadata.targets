@@ -28,6 +28,8 @@
     <PropertyGroup>
       <RelativeNamespace>$([System.IO.Path]::GetFileName($(GitRoot))).$(RelativePathFromGitRoot.Replace("\\", ".").Replace("/", ".").Replace("src.", ""))</RelativeNamespace>
       <PackageId Condition="!$(PackageId.StartsWith('JustinWritesCode'))">JustinWritesCode.$(RelativeNamespace)</PackageId>
+      <AssemblyFile>$(PackageId)</AssemblyFile>
+      <AssemblyName>$(PackageId)</AssemblyName>
     </PropertyGroup>
     <FixNamespace Namespace="$(RelativeNamespace)">
       <Output TaskParameter="FixedNamespace" PropertyName="FixedNamespace" />
