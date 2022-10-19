@@ -10,15 +10,6 @@
 
     <Import Project="JustinWritesCode.Common.RestoreCommonFiles.props" />
 
-    <ItemGroup Label="Global Usings">
-        <Using Include="Microsoft.Build" />
-        <Using Include="Microsoft.Build.Framework" />
-        <Using Include="Microsoft.Build.Execution" />
-        <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
-        <Using Include="System.Text.RegularExpressions" />
-        <Using Include="System.Text.Json" />
-    </ItemGroup>
-
     <ItemGroup>
       <!-- <PackageFile Include="@(CommonFileGlob)" PackagePath="%(PackagePath)" RestorePath="%(RestorePath)" /> -->
       <PackageFile Include="./JustinWritesCode.Common.RestoreCommonFiles.props" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.props" PackFolder="build" />
@@ -29,12 +20,5 @@
     <ItemGroup>
         <PackageTag Include="common" />
         <PackageTag Include="justinwritescode" />
-    </ItemGroup>
-
-    <ItemGroup>
-       <PackageReference Include="Microsoft.Build.Utilities.Core" />
-       <PackageReference Include="Microsoft.Build" />
-       <PackageReference Include="System.Text.Json" />
-       <PackageReference Include="System.ComponentModel.Annotations" />
     </ItemGroup>
 </Project>
