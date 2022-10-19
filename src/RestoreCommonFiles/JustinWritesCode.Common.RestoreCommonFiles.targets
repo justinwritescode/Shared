@@ -1,6 +1,7 @@
 <Project>
   <PropertyGroup>
     <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
+    <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
   </PropertyGroup>
   <Target Name="RestoreCommonFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="%(RestoreFile.Identity)"  

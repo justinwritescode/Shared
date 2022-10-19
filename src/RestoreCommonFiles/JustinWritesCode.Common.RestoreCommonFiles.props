@@ -1,7 +1,4 @@
 <Project>
- <PropertyGroup>
-  <PkgJustinWritesCode_Common_RestoreCommonFiles>/Users/justin/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local</PkgJustinWritesCode_Common_RestoreCommonFiles>
- </PropertyGroup>
   <ItemDefinitionGroup>
     <RestorablePackageFile PackagePath="/" RestoreFolder="/" IsRestorable="true" Pack="true" />
     <NonRestorablePackageFile PackagePath="/" RestoreFolder="/" IsRestorable="true" Pack="true" />
@@ -21,7 +18,7 @@
     <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Directory.Build.targets" PackagePath="common/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
     <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Packages.pkgs" PackagePath="common/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
 
-    <RestoreFile Include="@(RestorablePackageFile->'$(PkgJustinWritesCode_Common_RestoreCommonFiles)/%(PackagePath)')" 
+    <RestoreFile Include="@(RestorablePackageFile->'$(MSBuildThisFileDirectory)../%(PackagePath)')" 
                  RestorePath="%(RestorePath)" />
 
     <PackageFile Include="@(RestorablePackageFile)" />
