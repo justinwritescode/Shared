@@ -52,10 +52,10 @@
                 "build",
                 "--configuration",
                 "${input:Configuration}",
-                "-t:RestoreCommonFiles",
+                "-t:CommonFilesRestorer",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary",
-                "${workspaceFolder}/RestoreCommonFiles.restoreproj"
+                "${workspaceFolder}/*.sln"
             ],
             "group": "build",
             "presentation": {

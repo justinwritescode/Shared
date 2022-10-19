@@ -3,9 +3,17 @@
     <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
   </PropertyGroup>
   <Target Name="RestoreCommonFiles" DependsOnTargets="Restore">
+    <Exec Command="@(CommonFileGlob->'echo %(PackagePath)')" ConsoleToMsBuild="true">
+      <Output TaskParameter="ConsoleOutput" ItemName="CommonFilesPrintedOut" />
+    </Exec>
+    <Exec Command="echo @(CommonFileGlob->Count())" ConsoleToMsBuild="true">
+      <Output TaskParameter="ConsoleOutput" ItemName="CommonFilesPrintedOut" />
+    </Exec>
+    <Message Text="@(CommonFilesPrintedOut)" Importance="High" />
     <RestoreCommonFiles
       ProjectPath="$(MSBuildProjectFullPath)"
-      Include="$(MSBuildThisFileDirectory)../common/"
+      IncludeRootPath="$(MSBuildThisFileDirectory)../"
+      Include="$(CommonFilesPrintedOut)"
       Exclude="*.cs;*.csproj">
       <Output TaskParameter="RestoredFiles" ItemName="RestoredFile" />
       <Output TaskParameter="RestoredDirectories" ItemName="RestoredDirectory" />

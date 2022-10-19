@@ -9,7 +9,10 @@
         <Using Namespace="System.Text.RegularExpressions" />
         <Code Type="Fragment" Language="cs">
           <![CDATA[
+            // fix namespaces that might have hyphens and replace them with dots
             FixedNamespace = Regex.Replace(Namespace, @"\-(.)", m => m.Groups[1].Value.ToUpper());
+            // fix namespaces with repeating terms (e.g., replace "Microsoft.Microsoft" with "Microsoft")
+            FixedNamespace = Regex.Replace(FixedNamespace, "([a-zA-Z0-9_]+\\.){2,}", "$1");
           ]]>
         </Code>
       </Task>
@@ -23,7 +26,7 @@
       <Output TaskParameter="ConsoleOutput" PropertyName="RelativePathFromGitRoot" />
     </Exec>
     <PropertyGroup>
-      <RelativeNamespace>$(RelativePathFromGitRoot.Replace("\\", ".").Replace("/", ".").Replace("src.", ""))</RelativeNamespace>
+      <RelativeNamespace>$([System.IO.Path]::GetFileName($(GitRoot))).$(RelativePathFromGitRoot.Replace("\\", ".").Replace("/", ".").Replace("src.", ""))</RelativeNamespace>
       <PackageId Condition="!$(PackageId.StartsWith('JustinWritesCode'))">JustinWritesCode.$(RelativeNamespace)</PackageId>
     </PropertyGroup>
     <FixNamespace Namespace="$(RelativeNamespace)">

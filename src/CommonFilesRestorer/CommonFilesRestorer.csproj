@@ -9,9 +9,10 @@
         To restore the files, add a reference to this package to a project at the root of your repository and run `dotnet build YourProject.proj -t:RestoreCommonFiles`.</Description>
     </PropertyGroup>
 
-    <Import Project="JustinWritesCode.Common.RestoreCommonFiles.props" />
+    <Import Project="JustinWritesCode.Common.CommonFilesRestorer.props" />
 
     <ItemGroup Label="Global Usings">
+        <Using Include="Microsoft.Build" />
         <Using Include="Microsoft.Build.Framework" />
         <Using Include="Microsoft.Build.Execution" />
         <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
@@ -21,8 +22,8 @@
 
     <ItemGroup>
       <PackageFile Include="@(CommonFile)" PackagePath="%(PackagePath)" />
-      <PackageFile Include="./JustinWritesCode.Common.RestoreCommonFiles.props" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.props" PackFolder="build" />
-      <PackageFile Include="./JustinWritesCode.Common.RestoreCommonFiles.targets" PackagePath="build/JustinWritesCode.Common.RestoreCommonFiles.targets" PackFolder="build" />
+      <PackageFile Include="./JustinWritesCode.Common.CommonFilesRestorer.props" PackagePath="build/JustinWritesCode.Common.CommonFilesRestorer.props" PackFolder="build" />
+      <PackageFile Include="./JustinWritesCode.Common.CommonFilesRestorer.targets" PackagePath="build/JustinWritesCode.Common.CommonFilesRestorer.targets" PackFolder="build" />
       <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
     </ItemGroup>
 

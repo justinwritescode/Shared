@@ -4,6 +4,6 @@
     <PackageIcon Condition="Exists('Icon.jpg') And '$(PackageIcon)' == ''">Icon.jpg</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageFile Include="$(MSBuildProjectDirectory)$(PackageIcon)" PackagePath="%(Filename)%(Extension)" Condition="Exists('$(PackageIcon)')" />
+    <PackageFile Include="$(PackageIcon)" PackagePath="%(Filename)%(Extension)" Condition="Exists('$(PackageIcon)')" />
   </ItemGroup>
 </Project>

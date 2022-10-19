@@ -16,9 +16,11 @@ using global::JustinWritesCode.IO.Extensions;
 
 public partial class RestoreCommonFiles : MSBTask
 {
+    [Required]
+    public ITaskItem[] Include { get; set; }
     public string Exclude { get; set; } = string.Empty;
     [Required]
-    public string Include { get; set; } = string.Empty;
+    public string IncludeRootPath { get; set; } = string.Empty;
     public string? ProjectDirectory => Directory.GetParent(ProjectPath).FullName;
     [Required]
     public string? ProjectPath { get; set; }
@@ -36,18 +38,21 @@ public partial class RestoreCommonFiles : MSBTask
             Common.RestoredFiles.LoadFrom(Constants.RestoredFilesRecordsFileName(ProjectDirectory)) :
             new RestoredFiles { ProjectDirectoryInfo = ProjectDirectoryInfo };
 
-        if (Include is null || ProjectDirectory is null)
+        var commonFiles = string.Join(", ", Include.Select(i => new FileInfo(i.ItemSpec)).ToList());
+        Log.LogMessage($"Restoring common files: {commonFiles} to {ProjectDirectory}...");
+
+        if (IncludeRootPath is null || ProjectDirectory is null)
         {
             Log.LogError("Include and OutputDirectory must be set.");
             return false;
         }
 
-        var _include = new DirectoryInfo(Include);
+        var _include = new DirectoryInfo(IncludeRootPath);
         var projectDirectory = new DirectoryInfo(ProjectDirectory);
 
         if (!_include.Exists)
         {
-            Log.LogError($"Include '{Include}' does not exist.");
+            Log.LogError($"Include '{IncludeRootPath}' does not exist.");
             return false;
         }
 
@@ -57,14 +62,10 @@ public partial class RestoreCommonFiles : MSBTask
             return false;
         }
 
-        var files = _include.GetFiles("*", SearchOption.AllDirectories);
         var excludedFiles = !string.IsNullOrEmpty(Exclude) ? _include.GetFiles(Exclude, SearchOption.AllDirectories) : new FileInfo[0];
+        var files = Include.Select(i => new FileInfo(i.ItemSpec)).Except(excludedFiles).ToArray();
         foreach (var file in files)
         {
-            if (excludedFiles.Any(f => f.FullName == file.FullName))
-            {
-                continue;
-            }
             var relativePath = file.FullName.Substring(_include.FullName.Length);
             var destination = Path.Combine(projectDirectory.FullName, relativePath);
             var destinationDirectory = Path.GetDirectoryName(destination);
