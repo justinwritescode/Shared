@@ -2,7 +2,7 @@
     <PropertyGroup>
       <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
       <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-      <TargetFramework>netstandard1.0</TargetFramework>
+      <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
      <PackageReference Include="JustinWritesCode.Common.RestoreCommonFiles" Version="0.0.1-Local" />

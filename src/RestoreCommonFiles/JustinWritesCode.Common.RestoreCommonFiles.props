@@ -1,19 +1,30 @@
 <Project>
-  <UsingTask TaskName="RestoreCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.RestoreCommonFiles.dll" />
-  <UsingTask TaskName="CleanCommonFiles" AssemblyFile="../lib/JustinWritesCode.Common.RestoreCommonFiles.dll" />
+ <PropertyGroup>
+  <PkgJustinWritesCode_Common_RestoreCommonFiles>/Users/justin/.nuget/packages/justinwritescode.common.restorecommonfiles/0.0.1-local</PkgJustinWritesCode_Common_RestoreCommonFiles>
+ </PropertyGroup>
+  <ItemDefinitionGroup>
+    <RestorablePackageFile PackagePath="/" RestoreFolder="/" IsRestorable="true" Pack="true" />
+    <NonRestorablePackageFile PackagePath="/" RestoreFolder="/" IsRestorable="true" Pack="true" />
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../.github/**/*.*" PackagePath="@(Identity->'$(MSBuildProjectDirectory)/.github/%(RecursiveDir)%(Filename)%(Extension)')" RestorePath="@(Identity->'$(MSBuildProjectDirectory).github/%(RecursiveDir)%(Filename)%(Extension)')" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../.gitignore" PackagePath="common/.gitignore" RestorePath="$(MSBuildProjectDirectory).gitignore" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../.vscode/tasks.json" PackagePath="common/.vscode/tasks.json" RestorePath="$(MSBuildProjectDirectory).vscode/tasks.json" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../docs/*.*" PackagePath="@(Identity->'common/docs/%(Filename)%(Extension)')" RestorePath="$(MSBuildProjectDirectory)docs/%(Filename)%(Extension)" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../global.json" PackagePath="common/global.json" RestorePath="$(MSBuildProjectDirectory)global.json"  />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../NuGet.config" PackagePath="common/NuGet.config" RestorePath="$(MSBuildProjectDirectory)NuGet.config" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../Versions/*.*" PackagePath="@(Identity->'common/Versions/%(Filename)%(Extension)')" RestorePath="@(Identity->'$(MSBuildProjectDirectory)common/Versions/%(Filename)%(Extension)')" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../Packages/*.pkgs" PackagePath="@(Identity->'common/Packages/%(Filename)%(Extension)')" RestorePath="@(Identity->'$(MSBuildProjectDirectory)/Packages/%(Filename)%(Extension)')" Restore="false" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" RestorePath="@(Identity->'$(MSBuildProjectDirectory)Directory.Build/%(Filename)%(Extension)')" Restore="false" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)../../../assets/*.*" PackagePath="@(Identity->'common/assets/%(Filename)%(Extension)')" RestorePath="@(Identity->'$(MSBuildProjectDirectory)/assets/%(Filename)%(Extension)'" Restore="false" />
-    <CommonFileGlob Include="$(MSBuildThisFileDirectory)common/*.*" PackagePath="@(Identity->'common/%(Filename)%(Extension)')" RestorePath="@(Identity->'$(MSBuildProjectDirectory)/%(Filename)%(Extension)')" />
-    <!-- <CommonFile Include="$(MSBuildThisFileDirectory)../Directory.Build.*" PackagePath="common/Directory.Build%(Extension)" /> -->
-    <!-- <CommonFile Include="$(MSBuildThisFileDirectory)../Packages.props" PackagePath="common/Packages.props" /> -->
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.github/**/*.*" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" RestoreFolder=".github/%(RecursiveDir)" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.gitignore" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.vscode/tasks.json" PackagePath="common/.vscode/%(Filename)%(Extension)" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../docs/*.*" PackagePath="common/docs/%(Filename)%(Extension)" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../global.json" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../NuGet.config" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Versions/*.*" PackagePath="common/Versions/%(Filename)%(Extension)" RestoreFolder="Versions/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+    <NonRestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <NonRestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../assets/*.*" PackagePath="common/assets/%(Filename)%(Extension)" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Directory.Build.props" PackagePath="common/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Directory.Build.targets" PackagePath="common/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Packages.pkgs" PackagePath="common/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+
+    <RestoreFile Include="@(RestorablePackageFile->'$(PkgJustinWritesCode_Common_RestoreCommonFiles)/%(PackagePath)')" 
+                 RestorePath="%(RestorePath)" />
+
+    <PackageFile Include="@(RestorablePackageFile)" />
+    <PackageFile Include="@(NonRestorablePackageFile)" />
   </ItemGroup>
 </Project>
