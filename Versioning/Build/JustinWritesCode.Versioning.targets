@@ -1,9 +1,0 @@
-<Project>
- <UsingTask TaskName="SaveVersionNumberCentrally" AssemblyFile="$(MSBuildThisFileDirectory)../lib/JustinWritesCode.Versioning.dll" />
- <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion">
-  <SaveVersionNumberCentrally
-      PackageName="$(MSBuildProjectName)"
-      Version="$(PackageVersion)" 
-      Configuration="$(Configuration)" />
- </Target>
-</Project>

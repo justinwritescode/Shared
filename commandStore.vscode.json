@@ -1,0 +1,9 @@
+{
+  "commands": [
+    {
+      "id": "1edc912d-f48a-4862-85d2-d65c60e971bd",
+      "name": "Hello world",
+      "commandLine": "echo \"Hello world\\!\""
+    }
+  ]
+}

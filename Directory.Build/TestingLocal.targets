@@ -12,8 +12,13 @@
     </PropertyGroup>
    </Target>
 
-    <Target Name="PushNuGetPackageToLocal" AfterTargets="Pack" Condition="'$(Configuration)' == 'Local'">
+    <Target Name="PushNuGetPackageToLocal" AfterTargets="Pack" Condition="'$(Configuration)' == 'Local' And '$(GeneratePackageOnBuild)' == 'true'">
         <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Local --non-interactive" ContinueOnError="true" />
-        <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local" />
+        <Exec Command="dotnet nuget push $(PackageTargetPath) -s Local" Condition="Exists('$(PackageTargetPath)')" />
     </Target>
+
+   <ItemGroup>
+      <_JustinWritesCodePackageReference Include="@(PackageReference)" Condition="$([System.String]::Copy('%(Identity)').StartsWith('JustinWritesCode'))" />
+      <PackageReference Update="@(_JustinWritesCodePackageReference)" VersionOverride="0.0.1-Local" />
+   </ItemGroup>
 </Project>

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <!-- <PackageId>JustinWritesCode.Shared.RestoreSharedFiles</PackageId> -->
+        <Title>JustinWritesCode Shared Files</Title>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Description>This repository contains files that are common to all of my projects. 
+        To restore the files, add a reference to this package to a project at the root of your repository and run `dotnet build YourProject.proj -t:RestoreSharedFiles`.</Description>
+        <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
+    </PropertyGroup>
+
+    <Import Project="JustinWritesCode.Shared.RestoreSharedFiles.props" />
+
+    <ItemGroup>
+      <!-- <PackageFile Include="@(CommonFileGlob)" PackagePath="%(PackagePath)" RestorePath="%(RestorePath)" /> -->
+      <PackageFile Include="./JustinWritesCode.Shared.RestoreSharedFiles.props" PackagePath="build/JustinWritesCode.Shared.RestoreSharedFiles.props" PackFolder="build" />
+      <PackageFile Include="./JustinWritesCode.Shared.RestoreSharedFiles.targets" PackagePath="build/JustinWritesCode.Shared.RestoreSharedFiles.targets" PackFolder="build" />
+      <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageTag Include="common" />
+        <PackageTag Include="justinwritescode" />
+    </ItemGroup>
+</Project>

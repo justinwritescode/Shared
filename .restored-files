@@ -1,0 +1,439 @@
+{
+  "sourceFileInfo": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.restored-files",
+  "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+  "files": [
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/NuGet.config",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/uGet.config",
+      "fileHash": "831b91678af83c9b6994c1552a3c696244201f5e",
+      "timestamp": "2022-10-17T18:39:47.386261Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.gitignore",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/gitignore",
+      "fileHash": "098d51c37671cfa2df096e8b99b0d15c5e2415a7",
+      "timestamp": "2022-10-17T18:39:47.386554Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/global.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/lobal.json",
+      "fileHash": "a4ea4362f59345fe63d3d4b725da98619f001cb1",
+      "timestamp": "2022-10-17T18:39:47.386734Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Local.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ersions/Versions.Local.json",
+      "fileHash": "7540eaaf0d4a717b644a6a5cb9fd96ed442829bf",
+      "timestamp": "2022-10-17T18:39:47.386908Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Debug.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ersions/Versions.Debug.props",
+      "fileHash": "0a395a6e24981aac69154e22e367c21e0a55c061",
+      "timestamp": "2022-10-17T18:39:47.387089Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Local.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ersions/Versions.Local.props",
+      "fileHash": "77d931fa8e2cc980135e0c243408b8199322b989",
+      "timestamp": "2022-10-17T18:39:47.38729Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Debug.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ersions/Versions.Debug.json",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa",
+      "timestamp": "2022-10-17T18:39:47.388703Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/CODE_OF_CONDUCT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ocs/CODE_OF_CONDUCT.md",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49",
+      "timestamp": "2022-10-17T18:39:47.388897Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/LICENSE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ocs/LICENSE.md",
+      "fileHash": "47e4d2d1a736382680c7a66c1ea3c8444ec2a683",
+      "timestamp": "2022-10-17T18:39:47.389655Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/CODEOWNERS",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ocs/CODEOWNERS",
+      "fileHash": "c883b50012ae86d0d52dfefb84c4446c140d94ea",
+      "timestamp": "2022-10-17T18:39:47.389882Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/SUPPORT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ocs/SUPPORT.md",
+      "fileHash": "adb516463629d04d2a22e1eccafc552050569b9b",
+      "timestamp": "2022-10-17T18:39:47.391294Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/index.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ocs/index.md",
+      "fileHash": "a7354f8baa4315356a8634fce108ce54680b3f10",
+      "timestamp": "2022-10-17T18:39:47.391752Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/CONTRIBUTING.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/ocs/CONTRIBUTING.md",
+      "fileHash": "aaad5e1720ceee95aaa74d03b849ec44a5dc31a0",
+      "timestamp": "2022-10-17T18:39:47.393055Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/funding.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/funding.yml",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395",
+      "timestamp": "2022-10-17T18:39:47.393243Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/PULL_REQUEST_TEMPLATE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/PULL_REQUEST_TEMPLATE.md",
+      "fileHash": "f62f062ded733c9471d7c32fe351708cd19556b5",
+      "timestamp": "2022-10-17T18:39:47.395893Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/pull_request_template.yaml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/pull_request_template.yaml",
+      "fileHash": "1fa4c20bdbf538304b9fdac0eef2e15f40104db4",
+      "timestamp": "2022-10-17T18:39:47.396186Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/SECURITY.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/SECURITY.md",
+      "fileHash": "58914098e784f0aa2bbc7de42cc745217491fa09",
+      "timestamp": "2022-10-17T18:39:47.396431Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.vscode/tasks.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/vscode/tasks.json",
+      "fileHash": "3168af0f2522d9316ea83d58fbf7d044e07df728",
+      "timestamp": "2022-10-17T18:39:47.396708Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/workflows/docs-ci.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/workflows/docs-ci.yml",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1",
+      "timestamp": "2022-10-17T18:39:47.396922Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/ISSUE_TEMPLATE/feature_request.yml",
+      "fileHash": "cc787ad93c440413866d8538bd03b0fbc807668a",
+      "timestamp": "2022-10-17T18:39:47.397122Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/ISSUE_TEMPLATE/bug_report.yml",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426",
+      "timestamp": "2022-10-17T18:39:47.397297Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/security_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/ISSUE_TEMPLATE/security_report.yml",
+      "fileHash": "11128a7c79719786a15d1d6d70232924f33350aa",
+      "timestamp": "2022-10-17T18:39:47.397477Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/config.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/github/ISSUE_TEMPLATE/config.yml",
+      "fileHash": "39fdca8a77241a421ddc006f868c7943dd7d3aa2",
+      "timestamp": "2022-10-17T18:39:47.397654Z"
+    },
+    {
+      "status": "Overwritten",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.restored-files",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.restored-files",
+      "fileHash": "cf8e8cf6691ef14d78c8c140041a369a74de84e8",
+      "timestamp": "2022-10-17T18:39:47.397734Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/NuGet.config",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/NuGet.config",
+      "fileHash": "831b91678af83c9b6994c1552a3c696244201f5e",
+      "timestamp": "2022-10-18T05:23:46.388798Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.gitignore",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.gitignore",
+      "fileHash": "098d51c37671cfa2df096e8b99b0d15c5e2415a7",
+      "timestamp": "2022-10-18T05:23:46.389784Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/global.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/global.json",
+      "fileHash": "a4ea4362f59345fe63d3d4b725da98619f001cb1",
+      "timestamp": "2022-10-18T05:23:46.390077Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Local.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/Versions/Versions.Local.json",
+      "fileHash": "0f390280549fe220baa22bf56f6549f1c271b318",
+      "timestamp": "2022-10-18T05:23:46.390966Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Debug.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/Versions/Versions.Debug.props",
+      "fileHash": "0a395a6e24981aac69154e22e367c21e0a55c061",
+      "timestamp": "2022-10-18T05:23:46.391545Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Local.props",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/Versions/Versions.Local.props",
+      "fileHash": "75f898191848806ec96dc56889589996275821af",
+      "timestamp": "2022-10-18T05:23:46.393379Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/Versions/Versions.Debug.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/Versions/Versions.Debug.json",
+      "fileHash": "71aebfaa84cc68eee31b5d6e15fbc151d0007daa",
+      "timestamp": "2022-10-18T05:23:46.394055Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/CODE_OF_CONDUCT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/docs/CODE_OF_CONDUCT.md",
+      "fileHash": "0e3cb9f03ed2a4ce837779ff50fcb334cab16e49",
+      "timestamp": "2022-10-18T05:23:46.394408Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/LICENSE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/docs/LICENSE.md",
+      "fileHash": "47e4d2d1a736382680c7a66c1ea3c8444ec2a683",
+      "timestamp": "2022-10-18T05:23:46.395183Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/CODEOWNERS",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/docs/CODEOWNERS",
+      "fileHash": "c883b50012ae86d0d52dfefb84c4446c140d94ea",
+      "timestamp": "2022-10-18T05:23:46.395772Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/SUPPORT.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/docs/SUPPORT.md",
+      "fileHash": "adb516463629d04d2a22e1eccafc552050569b9b",
+      "timestamp": "2022-10-18T05:23:46.396083Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/index.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/docs/index.md",
+      "fileHash": "a7354f8baa4315356a8634fce108ce54680b3f10",
+      "timestamp": "2022-10-18T05:23:46.396496Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/docs/CONTRIBUTING.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/docs/CONTRIBUTING.md",
+      "fileHash": "aaad5e1720ceee95aaa74d03b849ec44a5dc31a0",
+      "timestamp": "2022-10-18T05:23:46.396821Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/funding.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/funding.yml",
+      "fileHash": "7bc2d31ec1c7cfde0a670f19c0822c0f8a7dd395",
+      "timestamp": "2022-10-18T05:23:46.397332Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/PULL_REQUEST_TEMPLATE.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/PULL_REQUEST_TEMPLATE.md",
+      "fileHash": "f62f062ded733c9471d7c32fe351708cd19556b5",
+      "timestamp": "2022-10-18T05:23:46.39794Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/pull_request_template.yaml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/pull_request_template.yaml",
+      "fileHash": "1fa4c20bdbf538304b9fdac0eef2e15f40104db4",
+      "timestamp": "2022-10-18T05:23:46.398408Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/SECURITY.md",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/SECURITY.md",
+      "fileHash": "58914098e784f0aa2bbc7de42cc745217491fa09",
+      "timestamp": "2022-10-18T05:23:46.398924Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.vscode/tasks.json",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.vscode/tasks.json",
+      "fileHash": "e62981c777c1803099d7d40570f99d830fdc9173",
+      "timestamp": "2022-10-18T05:23:46.39959Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/workflows/docs-ci.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/workflows/docs-ci.yml",
+      "fileHash": "d3fff150dd90a6163a2db881b7555d0671b269b1",
+      "timestamp": "2022-10-18T05:23:46.400401Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/ISSUE_TEMPLATE/feature_request.yml",
+      "fileHash": "cc787ad93c440413866d8538bd03b0fbc807668a",
+      "timestamp": "2022-10-18T05:23:46.400861Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/ISSUE_TEMPLATE/bug_report.yml",
+      "fileHash": "c002f561dbb1dc590df568632bef04dedd2c8426",
+      "timestamp": "2022-10-18T05:23:46.401329Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/security_report.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/ISSUE_TEMPLATE/security_report.yml",
+      "fileHash": "11128a7c79719786a15d1d6d70232924f33350aa",
+      "timestamp": "2022-10-18T05:23:46.401769Z"
+    },
+    {
+      "status": "None",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/.github/ISSUE_TEMPLATE/config.yml",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.github/ISSUE_TEMPLATE/config.yml",
+      "fileHash": "39fdca8a77241a421ddc006f868c7943dd7d3aa2",
+      "timestamp": "2022-10-18T05:23:46.402225Z"
+    },
+    {
+      "status": "RestoredNew",
+      "projectDirectoryInfo": "dir:///Users/david/GitHub/justinwritescode/RestoreShared",
+      "sourceRoot": "dir:///Users/david/.nuget/packages/justinwritescode.RestoreShared.RestoreSharedfiles/0.0.1-local/RestoreShared/",
+      "source": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.restored-files",
+      "destination": "file:///Users/david/GitHub/justinwritescode/RestoreShared/.restored-files",
+      "fileHash": "244a5ceb6191f02d752ceb344f96cdf88f412bc7",
+      "timestamp": "2022-10-18T05:23:46.402373Z"
+    }
+  ],
+  "directories": []
+}
