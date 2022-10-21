@@ -4,7 +4,7 @@
     <NonRestorablePackageFile PackagePath="/" RestoreFolder="/" IsRestorable="true" Pack="true" />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.github/**/*.*" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" RestoreFolder=".github/%(RecursiveDir)" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+    <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.github/**/*.*" Exclde=".DS_Store" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" RestoreFolder=".github/%(RecursiveDir)" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.gitignore" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../.vscode/tasks.json" PackagePath="common/.vscode/%(Filename)%(Extension)" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../docs/*.*" PackagePath="common/docs/%(Filename)%(Extension)" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />

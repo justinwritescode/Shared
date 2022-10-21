@@ -1,0 +1,3 @@
+<Project>
+  <Import Project="$(PkgJustinWritesCode_Shared_RestoreSharedFiles)/common/root/Directory.Build/*.props" />
+</Project>

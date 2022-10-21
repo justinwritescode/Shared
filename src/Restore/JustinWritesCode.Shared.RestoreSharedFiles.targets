@@ -3,7 +3,7 @@
     <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
     <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
   </PropertyGroup>
-  <Target Name="RestoreCommonFiles" DependsOnTargets="Restore">
+  <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="%(RestoreFile.Identity)"  
           DestinationFiles="%(RestoreFile.RestorePath)" />
     <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />

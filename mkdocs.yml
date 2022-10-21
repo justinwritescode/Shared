@@ -1,9 +1,9 @@
-site_name: JustinWritesCode Common Documentation
+site_name: JustinWritesCode Shared Documentation
 site_description: JustinWritesCode Documentation
 site_url: https://justinwritescode.com
 site_author: "Justin Chase"
-repo_url: https://github.com/justinwritescode/common
-repo_name: justinwritescode/common
+repo_url: https://github.com/justinwritescode/Shared
+repo_name: justinwritescode/Shared
 edit_uri: "tree/main/docs"
 docs_dir: docs
 nav:

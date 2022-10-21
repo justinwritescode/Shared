@@ -1,4 +1,4 @@
-# JustinWritesCode Common Files
+# JustinWritesCode Shared Files
 
 This repository contains files that are common to all of my projects. To restore the files, run the following command:
 
