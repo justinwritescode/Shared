@@ -9,14 +9,15 @@
         <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
     </PropertyGroup>
 
-    <Import Project="JustinWritesCode.Shared.RestoreSharedFiles.props" />
+    <Import Project="./SharedFiles.props" />
 
-    <ItemGroup>
-      <!-- <PackageFile Include="@(CommonFileGlob)" PackagePath="%(PackagePath)" RestorePath="%(RestorePath)" /> -->
-      <PackageFile Include="./JustinWritesCode.Shared.RestoreSharedFiles.props" PackagePath="build/JustinWritesCode.Shared.RestoreSharedFiles.props" PackFolder="build" />
-      <PackageFile Include="./JustinWritesCode.Shared.RestoreSharedFiles.targets" PackagePath="build/JustinWritesCode.Shared.RestoreSharedFiles.targets" PackFolder="build" />
-      <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
-    </ItemGroup>
+    <Target Name="AddPackageContents" BeforeTargets="GetPackageContents">
+        <ItemGroup>
+        <PackageFile Include="./SharedFiles.props" PackagePath="build/$(PackageId).props" PackFolder="build" />
+        <PackageFile Include="./SharedFiles.targets" PackagePath="build/$(PackageId).targets" PackFolder="build" />
+        <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
+        </ItemGroup>
+    </Target>
 
     <ItemGroup>
         <PackageTag Include="common" />

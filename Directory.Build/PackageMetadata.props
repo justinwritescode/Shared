@@ -5,8 +5,8 @@
     <Description><!-- TODO: Add this before you release the code! --></Description>
     <PackageTags><!-- TODO: Add these before you release the code! --></PackageTags>
     <Summary><!-- TODO: Add this before you release the code! --></Summary>
-    <RootNamespace Condition="'$(RootNamespace)' == ''">JustinWritesCode.$(MSBuildProjectName)</RootNamespace>
-    <PackageId Condition="'$(PackageId)' == ''">$(MSBuildProjectName)</PackageId>
+    <!-- <RootNamespace Condition="'$(RootNamespace)' == ''">JustinWritesCode.$(MSBuildProjectName)</RootNamespace> -->
+    <!-- <PackageId Condition="'$(PackageId)' == ''">$(MSBuildProjectName)</PackageId> -->
     <Company Condition="'$(Company)' == ''">JustinWritesCode</Company>
     <Product Condition="'$(Product)' == ''">JustinWritesCode</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -22,6 +22,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseJustinWritesCodeNamespace Condition="'$(UseJustinWritesCodeNamespace)' == ''">true</UseJustinWritesCodeNamespace>
   </PropertyGroup>
   <PropertyGroup>
     <GetPackageMetadataDependsOn>

@@ -1,5 +1,5 @@
 <Project>
-   <Target Name="GetPackageVersion" BeforeTargets="GetPackageMetadata" AfterTargets="MinVer" Returns="$(PackageVersion)">
+   <Target Name="GetPackageVersion" BeforeTargets="GetPackageMetadata" AfterTargets="MinVer" Returns="$(PackageVersion)" Condition="'$(Configuration)' == 'Local'">
     <ItemGroup>
       <PackageVersion Update="$(PackageId)" Version="0.0.1-Local" />
     </ItemGroup>
