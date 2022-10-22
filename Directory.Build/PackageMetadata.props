@@ -11,7 +11,6 @@
     <Product Condition="'$(Product)' == ''">JustinWritesCode</Product>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageOutputPath>artifacts</PackageOutputPath>
     <LangVersion>preview</LangVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <UserSecretsId>f46585c5-564a-6584-1234-eba29ed0cfc7</UserSecretsId>

@@ -3,10 +3,10 @@
     <_GitRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), ".git/HEAD"))</_GitRoot>
     <_RelativePath>$([MSBuild]::MakeRelative($(_GitRoot), $(MSBuildProjectDirectory)))</_RelativePath>
 
-    <_RelativeNamespace>$([System.IO.Path]::GetFileName($(_GitRoot))).$(_RelativePath.Replace("\", ".").Replace("/", ".").Replace("src.", "").Replace("tests.", "").Replace($(MSBuildProjectExtension), "")).$(MSBuildProjectName)</_RelativeNamespace>
+    <_RelativeNamespace>$([System.IO.Path]::GetFileName($(_GitRoot))).$(_RelativePath.Replace("\", ".").Replace("/", ".").Replace("src.", "").Replace("tests.", "").Replace($(MSBuildProjectExtension), ""))</_RelativeNamespace>
 
     <!-- Remove duplicates, e.g., Microsoft.Microsoft becomes Microsoft. -->
-    <_FixedRelativeNamespace>$([System.Text.RegularExpressions.Regex]::Replace($(_RelativeNamespace), "(\w+)\.\1\.", "$1."))</_FixedRelativeNamespace>
+    <_FixedRelativeNamespace>$([System.Text.RegularExpressions.Regex]::Replace($(_RelativeNamespace), "\.(\w+)\.\1", "$1"))</_FixedRelativeNamespace>
     <_FixedRelativeNamespace>$([System.Text.RegularExpressions.Regex]::Replace($(_FixedRelativeNamespace), "^\.+", ""))</_FixedRelativeNamespace>
     <_FixedRelativeNamespace>$([System.Text.RegularExpressions.Regex]::Replace($(_FixedRelativeNamespace), "\.+", "."))</_FixedRelativeNamespace>
     <RootNamespace Condition="'$(UseJustinWritesCodeNamespace)' != 'false' And !$(RootNamespace.StartsWith('JustinWritesCode'))">JustinWritesCode.$(_FixedRelativeNamespace)</RootNamespace>

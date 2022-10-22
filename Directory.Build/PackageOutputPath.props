@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <_GitRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), ".git/HEAD"))</_GitRoot>
+    <PackageOutputPath>$(_GitRoot)/packages</PackageOutputPath>  
+  </PropertyGroup>
+</Project>

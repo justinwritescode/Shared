@@ -1,8 +1,10 @@
 <Project Sdk="Microsoft.Build.Traversal">
+  <PropertyGroup>
+    <IncludeInSolutionFile>false</IncludeInSolutionFile>
+    <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="./**/*.*proj" />
-  </ItemGroup>
-  <ItemGroup>
-   <PackageReference Include="JustinWritesCode.Shared.SharedFiles" VersionOverride="0.0.1-Local" />
+    <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.7" />
   </ItemGroup>
 </Project>

@@ -36,4 +36,3 @@ jobs:
           github_token: ${{secrets.GIT_TOKEN}}
           branch: ${{github.ref_name}}
           folder_name: ${{needs.calculate-folder-name.outputs.folder_name}}
-  
