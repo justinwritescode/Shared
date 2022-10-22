@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <PackageFile Include="../../../.github/**/*.*" Exclde=".DS_Store" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" RestoreFolder=".github/%(RecursiveDir)" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+    <PackageFile Include="../../../.github/**/*.*" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" RestoreFolder=".github/%(RecursiveDir)" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
     <PackageFile Include="../../../.gitignore" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
     <PackageFile Include="../../../.vscode/tasks.json" PackagePath="common/.vscode/%(Filename)%(Extension)" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
     <PackageFile Include="../../../docs/*.*" PackagePath="common/docs/%(Filename)%(Extension)" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
@@ -13,5 +13,18 @@
     <PackageFile Include="../../../Packages/Versions.props" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <PackageFile Include="../../../Packages/Versions.props" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <PackageFile Include="../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/*.*" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/assets/*.*" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/Directory.Build/*.*" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/Packages/*.pkgs" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../common/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/.github/**/*.*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/.vscode/*.*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/docs/*.*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 </Project>
