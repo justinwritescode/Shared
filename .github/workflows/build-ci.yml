@@ -22,7 +22,9 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
+    - name: Restore Common Files
+      run: dotnet build *.slnproj -t:RestoreCentralFiles
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build *.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal
