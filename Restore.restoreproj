@@ -5,6 +5,6 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.6" />
+    <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.7" />
   </ItemGroup>
 </Project>
