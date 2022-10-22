@@ -1,0 +1,7 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.4" Condition="'$(PackageId)' != 'JustinWritesCode.Shared.SharedFiles'" />
+  </ItemGroup>
+  <Import Project="$(MSBuildThisFileDirectory)Packages/Versions.props" />
+  <Import Project="$(MSBuildThisFileDirectory)Packages/*.pkgs" />
+</Project>

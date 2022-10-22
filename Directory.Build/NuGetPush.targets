@@ -1,0 +1,11 @@
+<Project>
+   <Target Name="PushAzure" DependsOnTargets="Pack;GetPackageMetadata;MinVer" Condition="'$(GeneratePackageOnBuild)' == 'true'">
+        <Exec Command="dotnet nuget delete $(PackageId) $(PackageVersion) -s Azure --non-interactive -k 'az'" ContinueOnError="true" />
+        <Exec Command="dotnet nuget push $(PackageTargetPath) -s Azure -k 'az' --skip-duplicate" Condition="Exists('$(PackageTargetPath)')" />
+    </Target>
+
+   <Target Name="PushGitHub" DependsOnTargets="Pack;GetPackageMetadata;MinVer" Condition="'$(GeneratePackageOnBuild)' == 'true'">
+        <Exec Command="gh api %2d%2dmethod DELETE -H %22Accept: application/vnd.github+json%22 /user/packages/nuget/$(PackageId)/versions/$(PackageVersion)"  ContinueOnError="true" />
+        <Exec Command="dotnet nuget push $(PackageTargetPath) -s GitHub" Condition="Exists('$(PackageTargetPath)')" />
+    </Target>
+</Project>
