@@ -1,4 +1,0 @@
-<Project>
-  <Import Project="./Packages/Versions.props" />
-  <Import Project="./Packages/*.pkgs" />
-</Project>
