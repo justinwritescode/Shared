@@ -3,5 +3,6 @@
     <ProjectReference Include="./**/*.*proj" />
   </ItemGroup>
   <ItemGroup>
+   <PackageReference Include="JustinWritesCode.Shared.SharedFiles" VersionOverride="0.0.1-Local" />
   </ItemGroup>
 </Project>

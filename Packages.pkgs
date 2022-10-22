@@ -1,0 +1,4 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)Packages/Versions.props" />
+  <Import Project="$(MSBuildThisFileDirectory)Packages/*.pkgs" />
+</Project>
