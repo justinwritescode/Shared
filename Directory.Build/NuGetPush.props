@@ -1,9 +1,0 @@
-<Project>
-  <ItemDefinitionGroup>
-    <NuGetSource Value="Value" PushOnBuild="false" ApiKey="" /> 
-    <NuGetPushJob PackagePath="" PackageId="" Version="" ApiKey="" DeleteCommand="" PushCommand="" />
-  </ItemDefinitionGroup>
-  <PropertyGroup>
-    <NuGetConfigFile>$(MSBuildThisFileDirectory)../NuGet.config</NuGetConfigFile>  
-  </PropertyGroup>
-</Project>

@@ -1,7 +1,0 @@
-<Project>
-  <ItemGroup>
-     <PackageReference Update="AnyOf.SourceGenerator" Version="0.3.0" />
-     <PackageReference Update="AnyOf" Version="0.3.0" />
-     <PackageReference Update="AnyOf.System.Text.Json" Version="0.3.0" />
-   </ItemGroup>
-</Project>
