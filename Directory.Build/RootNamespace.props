@@ -17,6 +17,7 @@
     <PackageId Condition="'$(UseJustinWritesCodeNamespace)' == 'false'">@(RelativeNamespacePiecesNoDups->'%(Identity)', '.')</PackageId> -->
   </PropertyGroup>
   <Target Name="DisplayRootNamespace">
+    <Message Importance="High" Text="_GitRoot: $(_GitRoot)" />
     <Message Importance="High" Text="MSBuildProjectFile: $(MSBuildProjectFullPath)" />
     <Message Importance="High" Text="_RelativeNamespace: $(_RelativeNamespace)" />
     <Message Importance="High" Text="_FixedRelativeNamespace: $(_FixedRelativeNamespace)" />
