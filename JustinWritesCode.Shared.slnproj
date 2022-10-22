@@ -5,6 +5,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="./**/*.*proj" />
-    <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.7" />
+    <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.8" />
   </ItemGroup>
 </Project>
