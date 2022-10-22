@@ -1,0 +1,5 @@
+<Project>
+ <ItemGroup>
+   <GlobalPackageReference Include="Microsoft.VisualStudio.SlnGen" Version="[8.5.17,)" />
+ </ItemGroup>
+</Project>

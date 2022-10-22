@@ -3,28 +3,9 @@
     <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
     <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
   </PropertyGroup>
-  <ItemGroup>
-      <RestoreFile 
-        Include="$(MSBuildThisFileDirectory)../common/.github/**/*.*"
-        RestorePath="$(MSBuildProjectDirectory)/.github/%(RecursiveDir)%(Filename)%(Extension)" />
-      <RestoreFile 
-        Include="$(MSBuildThisFileDirectory)../common/.vscode/**/*.*"
-        RestorePath="$(MSBuildProjectDirectory)/.vscode/%(RecursiveDir)%(Filename)%(Extension)" />
-      <RestoreFile 
-        Include="$(MSBuildThisFileDirectory)../common/docs/**/*.*"
-        RestorePath="$(MSBuildProjectDirectory)/docs/%(RecursiveDir)%(Filename)%(Extension)" />
-
-      <CentralFile Include="$(MSBuildThisFileDirectory)../common/**/*.*" 
-        RestorePath="$(MSBuildProjectDirectory)/%(RecursiveDir)%(Filename)%(Extension)" />
-  </ItemGroup>
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="%(RestoreFile.Identity)"  
           DestinationFiles="%(RestoreFile.RestorePath)" />
-    <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />
-  </Target>
-  <Target Name="RestoreCentralFiles" DependsOnTargets="Restore">
-    <Copy SourceFiles="%(CentralFile.Identity)"  
-          DestinationFiles="%(CentralFile.RestorePath)" />
     <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />
   </Target>
 </Project>

@@ -1,0 +1,6 @@
+<Project>
+	<ItemGroup Label="Newtonsoft.Json">
+		<PackageReference Update="Newtonsoft.Json" Version="[13.0.1,)" />
+		<PackageReference Update="Newtonsoft.Json.Schema" Version="[3.0.4,)" />
+	</ItemGroup>
+</Project>

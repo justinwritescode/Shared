@@ -1,0 +1,13 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Update="NuGet.Configuration" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Common" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Client" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Packaging" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Protocol" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Resolver" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Credentials" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.Commands" Version="[6.3.1,)" />
+    <PackageReference Update="NuGet.PackageManagement" Version="[6.3.1,)" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+<Project>
+   <ItemGroup Label="">
+      <!-- Global Package References -->
+      <GlobalPackageReference Include="MinVer" Version="[4.1.0,)" PrivateAssets="All" IncludeAssets="runtime; build; native; contentfiles; analyzers; compile;" Condition="'$(ImportMinVer)' != 'false'" />
+      <GlobalPackageReference Include="NuGetizer" Version="[0.9.0,)" PrivateAssets="All" IncludeAssets="build; compile;" />
+      <GlobalPackageReference Include="Microsoft.SourceLink.GitHub" Version="[1.1.1,)" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive; compile;" PrivateAssets="All" />
+      <GlobalPackageReference Include="GitInfo" Version="[2.2.0,)" PrivateAssets="All" IncludeAssets="build; analyzers; compile;" />
+      <GlobalPackageReference Include="Microsoft.Build.Tasks.Git" Version="[1.1.1,)" IncludeAssets="runtime; build; native; contentfiles; analyzers; buildtransitive; compile;" PrivateAssets="All" />
+   </ItemGroup>
+</Project>

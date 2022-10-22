@@ -1,0 +1,9 @@
+<Project>
+   <ItemGroup Label="Global Code Generators">
+      <!-- Global Code Generators -->
+		<GlobalPackageReference Include="ThisAssembly" Version="[1.0.9,)" PrivateAssets="All" IncludeAssets="build; analyzers;" Condition="'$(EnableGlobalCodeGenerators)' != 'false' And '$(EnableThisAssembly)' != 'false'" />
+		<GlobalPackageReference Include="FluentBuilder" Version="[0.7.1,)" PrivateAssets="All" IncludeAssets="build; analyzers;"  Condition="'$(EnableGlobalCodeGenerators)' != 'false' And '$(EnableFluentBuilder)' != 'false'" />
+		<!-- <GlobalPackageReference Include="Supernova.Enum.Generators" Version="[1.0.12,)" PrivateAssets="All" IncludeAssets="build; analyzers;" Condition="'$(EnableGlobalCodeGenerators)' != 'false' And '$(EnablrEnumGenerator)' != 'false'" /> -->
+		<!-- <GlobalPackageReference Include="EnumerationClassGenerator" Version="[0.0.3,)" PrivateAssets="All" IncludeAssets="build; analyzers;" Condition="'$(EnableGlobalCodeGenerators)' != 'false' And '$(EnableEnumGenerator)' != 'false'" /> -->
+   </ItemGroup>
+</Project>

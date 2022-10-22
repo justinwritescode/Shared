@@ -1,4 +1,7 @@
 <Project>
   <Import Project="$(PkgJustinWritesCode_Shared_SharedFiles)/common/Packages/Versions.props" />
   <Import Project="$(PkgJustinWritesCode_Shared_SharedFiles)/common/Packages/*.pkgs" />
+  <ItemGroup>
+    <GlobalPackageReference Include="JustinWritesCode.Shared.SharedFiles" Version="0.0.1-Local" />
+  </ItemGroup>
 </Project>

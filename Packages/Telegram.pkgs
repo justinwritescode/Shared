@@ -1,0 +1,6 @@
+<Project>
+    <ItemGroup Label="Telegram">
+		<PackageReference Update="Telegram.Bot" Version="[18.0.0,)" />
+		<PackageReference Update="WTelegramClient" Version="[2.6.3,)" />
+	</ItemGroup>
+</Project>

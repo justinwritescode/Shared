@@ -1,0 +1,9 @@
+<Project>
+	<ItemGroup Label="Swashbuckle">
+		<PackageReference Update="Swashbuckle.AspNetCore" Version="[6.3.1,)" />
+		<PackageReference Update="Swashbuckle.AspNetCore.Annotations" Version="[6.3.1,)" />
+		<PackageReference Update="Swashbuckle.AspNetCore.Filters" Version="[7.0.3,)" />
+		<PackageReference Update="Swashbuckle.AspNetCore.Filters.Abstractions" Version="[7.0.3,)" />
+		<PackageReference Update="Swashbuckle.AspNetCore.ReDoc" Version="[6.3.1,)" />
+	</ItemGroup>
+</Project>
