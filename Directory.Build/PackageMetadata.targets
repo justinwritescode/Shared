@@ -37,14 +37,14 @@
   -->
 
   <Target Name="SetLastMinutePackageMetadata" BeforeTargets="GetPackageMetadata">
-    <Message Text="SetLastMinutePackageMetadata" Importance="High" />
+    <!-- <Message Text="SetLastMinutePackageMetadata" Importance="High" />
     <PropertyGroup>
       <RelativePathFromGitRoot>$([System.IO.Path]::GetRelativePath('$(GitRoot)', '$(MSBuildProjectDirectory)'))</RelativePathFromGitRoot>
-      <!-- e.g., if the *proj file is located at GITROOT/src/Shared/SharedFiles.nuproj, then the relative namespace is Shared.SharedFiles -->
       <PreliminaryRelativeNamespace>$([System.IO.Path]::GetFileName($(GitRoot))).$(RelativePathFromGitRoot.Replace("\\", ".").Replace("/", ".").Replace("src.", "")).$([System.IO.Path]::GetFileName('$(MSBuildProjectDirectory)'))</PreliminaryRelativeNamespace>
       <PreliminaryNamespace Condition="!$(PackageId.StartsWith('JustinWritesCode')) And '$(UseJustinWritesCodeNamespace)' == 'true'">JustinWritesCode.$(PreliminaryRelativeNamespace).$(MSBuildProjectName)</PreliminaryNamespace>
       <PreliminaryNamespace Condition="'$(UseJustinWritesCodeNamespace)' != 'true'">$(PreliminaryRelativeNamespace).$(MSBuildProjectName)</PreliminaryNamespace>
     </PropertyGroup>
+    <Message Text="SrcRoot: $(SrcRoot)" Importance="High" />
     <Message Text="RelativePathFromGitRoot: $(RelativePathFromGitRoot)" Importance="High" />
     <Message Text="PreliminaryRelativeNamespace: $(PreliminaryRelativeNamespace)" Importance="High" />
     <Message Text="PreliminaryNamespace: $(PreliminaryNamespace)" Importance="High" />
@@ -65,6 +65,6 @@
       <Summary Condition="'$(Summary)' == ''">$(Description)</Summary>
       <Summary Condition="'$(Summary)' == ''">TODO: Add this before you release the code!</Summary>
     </PropertyGroup>
-    <Message Text="RootNamespace: $(RootNamespace)" Importance="High" />
+    <Message Text="RootNamespace: $(RootNamespace)" Importance="High" /> -->
   </Target>
 </Project>

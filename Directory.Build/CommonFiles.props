@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <!-- <PackageReference Include="JustinWritesCode.Shared.SharedFiles" Condition="'$(PackageId)' != 'JustinWritesCode.Shared.SharedFiles'" /> -->
+  </ItemGroup>
+</Project>

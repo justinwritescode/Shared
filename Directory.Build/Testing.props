@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <PackageReferences>@(PackageReference)</PackageReferences>
-    <IsTestProject Condition="$(PackageReferences.Contains('Microsoft.NET.Test.Sdk'))">true</IsTestProject>
+    <IsTestProject>@(PackageReference->AnyHaveMetadataValue("Identity", "Microsoft.NET.Test.Sdk"))</IsTestProject>
   </PropertyGroup>
 
   <PropertyGroup>

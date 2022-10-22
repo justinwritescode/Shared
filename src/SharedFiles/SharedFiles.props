@@ -11,17 +11,14 @@
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../global.json" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../NuGet.config" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Versions/*.*" PackagePath="common/Versions/%(Filename)%(Extension)" RestoreFolder="Versions/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
-    <NonRestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <NonRestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <RestorablePackageFile Include="$(MSBuildProjectDirectory)../../../assets/*.*" PackagePath="common/assets/%(Filename)%(Extension)" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Directory.Build.props" PackagePath="common/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Directory.Build.props" PackagePath="common/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
     <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Directory.Build.targets" PackagePath="common/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
     <RestorablePackageFile Include="$(MSBuildThisFileDirectory)root/Packages.pkgs" PackagePath="common/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <NonRestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <NonRestorablePackageFile Include="$(MSBuildProjectDirectory)../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
 
     <RestoreFile Include="@(RestorablePackageFile->'$(MSBuildThisFileDirectory)../%(PackagePath)')" 
                  RestorePath="%(RestorePath)" />
-
-    <PackageFile Include="@(RestorablePackageFile)" />
-    <PackageFile Include="@(NonRestorablePackageFile)" />
   </ItemGroup>
 </Project>
