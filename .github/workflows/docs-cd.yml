@@ -1,4 +1,4 @@
-# This deploys the contents of the docs directory to the corresponding subdirectory inside the docs repository
+# This workflow builds and deploys an mkdocs site to GitHub Pages
 name: "justinwritescode/docs cd"
 
 on:
@@ -36,3 +36,4 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: ${{github.ref_name}}
           folder_name: ${{needs.calculate-folder-name.outputs.folder_name}}
+  
