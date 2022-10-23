@@ -2,7 +2,7 @@
     <PropertyGroup>
         <JustInTimeVersioningAssemblyFile>$(MSBuildThisFileDirectory)../lib/JustinWritesCode.JustInTimeVersioning.dll</JustInTimeVersioningAssemblyFile>
     </PropertyGroup>
-    <UsingTask TaskName="JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally" AssemblyFile="$(AssemblyFile)" />
+    <UsingTask TaskName="JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally" AssemblyFile="$(JustInTimeVersioningAssemblyFile)" />
     <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion">
     <JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally
         PackageName="$(PackageId)"
