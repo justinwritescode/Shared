@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Title>JustinWritesCode Version Synchronizer</Title>
+    <Description>Keeps central version records in sync with the repos</Description>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+<ItemGroup>
+  <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
+  <Using Include="Microsoft.Build.Framework" />
+</ItemGroup>
+ <ItemGroup>
+  <PackageReference Include="Microsoft.Build.Utilities.Core" VersionOverride="[17.3.1,)" />
+ </ItemGroup>
+ <ItemGroup>
+  <PackageFile Include="./Build/CentralVersioning.targets" PackagePath="build/$(PackageId).targets" />
+  <PackageFile Include="$(OutputPath)$(AssemblyName).*" PackagePath="lib/%(Filename)%(Extension)" />
+ </ItemGroup>
+ <UsingTask TaskName="SaveVersionNumberCentrally" AssemblyFile="$(OutputPath)$(AssemblyName).dll" />
+ <Target Name="SaveVersionNumberCentrally" AfterTargets="Build,Pack">
+  <SaveVersionNumberCentrally
+      PackageName="$(PackageId)"
+      Version="$(PackageVersion)"
+      Configuration="$(Configuration)" />
+ </Target>
+</Project>

@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <HasDoneRestoreOnce>false</HasDoneRestoreOnce>
-    <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
+    <!-- <HasDoneRestoreOnce>false</HasDoneRestoreOnce> -->
+    <!-- <EnableCentralPackageVersions>false</EnableCentralPackageVersions> -->
   </PropertyGroup>
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="@(RestoreFile)"

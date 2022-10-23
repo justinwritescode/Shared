@@ -10,17 +10,28 @@
         <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
     </PropertyGroup>
 
-    <Import Project="./SharedFiles.props" />
+    <ItemGroup>
+        <PackageFile Include="../../../.github/**/*.*" PackagePath="common/.github/%(RecursiveDir)%(Filename)%(Extension)" RestoreFolder=".github/%(RecursiveDir)" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+        <PackageFile Include="../../../.gitignore" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+        <PackageFile Include="../../../.vscode/tasks.json" PackagePath="common/.vscode/%(Filename)%(Extension)" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+        <PackageFile Include="../../../docs/*.*" PackagePath="common/docs/%(Filename)%(Extension)" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
+        <PackageFile Include="../../../global.json" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+        <PackageFile Include="../../../NuGet.config" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+        <PackageFile Include="../../../assets/*.*" PackagePath="common/assets/%(Filename)%(Extension)" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+        <PackageFile Include="../../../Directory.Build.props" PackagePath="common/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+        <PackageFile Include="../../../Directory.Build.targets" PackagePath="common/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+        <PackageFile Include="../../../Packages.pkgs" PackagePath="common/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+        <PackageFile Include="../../../Packages/*.pkgs" PackagePath="common/Packages/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/Packages/%(Filename)%(Extension)"/>
+        <PackageFile Include="../../../Packages/Versions.props" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+        <PackageFile Include="../../../Packages/Versions.props" PackagePath="common/Packages/%(Filename)%(Extension)" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+        <PackageFile Include="../../../Directory.Build/*.*" PackagePath="common/Directory.Build/%(Filename)%(Extension)" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
 
-    <Target Name="AddPackageContents" BeforeTargets="GetPackageContents">
-        <ItemGroup>
-            <PackageFile Include="./SharedFiles.props" PackagePath="build/$(PackageId).props" PackFolder="build" />
-            <PackageFile Include="./SharedFiles.targets" PackagePath="build/$(PackageId).targets" PackFolder="build" />
-            <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
-            <PackageFile Include="@(RestorablePackageFile)" />
-            <PackageFile Include="@(NonRestorablePackageFile)" />
-        </ItemGroup>
-    </Target>
+        <PackageFile Include="./SharedFiles.props" PackagePath="build/$(PackageId).props" PackFolder="build" />
+        <PackageFile Include="./SharedFiles.targets" PackagePath="build/$(PackageId).targets" PackFolder="build" />
+        <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
+        <PackageFile Include="@(RestorablePackageFile)" />
+        <PackageFile Include="@(NonRestorablePackageFile)" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageTag Include="common" />

@@ -1,6 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <_GitRoot>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), ".git/HEAD"))</_GitRoot>
-    <PackageOutputPath>$(_GitRoot)/artifacts</PackageOutputPath>  
-  </PropertyGroup>
-</Project>
