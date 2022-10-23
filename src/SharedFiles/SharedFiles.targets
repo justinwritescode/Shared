@@ -4,17 +4,17 @@
     <!-- <EnableCentralPackageVersions>false</EnableCentralPackageVersions> -->
   </PropertyGroup>
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
-    <Copy SourceFiles="@(RestoreFile)"
+    <Copy SourceFiles="@(SharedFile)"
           DestinationFiles="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />
+    <Message Importance="High" Text="Restored file: %(SharedFile.Identity) --> %(SharedFile.RestorePath)" />
   </Target>
   <Target Name="RestoreCentralFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="@(CentralFile)"
           DestinationFiles="@(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Copy SourceFiles="@(RestoreFile)"
-          DestinationFiles="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(SharedFile)"
+          DestinationFiles="@(SharedFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
     <Message Importance="High" Text="Restored file: %(CentralFile.Identity) --> %(CentralFile.RestorePath)" />
-    <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />
+    <Message Importance="High" Text="Restored file: %(SharedFile.Identity) --> %(SharedFile.RestorePath)" />
   </Target>
   <Target Name="CleanCentralFiles" DependsOnTargets="Restore">
     <Delete Files="@(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
@@ -22,7 +22,7 @@
     <Message Importance="High" Text="Cleaned file: %(CentralFile.RestorePath)" />
   </Target>
   <Target Name="CleanSharedFiles" DependsOnTargets="Restore">
-    <Delete Files="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Cleaned file: %(RestoreFile.RestorePath)" />
+    <Delete Files="@(SharedFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Message Importance="High" Text="Cleaned file: %(SharedFile.RestorePath)" />
   </Target>
 </Project>

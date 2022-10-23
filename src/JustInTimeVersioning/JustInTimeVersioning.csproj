@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Title>JustinWritesCode Version Synchronizer</Title>
+    <Description>Keeps central version records in sync with the repos</Description>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
+    <AssemblyName>JustinWritesCode.JustInTimeVersioning</AssemblyName>
+    <PackageId>JustinWritesCode.JustInTimeVersioning</PackageId>
+    <RootNamespace>JustinWritesCode.JustInTimeVersioning</RootNamespace>
+    <OutputPath>lib/</OutputPath>
+  </PropertyGroup>
+<ItemGroup>
+  <Using Include="Microsoft.Build.Utilities.Task" Alias="MSBTask" />
+  <Using Include="Microsoft.Build.Framework" />
+</ItemGroup>
+ <ItemGroup>
+  <PackageReference Include="Microsoft.Build.Utilities.Core" VersionOverride="[17.3.1,)" />
+  <PackageReference Include="System.Text.Json" />
+ </ItemGroup>
+ <ItemGroup>
+  <PackageFile Include="./Build/JustinWritesCode.JustInTimeVersioning.props" PackagePath="build/$(PackageId).props" />
+  <PackageFile Include="./Build/JustinWritesCode.JustInTimeVersioning.targets" PackagePath="build/$(PackageId).targets" />
+  <PackageFile Include="$(OutputPath)$(AssemblyName).*" PackagePath="lib/%(Filename)%(Extension)" />
+ </ItemGroup>
+  <Import Project="./Build/JustinWritesCode.JustInTimeVersioning.props" />
+  <Import Project="./Build/JustinWritesCode.JustInTimeVersioning.targets" />
+</Project>

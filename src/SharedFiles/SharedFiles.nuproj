@@ -16,7 +16,7 @@
         <PackageFile Include="../../../.vscode/tasks.json" PackagePath="common/.vscode/%(Filename)%(Extension)" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
         <PackageFile Include="../../../docs/*.*" PackagePath="common/docs/%(Filename)%(Extension)" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)" />
         <PackageFile Include="../../../global.json" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
-        <PackageFile Include="../../../NuGet.config" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+        <PackageFile Include="../../../.nuget/NuGet.config" PackagePath="common/%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
         <PackageFile Include="../../../assets/*.*" PackagePath="common/assets/%(Filename)%(Extension)" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
         <PackageFile Include="../../../Directory.Build.props" PackagePath="common/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
         <PackageFile Include="../../../Directory.Build.targets" PackagePath="common/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
@@ -29,8 +29,8 @@
         <PackageFile Include="./SharedFiles.props" PackagePath="build/$(PackageId).props" PackFolder="build" />
         <PackageFile Include="./SharedFiles.targets" PackagePath="build/$(PackageId).targets" PackFolder="build" />
         <PackageFile Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
-        <PackageFile Include="@(RestorablePackageFile)" />
-        <PackageFile Include="@(NonRestorablePackageFile)" />
+        <!-- <PackageFile Include="@(RestorablePackageFile)" /> -->
+        <!-- <PackageFile Include="@(NonRestorablePackageFile)" /> -->
     </ItemGroup>
 
     <ItemGroup>

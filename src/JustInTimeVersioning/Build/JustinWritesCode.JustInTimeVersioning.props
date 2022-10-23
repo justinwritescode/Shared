@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+   <AssemblyFile>$(MSBuildThisFileDirectory)../lib/JustinWritesCode.JustInTimeVersioning.dll</AssemblyFile>
+  </PropertyGroup>
+</Project>

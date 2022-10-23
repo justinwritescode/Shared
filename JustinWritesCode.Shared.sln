@@ -1,4 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CentralVersioning", "src\CentralVersioning\CentralVersioning.csproj", "{D5317B25-F0C2-4950-AF47-FD249189FDF6}"
+EndProject
 Project("{FF286327-C783-4F7A-AB73-9BCBAD0D4460}") = "SharedFiles", "src\SharedFiles\SharedFiles.nuproj", "{602C4EA6-7419-49D0-9DC4-F761CA756D81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{417CD87D-5DEF-4D80-B9B2-B19E7A02C650}"
@@ -12,6 +14,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Local|Any CPU.Build.0 = Local|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5317B25-F0C2-4950-AF47-FD249189FDF6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{602C4EA6-7419-49D0-9DC4-F761CA756D81}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
 		{602C4EA6-7419-49D0-9DC4-F761CA756D81}.Testing|Any CPU.Build.0 = Testing|Any CPU
 		{602C4EA6-7419-49D0-9DC4-F761CA756D81}.Local|Any CPU.ActiveCfg = Local|Any CPU

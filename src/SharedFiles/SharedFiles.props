@@ -8,9 +8,9 @@
     <CentralFile Include="$(MSBuildThisFileDirectory)../common/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
     <CentralFile Include="$(MSBuildThisFileDirectory)../common/Packages/*.pkgs" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <CentralFile Include="$(MSBuildThisFileDirectory)../common/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/.github/**/*.*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/.vscode/*.*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../common/docs/*.*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <SharedFile Include="$(MSBuildThisFileDirectory)../common/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <SharedFile Include="$(MSBuildThisFileDirectory)../common/.github/**/*.*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <SharedFile Include="$(MSBuildThisFileDirectory)../common/.vscode/*.*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <SharedFile Include="$(MSBuildThisFileDirectory)../common/docs/*.*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
 </Project>
