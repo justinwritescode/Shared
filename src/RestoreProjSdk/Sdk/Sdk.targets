@@ -1,8 +1,4 @@
-<Project>
-  <PropertyGroup>
-    <!-- <HasDoneRestoreOnce>false</HasDoneRestoreOnce> -->
-    <!-- <EnableCentralPackageVersions>false</EnableCentralPackageVersions> -->
-  </PropertyGroup>
+<Project Sdk="Microsoft.Build.NoTargets">
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="@(RestoreFile)"
           DestinationFiles="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />

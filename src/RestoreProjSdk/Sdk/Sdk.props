@@ -8,6 +8,9 @@
     <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
     <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/*.pkgs" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.json" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/.nuget/NuGet.config" RestoreFolder=".nuget/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
     <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.github/**/*.*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
     <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.vscode/*.*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />

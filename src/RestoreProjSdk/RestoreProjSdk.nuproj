@@ -1,25 +1,53 @@
 <Project Sdk="Microsoft.Build.NoTargets">
     <PropertyGroup>
         <TargetFramework>netstandard1.0</TargetFramework>
-        <!-- <PackageId>JustinWritesCode.Shared.RestoreSharedFiles</PackageId> -->
-        <Title>JustinWritesCode Shared Files</Title>
-        <!-- <PackageId>JustinWritesCode.SharedFiles</PackageId> -->
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Title>JustinWritesCode Shared Files Restorer SDK</Title>
         <Description>This repository contains files that are common to all of my projects. 
-        To restore the files, add a reference to this package to a project at the root of your repository and run `dotnet build YourProject.proj -t:RestoreSharedFiles`.</Description>
+To restore the files, add a ```.restoreproj``` file to the root of your git repo with at least the following contents:
+
+```xml
+<Project Sdk="JustinWritesCode.RestoreProjSdk" />
+```
+
+Alternatively, stick this line in any ```*proj``` file at the top level of your repo:
+
+```xml
+<Sdk Name="JustinWritesCode.RestoreProjSdk" />
+```
+
+And add a ```global.json``` file with at least the following contents:
+
+```json
+{
+    "msbuild-sdks": {
+        "JustinWritesCode.RestoreProjSdk": "the-latest-package-version"
+    }
+}
+```
+
+Then run the following command and voila! The files will be restored!
+
+```dotnet build *.restoreproj -t:RestoreSharedFiles```
+
+If you are restoring a root repo without anything above it, you'll need to restore all of the central files too. Use the following command for that:
+
+```dotnet build *.restoreproj -t:RestoreCentralFiles```
+</Description>
+        <PackageId>JustinWritesCode.RestoreProjSdk</PackageId>
+        <AssemblyName>JustinWritesCode.RestoreProjSdk</AssemblyName>
+        <RootNamespace>JustinWritesCode.RestoreProjSdk</RootNamespace>
+        <PackageType>MSBuildSdk</PackageType>
+        <MinVerTagPrefix>rpsdk-v</MinVerTagPrefix>
         <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
-        <PackageId>JustinWritesCode.SharedFiles</PackageId>
-        <AssemblyName>JustinWritesCode.SharedFiles</AssemblyName>
-        <RootNamespace>JustinWritesCode.SharedFiles</RootNamespace>
     </PropertyGroup>
 
     <ItemDefinitionGroup>
-        <Content PackagePath="shared/%(SharedFile.PackageFolder)%(SharedFile.RecursiveDir)%(SharedFile.Filename)%(SharedFile.Extension)"
-                    RestorePath="$(MSBuildProjectDirectory)/%(SharedFile.PackageFolder)%(SharedFile.RecursiveDir)%(SharedFile.Filename)%(SharedFile.Extension)" 
+        <Content PackagePath="shared/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"
+                    RestorePath="$(MSBuildProjectDirectory)/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
                     IsRestorable="false" />
     </ItemDefinitionGroup>
 
-    <ItemGroup Condition="'$(MSBuildProjectName)' == 'SharedFiles'">
+    <ItemGroup>
         <Content Include="../../../.config/dotnet-tools.json" IsRestorable="false" Folder=".config/" />
         <Content Include="../../../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
         <Content Include="../../../.gitignore" IsRestorable="true" Folder="./" />
@@ -28,31 +56,32 @@
         <Content Include="../../../assets/*.*" Folder="assets/" />
         <Content Include="../../../Directory.Build.props" Folder="./" />
         <Content Include="../../../Directory.Build.targets" Folder="./" />
-        <Content Include="../../../Directory.Build.targets" Folder="./" />
         <Content Include="../../../Directory.Build/*.*" Folder="Diretory.Build/" />
         <Content Include="../../../docs/*.*"  Exclude=".DS_Store" IsRestorable="true" Folder="docs/"/>
         <Content Include="../../../global.json" IsRestorable="false" Folder="./" />
         <Content Include="../../../LICENSE.md"  IsRestorable="true" Folder="./"/>
         <Content Include="../../../Packages.pkgs" Folder="Packages/" />
         <Content Include="../../../Packages/*.pkgs" Folder="Packages/" />
-        <Content Include="../../../Packages/Versions.props" Folder="Packages/" />
+        <Content Include="../../../Packages/Versions.*.json" Folder="Packages/" />
+        <Content Include="../../../Packages/Versions.*.props" Folder="Packages/" />
         <Content Include="../../../Packages/Versions.props" Folder="Packages/" />
         <Content Remove="**/*.DS_Store" />
-        <Content Update="@(Content)" PackageFolder="$([System.Text.RegularExpressions.Regex]::Replace('%(Content.Identity)', '\.\.\/\.\.\/\.\.\/(.*)\/', '$1/')" />
         <Content Update="@(Content)" PackagePath="shared/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
         <Content Include="../../../.nuget/NuGet.CI.config" PackagePath="shared/.nuget/NuGet.config" IsRestorable="false" Folder=".nuget/" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="./SharedFiles.props" PackagePath="build/$(PackageId).props" />
-        <Content Include="./SharedFiles.targets" PackagePath="build/$(PackageId).targets" />
-        <Content Include="$(OutputPath)*.*" PackagePath="lib/%(Filename)%(Extension)" />
-        <!-- <PackageFile Include="@(RestorablePackageFile)" /> -->
-        <!-- <PackageFile Include="@(NonRestorablePackageFile)" /> -->
+        <Content Include="./Sdk/Sdk.props" PackagePath="Sdk/Sdk.props" />
+        <Content Include="./Sdk/Sdk.targets" PackagePath="Sdk/Sdk.targets" />
     </ItemGroup>
 
     <ItemGroup>
+        <PackageTag Include="shared" />
+        <PackageTag Include="shared-files" />
         <PackageTag Include="common" />
+        <PackageTag Include="common-files" />        
+        <PackageTag Include="msbuild" />
+        <PackageTag Include="msbuild-sdk" />
         <PackageTag Include="justinwritescode" />
     </ItemGroup>
 
