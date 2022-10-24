@@ -4,25 +4,24 @@
     <!-- <EnableCentralPackageVersions>false</EnableCentralPackageVersions> -->
   </PropertyGroup>
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
-    <Copy SourceFiles="@(SharedFile)"
-          DestinationFiles="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Restored file: %(SharedFile.Identity) --> %(SharedFile.RestorePath)" />
+    <Copy SourceFiles="../shared/%(SharedFile.PackagePath)"
+          DestinationFiles="%(SharedFile.ResorePath)"
+          Condition="'%(SharedFile.IsRestorable)' == 'true'" />
+    <Message Importance="High" Text="Restored file: %(SharedFile.PackagePath) --> %(SharedFile.ResorePath)" />
   </Target>
   <Target Name="RestoreCentralFiles" DependsOnTargets="Restore">
-    <Copy SourceFiles="@(CentralFile)"
-          DestinationFiles="@(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Copy SourceFiles="@(SharedFile)"
-          DestinationFiles="@(SharedFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Restored file: %(CentralFile.Identity) --> %(CentralFile.RestorePath)" />
-    <Message Importance="High" Text="Restored file: %(SharedFile.Identity) --> %(SharedFile.RestorePath)" />
+    <Copy SourceFiles="../shared/%(SharedFile.PackagePath)"
+          DestinationFiles="%(SharedFile.ResorePath)" />
+    <Message Importance="High" Text="Restored file: %(SharedFile.PackagePath) --> %(SharedFile.ResorePath)" />
   </Target>
   <Target Name="CleanCentralFiles" DependsOnTargets="Restore">
-    <Delete Files="@(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Delete Files="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Cleaned file: %(CentralFile.RestorePath)" />
+    <Delete Files="%(SharedFile.RestorePath)" />
+    <Message Importance="High" Text="Cleaned file: %(SharedFile.RestorePath)" />
   </Target>
   <Target Name="CleanSharedFiles" DependsOnTargets="Restore">
-    <Delete Files="@(SharedFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Cleaned file: %(SharedFile.RestorePath)" />
+    <Delete Files="%(SharedFile.RestorePath)" 
+          Condition="'%(SharedFile.IsRestorable)' == 'true'" />
+    <Message Importance="High" Text="Cleaned file: %(SharedFile.RestorePath)"
+          Condition="'%(SharedFile.IsRestorable)' == 'true'" />
   </Target>
 </Project>
