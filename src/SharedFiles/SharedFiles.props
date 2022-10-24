@@ -1,3 +1,16 @@
 <Project>
-
+  <ItemGroup>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/*.*" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/assets/*.*" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build/*.*" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/*.pkgs" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.github/**/*.*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.vscode/*.*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/docs/*.*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
 </Project>
