@@ -56,7 +56,7 @@ If you are restoring a root repo without anything above it, you'll need to resto
         <Content Include="../../../assets/*.*" Folder="assets/" />
         <Content Include="../../../Directory.Build.props" Folder="./" />
         <Content Include="../../../Directory.Build.targets" Folder="./" />
-        <Content Include="../../../Directory.Build/*.*" Folder="Diretory.Build/" />
+        <Content Include="../../../Directory.Build/*.*" Folder="Directory.Build/" />
         <Content Include="../../../docs/*.*"  Exclude=".DS_Store" IsRestorable="true" Folder="docs/"/>
         <Content Include="../../../global.json" IsRestorable="false" Folder="./" />
         <Content Include="../../../LICENSE.md"  IsRestorable="true" Folder="./"/>
