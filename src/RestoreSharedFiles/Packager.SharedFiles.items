@@ -1,0 +1,29 @@
+<Project>
+    <ItemDefinitionGroup>
+        <Content PackagePath="shared/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"
+                    RestorePath="$(MSBuildProjectDirectory)/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
+                    IsRestorable="false" />
+    </ItemDefinitionGroup>
+   <ItemGroup>
+        <Content Include="../../../.config/dotnet-tools.json" IsRestorable="false" Folder=".config/" />
+        <Content Include="../../../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
+        <Content Include="../../../.gitignore" IsRestorable="true" Folder="./" />
+        <Content Include="../../../.vscode/*.sh" IsRestorable="true" Folder=".vscode/" />
+        <Content Include="../../../.vscode/tasks.json"  IsRestorable="true"  Folder=".vscode/"/>
+        <Content Include="../../../assets/*.*" Folder="assets/" />
+        <Content Include="../../../Directory.Build.props" Folder="./" />
+        <Content Include="../../../Directory.Build.targets" Folder="./" />
+        <Content Include="../../../Directory.Build/*.*" Folder="Directory.Build/" />
+        <Content Include="../../../docs/*.*"  Exclude=".DS_Store" IsRestorable="true" Folder="docs/"/>
+        <Content Include="../../../global.json" IsRestorable="false" Folder="./" />
+        <Content Include="../../../LICENSE.md"  IsRestorable="true" Folder="./"/>
+        <Content Include="../../../Packages.pkgs" Folder="Packages/" />
+        <Content Include="../../../Packages/*.pkgs" Folder="/" />
+        <Content Include="../../../Packages/Versions.*.json" Folder="Packages/" />
+        <Content Include="../../../Packages/Versions.*.props" Folder="Packages/" />
+        <Content Include="../../../Packages/Versions.props" Folder="Packages/" />
+        <Content Remove="**/*.DS_Store" />
+        <Content Update="@(Content)" PackagePath="shared/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
+        <Content Include="../../../.nuget/NuGet.CI.config" PackagePath="shared/.nuget/NuGet.config" IsRestorable="false" Folder=".nuget/" />
+    </ItemGroup>
+</Project>
