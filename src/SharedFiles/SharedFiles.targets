@@ -1,8 +1,4 @@
 <Project>
-  <PropertyGroup>
-    <!-- <HasDoneRestoreOnce>false</HasDoneRestoreOnce> -->
-    <!-- <EnableCentralPackageVersions>false</EnableCentralPackageVersions> -->
-  </PropertyGroup>
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
     <Copy SourceFiles="../shared/%(SharedFile.PackagePath)"
           DestinationFiles="%(SharedFile.ResorePath)"

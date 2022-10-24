@@ -13,34 +13,37 @@
         <Description>This repository contains files that are common to all of my projects. 
         To restore the files, add a reference to this package to a project at the root of your repository and run `dotnet build YourProject.proj -t:RestoreSharedFiles`.</Description>
         <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
+        <PackageId>JustinWritesCode.SharedFiles</PackageId>
+        <AssemblyName>JustinWritesCode.SharedFiles</AssemblyName>
+        <RootNamespace>JustinWritesCode.SharedFiles</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <SharedFile Include="../../../.github/**/*.*" Folder=".github/" IsRestorable="true" />
-        <SharedFile Include="../../../.gitignore" Folder="/" IsRestorable="true" />
-        <SharedFile Include="../../../.vscode/tasks.json" Folder=".vscode/" IsRestorable="true" />
-        <SharedFile Include="../../../docs/*.*" Folder="docs/" IsRestorable="true" />
-        <SharedFile Include="../../../global.json" Folder="/" />
-        <SharedFile Include="../../../.nuget/NuGet.config" Folder="/" />
-        <SharedFile Include="../../../assets/*.*" Folder="assets/" />
-        <SharedFile Include="../../../Directory.Build.props" Folder="/" />
-        <SharedFile Include="../../../Directory.Build.targets" Folder="/" />
-        <SharedFile Include="../../../Packages.pkgs" Folder="/" />
-        <SharedFile Include="../../../Packages/*.pkgs" Folder="Packages/" />
-        <SharedFile Include="../../../Packages/Versions.props" Folder="Packages/" />
-        <SharedFile Include="../../../Packages/Versions.props" Folder="Packages/" />
-        <SharedFile Include="../../../Directory.Build/*.*" Folder="Directory.Build/" />
-        <SharedFile Include="../../../.config/dotnet-tools.json" Folder=".config/" />
+        <SharedFile Include="../../../.github/**/*.*" Folder=".github/" IsRestorable="true" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../.gitignore" Folder="/" IsRestorable="true" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../.vscode/tasks.json" Folder=".vscode/" IsRestorable="true" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../.vscode/*.sh" Folder=".vscode/" IsRestorable="true" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../docs/*.*" Folder="docs/" IsRestorable="true" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../global.json" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../LICENSE.md" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../.nuget/NuGet.config" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../assets/*.*" Folder="assets/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Directory.Build.props" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Directory.Build.targets" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Directory.Build.targets" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Packages.pkgs" Folder="/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Packages/*.pkgs" Folder="Packages/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Packages/Versions.props" Folder="Packages/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Packages/Versions.props" Folder="Packages/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../Directory.Build/*.*" Folder="Directory.Build/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
+        <SharedFile Include="../../../.config/dotnet-tools.json" Folder=".config/" PackagePath="shared/%(Folder)%(RecursiveDir)%(Filename)%(Extension)" RestorePath="$(MSBuildProjectDirectory)%(Folder)%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
 
     <ItemGroup>
-        <SharedFile Update="@(SharedFile)" 
-            PackagePath="shared/%(SharedFile.PackageFolder)%(SharedFile.RecursiveDir)%(SharedFile.Filename)%(SharedFile.Extension))'"
-            RestorePath="$(MSBuildProjectDirectory)%(SharedFile.RecursiveDir)%(SharedFile.Filename)%(SharedFile.Extension)" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageFile Include="@(SharedFile)" Condition="'$(MSBuildProjectName)' == 'SharedFiles'" />
+        <PackageFile Include="@(SharedFile)" />
     </ItemGroup>
 
     <ItemGroup>
@@ -71,4 +74,8 @@
         <PackageTag Include="common" />
         <PackageTag Include="justinwritescode" />
     </ItemGroup>
+
+    <Target Name="WritePackageContents" AfterTargets="GetPackageContents">
+        <Message Importance="High" Text="Package file: %(PackageFile.Identity); package path: %(PackageFile.PackagePath)" />
+    </Target>
 </Project>
