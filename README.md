@@ -1,9 +1,32 @@
-# JustinWritesCode Shared Files
+# Shared
 
-This repository contains files that are common to all of my projects. To restore the files, run the following command:
+This repository contains files that are common to all of my projects. 
+To restore the files, add a ```.restoreproj``` file to the root of your git repo with at least the following contents:
 
-```dotnet file sync```
+```xml
+<Project Sdk="JustinWritesCode.RestoreProjSdk" />
+```
 
-If you don't have the ```dotnet file``` tool installed, you can install it with the following command:
+Alternatively, stick this line in any ```*proj``` file at the top level of your repo:
 
-```dotnet tool install -g dotnet-file```
+```xml
+<Sdk Name="JustinWritesCode.RestoreProjSdk" />
+```
+
+And add a ```global.json``` file with at least the following contents:
+
+```json
+{
+    "msbuild-sdks": {
+        "JustinWritesCode.RestoreProjSdk": "the-latest-package-version"
+    }
+}
+```
+
+Then run the following command and voila! The files will be restored!
+
+```dotnet build *.restoreproj -t:RestoreSharedFiles```
+
+If you are restoring a root repo without anything above it, you'll need to restore all of the central files too. Use the following command for that:
+
+```dotnet build *.restoreproj -t:RestoreCentralFiles```
