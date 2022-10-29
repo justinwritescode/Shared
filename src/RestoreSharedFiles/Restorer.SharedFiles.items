@@ -1,19 +1,33 @@
 <Project>
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <PackageId>$(MSBuildProjectName)</PackageId>
+    <RootNamespace>$(MSBuildProjectName)</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <CentralFile RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(CentralFile.RestoreFolder)%(CentralFile.RecursiveDir)%(CentralFile.Filename)%(CentralFile.Extension)" />
+    <RestoreFile RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFile.RestoreFolder)%(RestoreFile.RecursiveDir)%(RestoreFile.Filename)%(RestoreFile.Extension)" />
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/*.*" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/assets/*.*" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build/*.*" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages.pkgs" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/*.pkgs" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/*" RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/assets/*" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
+    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension).tmp" /> -->
+    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/> -->
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build/*" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages.pkgs" RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/*" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
+    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
     <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.json" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/.nuget/NuGet.config" RestoreFolder=".nuget/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.github/**/*.*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.vscode/*.*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/docs/*.*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.json" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/> -->
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/.nuget/NuGet.config" RestoreFolder=".nuget/" RestorePath="$$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
+    <!-- <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" /> -->
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.github/**/*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.vscode/*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/docs/*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
+  <!-- <Target Name="WriteDirectoryBuild">
+    <WriteLinesToFile File="$(MSBuildProjectDirectory)/Directory.Build.props" Lines="&lt;Project&gt;&#xD;&#xA;&lt;/Project&gt;" Overwrite="true" />
+  </Target> -->
 </Project>

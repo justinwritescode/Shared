@@ -1,28 +1,41 @@
+<!--
+ Packager.SharedFiles.items
+ 
+   Created: 2022-10-24-10:28:32
+   Modified: 2022-10-29-02:58:25
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project>
     <ItemDefinitionGroup>
-        <Content PackagePath="shared/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"
+        <Content PackagePath="shared/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"
                     RestorePath="$(MSBuildProjectDirectory)/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
-                    IsRestorable="false" />
+                    Folder="./" IsRestorable="false" />
     </ItemDefinitionGroup>
    <ItemGroup>
         <Content Include="../../../.config/dotnet-tools.json" IsRestorable="false" Folder=".config/" />
         <Content Include="../../../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
-        <Content Include="../../../.gitignore" IsRestorable="true" Folder="./" />
-        <Content Include="../../../.vscode/*.sh" IsRestorable="true" Folder=".vscode/" />
-        <Content Include="../../../.vscode/tasks.json"  IsRestorable="true"  Folder=".vscode/"/>
+        <Content Include="../../../.gitignore" IsRestorable="true" />
+        <Content Include="../../../.vscode/*" IsRestorable="true" Folder=".vscode/" />
+        <Content Include="../../../.scripts/*" IsRestorable="true" Folder=".scripts/" />
         <Content Include="../../../assets/*.*" Folder="assets/" />
-        <Content Include="../../../Directory.Build.props" Folder="./" />
-        <Content Include="../../../Directory.Build.targets" Folder="./" />
+        <Content Include="../../../Directory.Build.props" />
+        <Content Include="../../../Directory.Build.targets" />
         <Content Include="../../../Directory.Build/*.*" Folder="Directory.Build/" />
         <Content Include="../../../docs/*.*"  Exclude=".DS_Store" IsRestorable="true" Folder="docs/"/>
-        <Content Include="../../../global.json" IsRestorable="false" Folder="./" />
-        <Content Include="../../../LICENSE.md"  IsRestorable="true" Folder="./"/>
-        <Content Include="../../../Packages.pkgs" Folder="Packages/" />
-        <Content Include="../../../Packages/*.pkgs" Folder="/" />
+        <Content Include="../../../global.json" IsRestorable="false" />
+        <Content Include="../../../LICENSE.md"  IsRestorable="true" />
+        <Content Include="../../../Packages.pkgs" />
+        <Content Include="../../../Packages/*.pkgs" Folder="Packages/" />
         <Content Include="../../../Packages/Versions.*.json" Folder="Packages/" />
         <Content Include="../../../Packages/Versions.*.props" Folder="Packages/" />
         <Content Include="../../../Packages/Versions.props" Folder="Packages/" />
         <Content Remove="**/*.DS_Store" />
+        <Content Remove="../../../.github/workflows/update-readme.yml" />
         <Content Update="@(Content)" PackagePath="shared/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
         <Content Include="../../../.nuget/NuGet.CI.config" PackagePath="shared/.nuget/NuGet.config" IsRestorable="false" Folder=".nuget/" />
     </ItemGroup>

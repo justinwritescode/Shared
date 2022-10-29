@@ -1,7 +1,27 @@
+<!--
+ RestoreProjSdk.nuproj
+ 
+   Created: 2022-10-24-12:03:11
+   Modified: 2022-10-29-03:00:44
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="Microsoft.Build.NoTargets">
     <PropertyGroup>
         <TargetFramework>netstandard1.0</TargetFramework>
         <Title>JustinWritesCode Shared Files Restorer SDK</Title>
+        <PackageId>RestoreProjSdk</PackageId>
+        <AssemblyName>RestoreProjSdk</AssemblyName>
+        <RootNamespace>RestoreProjSdk</RootNamespace>
+        <PackageType>MSBuildSdk</PackageType>
+        <MinVerTagPrefix>rpsdk-v</MinVerTagPrefix>
+        <SlnGenSolutionFolder>src-shared</SlnGenSolutionFolder>
+        <ProjectName>RestoreProjSdk</ProjectName>
+        <PackageVersionOverride>0.0.1</PackageVersionOverride>
         <Description>This repository contains files that are common to all of my projects. 
 To restore the files, add a ```.restoreproj``` file to the root of your git repo with at least the following contents:
 
@@ -33,12 +53,6 @@ If you are restoring a root repo without anything above it, you'll need to resto
 
 ```dotnet build *.restoreproj -t:RestoreCentralFiles```
 </Description>
-        <PackageId>JustinWritesCode.RestoreProjSdk</PackageId>
-        <AssemblyName>JustinWritesCode.RestoreProjSdk</AssemblyName>
-        <RootNamespace>JustinWritesCode.RestoreProjSdk</RootNamespace>
-        <PackageType>MSBuildSdk</PackageType>
-        <MinVerTagPrefix>rpsdk-v</MinVerTagPrefix>
-        <SlnGenSolutionFolder>src-shared</SlnGenSolutionFolder>
     </PropertyGroup>
     <Import Project="./Packager.SharedFiles.items" />
 
@@ -48,12 +62,12 @@ If you are restoring a root repo without anything above it, you'll need to resto
     </ItemGroup>
 
     <ItemGroup>
-        <PackageTag Include="shared" />
+        <PackageTag Include="shared" Visible="false" />
         <PackageTag Include="shared-files" />
-        <PackageTag Include="common" />
-        <PackageTag Include="common-files" />        
-        <PackageTag Include="msbuild" />
-        <PackageTag Include="msbuild-sdk" />
-        <PackageTag Include="justinwritescode" />
+        <PackageTag Include="common" Visible="false" />
+        <PackageTag Include="common-files" Visible="false" />
+        <PackageTag Include="msbuild" Visible="false" />
+        <PackageTag Include="msbuild-sdk" Visible="false" />
+        <PackageTag Include="justinwritescode" Visible="false" />
     </ItemGroup>
 </Project>

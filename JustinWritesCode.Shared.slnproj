@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.Build.Traversal">
   <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
     <IncludeInSolutionFile>false</IncludeInSolutionFile>
     <EnableCentralPackageVersions>false</EnableCentralPackageVersions>
   </PropertyGroup>

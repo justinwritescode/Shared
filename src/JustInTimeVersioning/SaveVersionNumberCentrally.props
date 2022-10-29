@@ -1,0 +1,18 @@
+<!--
+ Build.props
+ 
+   Created: 2022-10-23-04:28:47
+   Modified: 2022-10-29-12:16:50
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <AssemblyFile Condition="'$(PackageId)' != 'JustinWritesCode.JustInTimeVersioning'">../lib/JustinWritesCode.JustInTimeVersioning.dll</AssemblyFile>
+    <AssemblyFile Condition="'$(PackageId)' == 'JustinWritesCode.JustInTimeVersioning'">./lib/JustinWritesCode.JustInTimeVersioning.dll</AssemblyFile>
+  </PropertyGroup>
+</Project>

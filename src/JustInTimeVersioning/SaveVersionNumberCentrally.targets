@@ -1,0 +1,21 @@
+<!--
+ JustinWritesCode.JustInTimeVersioning.targets
+ 
+   Created: 2022-10-22-03:23:14
+   Modified: 2022-10-29-03:07:50
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <UsingTask TaskName="JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally" AssemblyFile="$(AssemblyFile)" />
+    <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion" DependsOnTargets="MinVer">
+        <JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally
+            PackageName="$(PackageId)"
+            Version="$(PackageVersion)" 
+            Configuration="$(Configuration)" />
+    </Target>
+</Project>

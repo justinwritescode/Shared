@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.Build.NoTargets">
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
+    <Message Importance="High" Text="Using version $(PackageVersion)" />
     <Copy SourceFiles="@(RestoreFile)"
           DestinationFiles="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
     <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />
@@ -9,8 +10,8 @@
           DestinationFiles="@(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
     <Copy SourceFiles="@(RestoreFile)"
           DestinationFiles="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
-    <Message Importance="High" Text="Restored file: %(CentralFile.Identity) --> %(CentralFile.RestorePath)" />
-    <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> %(RestoreFile.RestorePath)" />
+    <Message Importance="High" Text="Restored file: %(CentralFile.Identity) --> @(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Message Importance="High" Text="Restored file: %(RestoreFile.Identity) --> @(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
   <Target Name="CleanCentralFiles" DependsOnTargets="Restore">
     <Delete Files="@(CentralFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
@@ -21,4 +22,10 @@
     <Delete Files="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
     <Message Importance="High" Text="Cleaned file: %(RestoreFile.RestorePath)" />
   </Target>
+  <Target Name="Pack" />
+  <!-- <Target Name="DeleteDirectoryBuild" AfterTargets="RestoreSharedFiles;RestoreCentralFiles;CleanCentralFiles;CleanSharedFiles">
+    <Delete Files="$(MSBuildProjectDirectory)/Directory.Build.props" Condition="Exists('$(MSBuildProjectDirectory)/Directory.Build.props')" />
+    <Move SourceFiles="$(MSBuildProjectDirectory)/Directory.Build.props.tmp" DestinationFiles="$(MSBuildProjectDirectory)/Directory.Build.props"
+      Condition="Exists('$(MSBuildProjectDirectory)/Directory.Build.props.tmp')" />
+  </Target> -->
 </Project>
