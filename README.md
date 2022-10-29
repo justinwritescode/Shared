@@ -36,3 +36,6 @@ If you are restoring a root repo without anything above it, you'll need to resto
 ## JustInTimeVersioning
 
 This project keeps a centralized log of all current package versions by configuration.  The current versions are stored in ```Packages/Versions.{Configuration}.json``` and ```Packages/Versions.{Configuration}.props.```. Whenever a package is built, this program runs a target called ```SaveVersionNumberCentrally,``` which stores the package version to these files.  With this repo, you don't have to worry about updating your package versions because it's done for you.
+
+!!! note
+    You'll need to run the ```RestoreCentralFiles``` target to the repo you're using or a repo above it in the directory tree for this to work properly.
