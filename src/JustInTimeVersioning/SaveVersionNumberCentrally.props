@@ -12,7 +12,7 @@
 
 <Project>
   <PropertyGroup>
-    <AssemblyFile Condition="'$(PackageId)' != 'JustinWritesCode.JustInTimeVersioning'">../lib/JustinWritesCode.JustInTimeVersioning.dll</AssemblyFile>
-    <AssemblyFile Condition="'$(PackageId)' == 'JustinWritesCode.JustInTimeVersioning'">./lib/JustinWritesCode.JustInTimeVersioning.dll</AssemblyFile>
+    <AssemblyFile Condition="'$(PackageId)' != 'JustInTimeVersioning'">../lib/JustInTimeVersioning.dll</AssemblyFile>
+    <AssemblyFile Condition="'$(PackageId)' == 'JustInTimeVersioning'">./lib/JustInTimeVersioning.dll</AssemblyFile>
   </PropertyGroup>
 </Project>

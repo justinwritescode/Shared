@@ -26,13 +26,13 @@
 To restore the files, add a ```.restoreproj``` file to the root of your git repo with at least the following contents:
 
 ```xml
-<Project Sdk="JustinWritesCode.RestoreProjSdk" />
+<Project Sdk="RestoreProjSdk" />
 ```
 
 Alternatively, stick this line in any ```*proj``` file at the top level of your repo:
 
 ```xml
-<Sdk Name="JustinWritesCode.RestoreProjSdk" />
+<Sdk Name="RestoreProjSdk" />
 ```
 
 And add a ```global.json``` file with at least the following contents:
@@ -40,7 +40,7 @@ And add a ```global.json``` file with at least the following contents:
 ```json
 {
     "msbuild-sdks": {
-        "JustinWritesCode.RestoreProjSdk": "the-latest-package-version"
+        "RestoreProjSdk": "the-latest-package-version"
     }
 }
 ```

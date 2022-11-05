@@ -9,6 +9,6 @@
    Copyright © 2022 Justin Chase, All Rights Reserved
       License: MIT (https://opensource.org/licenses/MIT)
 -->
-# JustinWritesCode.Versioning
+# JustInTimeVersioning
 
 A utility to keep central version records in sync with the repo

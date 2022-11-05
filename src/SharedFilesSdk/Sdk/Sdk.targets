@@ -1,0 +1,16 @@
+<!--
+ Sdk.targets
+ 
+   Created: 2022-10-30-06:59:39
+   Modified: 2022-10-30-06:59:39
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <ItemGroup>
+    <SharedFile Update="@(SharedFile)" IsPackable="true" Package>
+  </ItemGroup>
+</Project>

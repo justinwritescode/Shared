@@ -21,7 +21,7 @@
         <Content Include="../../../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
         <Content Include="../../../.gitignore" IsRestorable="true" />
         <Content Include="../../../.vscode/*" IsRestorable="true" Folder=".vscode/" />
-        <Content Include="../../../.scripts/*" IsRestorable="true" Folder=".scripts/" />
+        <Content Include="../../../.scripts/**/*" IsRestorable="true" Folder="%(Content.RecursiveDir)" />
         <Content Include="../../../assets/*.*" Folder="assets/" />
         <Content Include="../../../Directory.Build.props" />
         <Content Include="../../../Directory.Build.targets" />

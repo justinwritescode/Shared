@@ -10,7 +10,7 @@
 //      License: MIT (https://opensource.org/licenses/MIT)
 // 
 
-namespace JustinWritesCode.JustInTimeVersioning;
+namespace JustInTimeVersioning;
 
 public class SaveVersionNumberCentrally : MSBTask
 {
@@ -28,7 +28,7 @@ public class SaveVersionNumberCentrally : MSBTask
     {
         VersionManager.Configuration = Configuration;
         VersionManager.SaveVersion(PackageName, Version);
-        System.Console.WriteLine($"Saved version {Version} for package {PackageName}.");
+        System.Console.WriteLine($"Saved version {Version} for package {PackageName} to {VersionManager.VersionsPropsFilePath}.");
         return true;
     }
 }

@@ -1,0 +1,23 @@
+<!--
+ SharedFilesSdk.nuproj
+ 
+   Created: 2022-10-31-03:48:05
+   Modified: 2022-10-31-03:48:05
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project Sdk="Microsoft.Build.NoTargets" InitialTargets="WriteStuff">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>SharedFilesSdk</PackageId>
+    <Description>Shared files SDK</Description>
+  </PropertyGroup>
+  <Import Project="./Sdk/Sdk.props" />
+  <Target Name="WriteStuff">
+    <Message Text="SharedFolder: @(SharedFolder)" />
+    <Message Text="SharedFile: @(SharedFile)" />
+  </Target>
+</Project>

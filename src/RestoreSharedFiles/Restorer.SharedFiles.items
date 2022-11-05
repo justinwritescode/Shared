@@ -1,3 +1,15 @@
+<!--
+ Restorer.SharedFiles.items
+ 
+   Created: 2022-10-29-03:17:38
+   Modified: 2022-10-30-06:46:42
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project>
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
@@ -11,21 +23,23 @@
     <RestoreFile RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFile.RestoreFolder)%(RestoreFile.RecursiveDir)%(RestoreFile.Filename)%(RestoreFile.Extension)" />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/*" RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/assets/*" RestoreFolder="assets/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
-    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.props" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension).tmp" /> -->
-    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.targets" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)"/> -->
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build/*" RestoreFolder="Directory.Build/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages.pkgs" RestoreFolder="./" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/*" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
-    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.props" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/>
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.json" RestoreFolder="Packages/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(Filename)%(Extension)"/> -->
-    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/.nuget/NuGet.config" RestoreFolder=".nuget/" RestorePath="$$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)"/>
-    <!-- <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore" RestorePath="$(MSBuildProjectDirectory)/%(Filename)%(Extension)" /> -->
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.github/**/*" RestoreFolder=".github/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.vscode/*" RestoreFolder=".vscode/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
-    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/docs/*" RestoreFolder="docs/" RestorePath="$(MSBuildProjectDirectory)/%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/*" RestoreFolder="./" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/assets/*" RestoreFolder="assets/" />
+    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.props"  /> -->
+    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build.targets" /> -->
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Directory.Build/*" RestoreFolder="Directory.Build/" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages.pkgs" RestoreFolder="./" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/*" RestoreFolder="Packages/" />
+    <!-- <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.props" RestoreFolder="Packages/" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.props" RestoreFolder="Packages/" />
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/Packages/Versions.*.json" RestoreFolder="Packages/" /> -->
+    <CentralFile Include="$(MSBuildThisFileDirectory)../shared/.nuget/NuGet.config" RestoreFolder=".nuget/" />
+    <!-- <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore"  /> -->
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.gitignore" RestoreFolder="./" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.github/**/*" RestoreFolder=".github/" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.scripts/**/*" RestoreFolder=".scripts/" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/.vscode/*" RestoreFolder=".vscode/" />
+    <RestoreFile Include="$(MSBuildThisFileDirectory)../shared/docs/*" RestoreFolder="docs/" />
   </ItemGroup>
   <!-- <Target Name="WriteDirectoryBuild">
     <WriteLinesToFile File="$(MSBuildProjectDirectory)/Directory.Build.props" Lines="&lt;Project&gt;&#xD;&#xA;&lt;/Project&gt;" Overwrite="true" />

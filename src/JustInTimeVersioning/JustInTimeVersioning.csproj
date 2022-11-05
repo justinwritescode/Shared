@@ -17,9 +17,9 @@
     <Description>Keeps central version records in sync with the repos</Description>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <SlnGenSolutionFolder>src</SlnGenSolutionFolder>
-    <AssemblyName>JustinWritesCode.JustInTimeVersioning</AssemblyName>
-    <PackageId>JustinWritesCode.JustInTimeVersioning</PackageId>
-    <RootNamespace>JustinWritesCode.JustInTimeVersioning</RootNamespace>
+    <AssemblyName>JustInTimeVersioning</AssemblyName>
+    <PackageId>JustInTimeVersioning</PackageId>
+    <RootNamespace>JustInTimeVersioning</RootNamespace>
     <OutputPath>lib/</OutputPath>
   </PropertyGroup>
 <ItemGroup>
@@ -33,6 +33,7 @@
  <ItemGroup>
   <PackageFile Include="./SaveVersionNumberCentrally.props" PackagePath="build/$(PackageId).props" />
   <PackageFile Include="./SaveVersionNumberCentrally.targets" PackagePath="build/$(PackageId).targets" />
+  <PackageFile Include="./InitializeJustInTimeVersioning.targets" PackagePath="build/InitializeJustInTimeVersioning.targets" />
   <PackageFile Include="$(OutputPath)$(AssemblyName).*" PackagePath="lib/%(Filename)%(Extension)" />
  </ItemGroup>
   <Import Project="./SaveVersionNumberCentrally.props" />

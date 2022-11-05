@@ -5,10 +5,8 @@
   },
   "compilationOptions": {
     "defines": [
-      "RELEASE",
-      "PRODUCTION",
       "TRACE",
-      "RELEASE",
+      "TESTING",
       "NETSTANDARD",
       "NETSTANDARD2_0",
       "NETSTANDARD1_0_OR_GREATER",
@@ -24,7 +22,6 @@
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
-    "optimize": true,
     "keyFile": "/Users/david/GitHub/justinwritescode/Directory.Build/../assets/JustinWritesCode.snk",
     "emitEntryPoint": false,
     "xmlDoc": true,
@@ -32,7 +29,7 @@
   },
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "JustinWritesCode.JustInTimeVersioning/0.0.8l": {
+      "JustInTimeVersioning/0.0.1-Testing": {
         "dependencies": {
           "FluentBuilder": "0.7.1",
           "GitInfo": "2.2.0",
@@ -161,7 +158,7 @@
           "System.Xml.XPath.XDocument": "4.0.3.0"
         },
         "compile": {
-          "JustinWritesCode.JustInTimeVersioning.dll": {}
+          "JustInTimeVersioning.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.0.3.0": {
@@ -960,7 +957,7 @@
       }
     },
     ".NETStandard,Version=v2.0/": {
-      "JustinWritesCode.JustInTimeVersioning/0.0.8l": {
+      "JustInTimeVersioning/0.0.1-Testing": {
         "dependencies": {
           "FluentBuilder": "0.7.1",
           "GitInfo": "2.2.0",
@@ -1089,7 +1086,7 @@
           "System.Xml.XPath.XDocument": "4.0.3.0"
         },
         "runtime": {
-          "JustinWritesCode.JustInTimeVersioning.dll": {}
+          "JustInTimeVersioning.dll": {}
         }
       },
       "FluentBuilder/0.7.1": {},
@@ -1363,7 +1360,7 @@
     }
   },
   "libraries": {
-    "JustinWritesCode.JustInTimeVersioning/0.0.8l": {
+    "JustInTimeVersioning/0.0.1-Testing": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

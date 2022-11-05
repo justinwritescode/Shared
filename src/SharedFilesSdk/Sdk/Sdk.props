@@ -1,0 +1,22 @@
+<!--
+ Sdk.props
+ 
+   Created: 2022-10-30-06:59:33
+   Modified: 2022-10-30-06:59:33
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+    <ItemDefinitionGroup>
+        <SharedFile PackagePath="shared/%(SharedFile.Folder)%(SharedFile.RecursiveDir)%(SharedFile.Filename)%(SharedFile.Extension)"
+                    RestorePath="$(MSBuildProjectDirectory)/%(SharedFile.PackageFolder)%(SharedFile.RecursiveDir)%(SharedFile.Filename)%(SharedFile.Extension)" 
+                    Folder="./" IsRestorable="false" Pack="true" PackFolder="Content" />
+    </ItemDefinitionGroup>
+   <ItemGroup>
+      <SharedFolder Include="../../../.scripts/" />
+      <SharedFile Include="@(SharedFolder->Combine('**/*'))" />
+   </ItemGroup>
+</Project>

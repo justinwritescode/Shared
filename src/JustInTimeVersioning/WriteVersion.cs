@@ -10,7 +10,7 @@
 //      License: MIT (https://opensource.org/licenses/MIT)
 // 
 
-namespace JustinWritesCode.JustInTimeVersioning;
+namespace JustInTimeVersioning;
 
 public class WriteVersion : Microsoft.Build.Utilities.Task
 {

@@ -11,11 +11,12 @@
 -->
 
 <Project>
-    <UsingTask TaskName="JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally" AssemblyFile="$(AssemblyFile)" />
-    <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion" DependsOnTargets="MinVer">
-        <JustinWritesCode.JustInTimeVersioning.SaveVersionNumberCentrally
+    <UsingTask TaskName="JustInTimeVersioning.SaveVersionNumberCentrally" AssemblyFile="$(AssemblyFile)" />
+    <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion;MinVer">
+        <JustInTimeVersioning.SaveVersionNumberCentrally
             PackageName="$(PackageId)"
             Version="$(PackageVersion)" 
             Configuration="$(Configuration)" />
     </Target>
+    <Import Project="./InitializeJustInTimeVersioning.targets" />
 </Project>
