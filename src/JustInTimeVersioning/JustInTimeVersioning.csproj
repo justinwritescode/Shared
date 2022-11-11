@@ -16,9 +16,6 @@
     <PackageId>JustInTimeVersioning</PackageId>
   </PropertyGroup>
  <ItemGroup>
-  <PackageReference Include="Microsoft.Build" />
- </ItemGroup>
- <ItemGroup>
   <PackageFile Include="./JustInTimeVersioning.props" PackagePath="build/$(PackageId).props" />
   <PackageFile Include="./JustInTimeVersioning.targets" PackagePath="build/$(PackageId).targets" />
   <PackageFile Include="./InitializeJustInTimeVersioning.targets" PackagePath="build/InitializeJustInTimeVersioning.targets" />

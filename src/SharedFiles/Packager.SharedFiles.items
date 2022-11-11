@@ -1,0 +1,43 @@
+<!--
+ Packager.SharedFiles.items
+ 
+   Created: 2022-10-24-10:28:32
+   Modified: 2022-10-29-02:58:25
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <ItemDefinitionGroup>
+        <Content PackagePath="shared/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)"
+                    RestorePath="$(MSBuildProjectDirectory)/%(Content.PackageFolder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" 
+                    Folder="./" IsRestorable="false" />
+    </ItemDefinitionGroup>
+   <ItemGroup>
+        <Content Include="$(MSBuildThisFileDirectory)../../../.config/dotnet-tools.json" IsRestorable="false" Folder=".config/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../.github/**/*.*" Exclude=".DS_Store" IsRestorable="true" Folder=".github/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../.gitignore" IsRestorable="true" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../.vscode/*" IsRestorable="true" Folder=".vscode/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../.scripts/**/*" IsRestorable="true" Folder=".scripts/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../assets/*.*" Folder="assets/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Directory.Build.props" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Directory.Build.targets" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Directory.Build/*.*" Folder="Directory.Build/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../docs/*.*"  Exclude=".DS_Store" IsRestorable="true" Folder="docs/"/>
+        <Content Include="$(MSBuildThisFileDirectory)../../../global.json" IsRestorable="false" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../LICENSE.md"  IsRestorable="true" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Packages.pkgs" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Packages/*.pkgs" Folder="Packages/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Packages/Versions.*.json" Folder="Packages/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Packages/Versions.*.props" Folder="Packages/" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../Packages/Versions.props" Folder="Packages/" />
+        <Content Remove="**/*.DS_Store" />
+        <Content Remove="$(MSBuildThisFileDirectory)../../../**/.DS_Store" />
+        <Content Remove="../../../.github/workflows/update-readme.yml" />
+        <Content Update="@(Content)" PackagePath="shared/%(Content.Folder)%(Content.RecursiveDir)%(Content.Filename)%(Content.Extension)" />
+        <Content Include="$(MSBuildThisFileDirectory)../../../.nuget/NuGet.CI.config" PackagePath="shared/.nuget/NuGet.config" IsRestorable="false" Folder=".nuget/" />
+    </ItemGroup>
+</Project>

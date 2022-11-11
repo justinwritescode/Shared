@@ -1,0 +1,35 @@
+<!--
+ RestoreProjSdk.nuproj
+ 
+   Created: 2022-10-24-12:03:11
+   Modified: 2022-10-29-03:00:44
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <PropertyGroup>
+        <TargetFramework>netstandard1.0</TargetFramework>
+        <Title>JustinWritesCode Shared Files Restorer SDK</Title>
+        <PackageId>$(MSBuildProjectName)</PackageId>
+        <AssemblyName>$(PackageId)</AssemblyName>
+    </PropertyGroup>
+    <Import Project="./Packager.SharedFiles.items" />
+
+    <ItemGroup>
+      <Content Include="$(MSBuildThisFileDirectory)./Icon.png" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageTag Include="shared" Visible="false" />
+        <PackageTag Include="shared-files" />
+        <PackageTag Include="common" Visible="false" />
+        <PackageTag Include="common-files" Visible="false" />
+        <PackageTag Include="msbuild" Visible="false" />
+        <PackageTag Include="msbuild-sdk" Visible="false" />
+        <PackageTag Include="justinwritescode" Visible="false" />
+    </ItemGroup>
+</Project>
