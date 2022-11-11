@@ -12,7 +12,7 @@
 
 <Project>
     <UsingTask TaskName="JustInTimeVersioning.SaveVersionNumberCentrally" AssemblyFile="$(AssemblyFile)" />
-    <Target Name="SaveVersionNumberCentrally" AfterTargets="GetPackageVersion;MinVer">
+    <Target Name="SaveVersionNumberCentrally" AfterTargets="Pack" DependsOnTargets="Pack">
         <JustInTimeVersioning.SaveVersionNumberCentrally
             PackageName="$(PackageId)"
             Version="$(PackageVersion)" 

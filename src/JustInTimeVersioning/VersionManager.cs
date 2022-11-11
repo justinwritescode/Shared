@@ -19,23 +19,6 @@ using System;
 
 public static class VersionManager
 {
-    // public VersionManager(string configuration, string versionsJsonFileName = "Packages/JustinWritesCode.Versions.{0}.json", string versionsPropsFileName = "Packages/JustinWritesCode.Versions.{0}.props")
-    // {
-    //     Configuration = configuration;
-    //     VersionsJsonFileName = versionsJsonFileName;
-    //     VersionsPropsFileName = versionsPropsFileName;
-    //     if (!File.Exists(VersionsJsonFilePath))
-    //     {
-    //         File.WriteAllText(VersionsJsonFilePath, "{}");
-    //     }
-    //     if (!File.Exists(VersionsPropsFilePath))
-    //     {
-    //         File.WriteAllText(VersionsPropsFilePath, "<Project />");
-    //     }
-    //     Versions = System.Text.Json.JsonSerializer.Deserialize<IDictionary<string, string>>(
-    //     System.IO.File.ReadAllText(VersionsJsonFilePath));
-    // }
-
     private static void SaveVersions()
     {
         var sortedVersions = Versions.Value.OrderBy(x => x.Key).ToDictionary(x => x.Key, x => x.Value);

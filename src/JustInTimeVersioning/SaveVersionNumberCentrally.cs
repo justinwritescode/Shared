@@ -14,12 +14,12 @@ namespace JustInTimeVersioning;
 
 public class SaveVersionNumberCentrally : MSBTask
 {
-    [Required]
+    [MSBF.Required]
     public string PackageName { get; set; } = string.Empty;
 
-    [Required]
+    [MSBF.Required]
     public string Version { get; set; } = string.Empty;
-    [Required]
+    [MSBF.Required]
     public string Configuration { get; set; } = "Local";
     public string VersionsJsonFileName { get => VersionManager.VersionsJsonFileName; set => VersionManager.VersionsJsonFileName = value; }
     public string VersionsPropsFileName { get => VersionManager.VersionsPropsFileName; set => VersionManager.VersionsPropsFileName = value; }
