@@ -1,3 +1,15 @@
+<!--
+ * Restore.targets
+ * 
+ *   Created: 2022-10-29-06:17:38
+ *   Modified: 2022-11-10-11:37:25
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
 <Project Sdk="Microsoft.Build.NoTargets">
   <Target Name="RestoreSharedFiles" DependsOnTargets="Restore">
     <Message Importance="High" Text="Using version $(PackageVersion)" />
@@ -21,6 +33,10 @@
   <Target Name="CleanSharedFiles" DependsOnTargets="Restore">
     <Delete Files="@(RestoreFile->'%(RestoreFolder)%(RecursiveDir)%(Filename)%(Extension)')" />
     <Message Importance="High" Text="Cleaned file: %(RestoreFile.RestorePath)" />
+  </Target>
+  <Target Name="RestoreGitIgnore" DependsOnTargets="Restore">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)../shared/.gitignore" 
+          DestinationFiles="./.gitignore" />
   </Target>
   <Target Name="Pack" />
   <!-- <Target Name="DeleteDirectoryBuild" AfterTargets="RestoreSharedFiles;RestoreCentralFiles;CleanCentralFiles;CleanSharedFiles">

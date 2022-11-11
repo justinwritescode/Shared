@@ -55,7 +55,7 @@ public static class VersionManager
         {
             File.WriteAllText(VersionsPropsFilePath, "<Project />");
         }
-        return System.Text.Json.JsonSerializer.Deserialize<IDictionary<string, string>>(
+        return System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(
             System.IO.File.ReadAllText(VersionsJsonFilePath));
     });
 
