@@ -1,14 +1,11 @@
-<!--
- * README.md
- * 
- *   Created: 2022-10-29-06:17:38
- *   Modified: 2022-11-10-08:06:40
- * 
- *   Author: Justin Chase <justin@justinwritescode.com>
- *   
- *   Copyright © 2022 Justin Chase, All Rights Reserved
- *      License: MIT (https://opensource.org/licenses/MIT)
--->
+---
+author: Justin Chase
+author_email: justin@justinwritescode.com
+title: README.md
+modified: 2022-11-19-04:04:44
+created: 2022-11-10-09:07:36
+license: MIT
+---
 
 # JustInTimeVersioning
 
@@ -22,7 +19,7 @@ The following command will initialize the repository with no version numbers in 
 dotnet build --Target:InitJustInTimeVersioning JustInTimeVersioning.csproj
 ```
 
-To control which directory is used, use the ``JustInTimeVersioningInitPackagesDirectory`` property like this:
+To control which directory is used, use the `JustInTimeVersioningInitPackagesDirectory` property like this:
 
 ```bash
 dotnet build --Target:InitJustInTimeVersioning --property:JustInTimeVersioningInitPackagesDirectory=C:\JustInTimeVersioning
@@ -32,4 +29,4 @@ This will create the following directory structure:
 
 ## Usage
 
-Now, simply refer to the JustInTimeVersioning ``.csproj`` or ``nuget`` package from your ``.csproj`` files and they will automatically update the version number in the
+Now, simply refer to the JustInTimeVersioning `.csproj` or `nuget` package from your `.csproj` files and they will automatically update the version number in the

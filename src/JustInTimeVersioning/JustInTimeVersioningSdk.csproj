@@ -13,7 +13,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
  <Import Project="./Compilation.props" />
  <PropertyGroup>
-  <PackageId>JustInTimeVersioning.Sdk</PackageId>
+  <PackageId>JustInTimeVersioningSdk</PackageId>
+	<TargetFramework>netstandard2.0</TargetFramework>
  </PropertyGroup>
  <ItemGroup>
   <PackageFile Include="./JustInTimeVersioning.props" PackagePath="sdk/Sdk.props" />

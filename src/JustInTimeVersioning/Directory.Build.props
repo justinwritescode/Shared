@@ -1,0 +1,37 @@
+<!--
+ * Directory.Build.props
+ * 
+ *   Created: 2022-11-19-02:52:35
+ *   Modified: 2022-11-19-02:52:35
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<Import Project="../../../Directory.Build/AssemblySigning.props" />
+	<Import Project="../../../Directory.Build/Authors-Owners.props" />
+	<Import Project="../../../Directory.Build/BuildConfigurations.props" />
+	<Import Project="../../../Directory.Build/CodeDocumentation.props" />
+	<Import Project="../../../Directory.Build/CustomBeforeAndAfterCentralPackageVersions.props" />
+	<Import Project="../../../Directory.Build/CompilerVisibleProperties.props" />
+	<Import Project="../../../Directory.Build/CopyFilesAndSymbolsFromPackages.props" />
+	<Import Project="../../../Directory.Build/MinVer.props" />
+	<Import Project="../../../Directory.Build/NoWarn.props" />
+	<Import Project="../../../Directory.Build/NuGetizer.props" />
+	<Import Project="../../../Directory.Build/NuGetOutputs.props" />
+	<Import Project="../../../Directory.Build/NuGetPush.props" />
+	<Import Project="../../../Directory.Build/PackageMetadata.props" />
+	<Import Project="../../../Directory.Build/PackageIcon.props" />
+	<Import Project="../../../Directory.Build/PackageOutputPath.props" />
+	<Import Project="../../../Directory.Build/PackageProjectUrl.props" />
+	<Import Project="../../../Directory.Build/PackageReadme.props" />
+	<Import Project="../../../Directory.Build/PackageTags.props" />
+	<Import Project="../../../Directory.Build/PackageVersionOverride.props" />
+	<Import Project="../../../Directory.Build/SlnGen.props" />
+	<Import Project="../../../Directory.Build/ProjectTypeInfo.props" />
+	<Import Project="../../../Directory.Build/TestingLocal.props" />
+	<Import Project="../../../Directory.Build/Testing.props" />
+</Project>

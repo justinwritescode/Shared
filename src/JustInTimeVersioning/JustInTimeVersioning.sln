@@ -1,0 +1,35 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JustInTimeVersioning", "JustInTimeVersioning.csproj", "{F2A1AC24-2984-4AFC-9C4D-C56D01529847}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3521A5A-1B75-4D69-9853-3960A20AB60A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Testing|Any CPU = Testing|Any CPU
+		Local|Any CPU = Local|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Testing|Any CPU.ActiveCfg = Testing|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Testing|Any CPU.Build.0 = Testing|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Local|Any CPU.ActiveCfg = Local|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Local|Any CPU.Build.0 = Local|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F2A1AC24-2984-4AFC-9C4D-C56D01529847} = {A3521A5A-1B75-4D69-9853-3960A20AB60A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {469F5582-C464-4671-9922-4C17551641F4}
+	EndGlobalSection
+EndGlobal

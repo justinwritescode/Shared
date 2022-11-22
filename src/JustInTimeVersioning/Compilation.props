@@ -35,7 +35,11 @@
     <Using Include="System.Text.RegularExpressions" />
     <Using Include="Microsoft.Build.Execution" Alias="MSBEx" />
     <Using Include="Microsoft.Build.Framework" Alias="MSBF" />
+    <Using Include="Microsoft.Build" Alias="MSB" />
+    <Using Include="Microsoft.Build.Utilities" Alias="MSBUtils" />
+    <Using Include="Microsoft.Build.Utilities.TaskLoggingHelper" Alias="MSBLog" />
   </ItemGroup>
   <Import Project="./JustInTimeVersioning.props" />
   <Import Project="./JustInTimeVersioning.targets" />
+	<Import Project="../../../Directory.Build/*.targets" />
 </Project>

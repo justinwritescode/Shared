@@ -16,6 +16,7 @@
         <Title>JustinWritesCode Shared Files Restorer SDK</Title>
         <PackageId>$(MSBuildProjectName)</PackageId>
         <AssemblyName>$(PackageId)</AssemblyName>
+        <MinVerTagPrefix>restor-v</MinVerTagPrefix>
     </PropertyGroup>
     <Import Project="./Packager.SharedFiles.items" />
 
