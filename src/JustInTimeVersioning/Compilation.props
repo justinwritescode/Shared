@@ -41,5 +41,5 @@
   </ItemGroup>
   <Import Project="./JustInTimeVersioning.props" />
   <Import Project="./JustInTimeVersioning.targets" />
-	<Import Project="../../../Directory.Build/*.targets" />
+	<!-- <Import Project="../../../Directory.Build/*.targets" /> -->
 </Project>
