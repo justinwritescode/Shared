@@ -1,0 +1,24 @@
+<!--
+ CustomBeforeAndAfterCentralPackageVersions.props
+ 
+   Created: 2022-10-22-06:23:58
+   Modified: 2022-10-29-02:47:31
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <CustomBeforeCentralPackageVersionsProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeCentralPackageVersions.props')))">
+      $(CustomBeforeCentralPackageVersionsProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeCentralPackageVersions.props"))
+    </CustomBeforeCentralPackageVersionsProps>
+    <CustomAfterCentralPackageVersionsProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterCentralPackageVersions.props')))">
+      $(CustomAfterCentralPackageVersionsProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterCentralPackageVersions.props"))
+    </CustomAfterCentralPackageVersionsProps>
+  </PropertyGroup>
+</Project>

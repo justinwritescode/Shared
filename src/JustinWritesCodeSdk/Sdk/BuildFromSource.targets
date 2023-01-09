@@ -1,0 +1,19 @@
+<!--
+ * BuildFromSource.targets
+ * 
+ *   Created: 2022-12-26-10:35:33
+ *   Modified: 2022-12-26-10:35:33
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <!-- <ItemGroup Condition="'$(BuildFromSource)' != 'true'">
+    <PackageReference Include="$([System.Text.RegularExpressions.Regex]::Replace((%(ProjectReference.Identity), '(?:.+[\/\\])+(.*)\.csproj', '$1'))" />
+    <PropsFile Include="$([System.String]::Copy(%(ProjectReference.Identity)).Replace('.csproj', '.props'))"  />
+    <TargetsFile Include="$([System.String]::Copy(%(ProjectReference.Identity)).Replace('.csproj', '.targets'))"  />
+  </ItemGroup> -->
+</Project>

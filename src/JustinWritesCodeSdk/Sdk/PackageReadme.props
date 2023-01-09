@@ -1,0 +1,11 @@
+<Project InialTargets="EnsureReadmeExists">
+	<!-- <PropertyGroup>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+	<Target Name="EnsureReadmeExists">
+			<Error Condition="!Exists('README.md')"
+				Code="README.MD_NOT_FOUND"
+				File="$(MSBuildProjectDirectory)/README.md" 
+				Text="No readme file exists for the package '$(MSBuildProjectName)'" />
+	</Target> -->
+</Project>

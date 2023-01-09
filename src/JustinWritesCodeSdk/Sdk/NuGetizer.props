@@ -1,0 +1,31 @@
+<!--
+ NuGetizer.props
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-10-29-02:48:05
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <EmbedAllSources>true</EmbedAllSources>
+    <RepositoryType>git</RepositoryType>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <IsPackable>true</IsPackable>
+    <IsNuGetized>true</IsNuGetized>
+  </PropertyGroup>
+
+  <!-- Pack any files named after the package ID into the package's build folder -->
+  <!-- <ItemGroup>
+    <PackageFile Include="$(MSBuildProjectDirectory)$(PackageId).props" PackagePath="build/$(PackageId).props" />
+    <PackageFile Include="$(MSBuildProjectDirectory)$(PackageId).targets" PackagePath="build/$(PackageId).targets" />
+    <PackageFile Include="$(MSBuildProjectDirectory)build/$(PackageId).props" PackagePath="build/$(PackageId).props" />
+    <PackageFile Include="$(MSBuildProjectDirectory)build/$(PackageId).targets" PackagePath="build/$(PackageId).targets" />
+  </ItemGroup> -->
+</Project>

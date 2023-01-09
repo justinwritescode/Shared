@@ -1,0 +1,24 @@
+<!--
+ * RemoveDuplicatePackageReferences.targets
+ * 
+ *   Created: 2022-11-27-12:58:57
+ *   Modified: 2022-11-27-01:34:20
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<!-- Gets rid of duplicate PackageReferences so we don't get that stupid warning any more -->
+<Project>
+	<Target Name="RemoveDuplicatePackageReferences" BeforeTargets="CollectPackageReferences">
+		<RemoveDuplicates Inputs="@(PackageReference)">
+			<Output TaskParameter="Filtered" ItemName="DistinctPackageReference" />
+		</RemoveDuplicates>
+		<ItemGroup>
+			<PackageReference Remove="@(PackageReference)" />
+			<PackageReference Include="@(DistinctPackageReference)" />
+		</ItemGroup>
+	</Target>
+</Project>

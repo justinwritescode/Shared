@@ -1,0 +1,19 @@
+<!--
+ PackageTags.targets
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-10-29-02:48:58
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <Target Name="SetPackageTags" BeforeTargets="GetPackageMetadata;GenerateMSBuildEditorConfigFileShouldRun">
+    <PropertyGroup>
+      <PackageTags>@(PackageTag->Distinct(), ' ')</PackageTags>
+    </PropertyGroup>
+  </Target>
+</Project>

@@ -1,0 +1,18 @@
+<!--
+ * PackageOutputPath.props
+ * 
+ *   Created: 2022-12-03-05:40:39
+ *   Modified: 2022-12-05-04:29:47
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <PackageOutputPath>$(_GitRoot)/artifacts/$(MSBuildProjectName)</PackageOutputPath>  
+    <OutputPath>$(_GitRoot)/artifacts/$(MSBuildProjectName)</OutputPath>  
+  </PropertyGroup>
+</Project>

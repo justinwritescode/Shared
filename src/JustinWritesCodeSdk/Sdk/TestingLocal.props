@@ -1,0 +1,32 @@
+<!--
+ TestingLocal.props
+ 
+   Created: 2022-10-24-08:10:51
+   Modified: 2022-10-29-02:49:16
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup Condition="'$(Configuration)' == 'Local' And '$(PackageVersionOverride)' == ''">
+    <PackageVersionOverride>0.0.1-Local</PackageVersionOverride>
+    <MinVerVersionOverride>0.0.1-Local</MinVerVersionOverride>
+    <!-- <PackageVersion>0.0.1-Local</PackageVersion>
+    <Version>0.0.1-Local</Version>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <VersionSuffix>-Local</VersionSuffix>
+    <InformationalVersion>0.0.1-Local</InformationalVersion> -->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Testing' And '$(PackageVersionOverride)' == ''">
+    <PackageVersionOverride>0.0.1-Testing</PackageVersionOverride>
+    <MinVerVersionOverride>0.0.1-Testing</MinVerVersionOverride>
+    <!-- <PackageVersion>0.0.1-Local</PackageVersion>
+    <Version>0.0.1-Local</Version>
+    <AssemblyVersion>0.0.1</AssemblyVersion>
+    <VersionSuffix>-Local</VersionSuffix>
+    <InformationalVersion>0.0.1-Local</InformationalVersion> -->
+  </PropertyGroup>
+</Project>

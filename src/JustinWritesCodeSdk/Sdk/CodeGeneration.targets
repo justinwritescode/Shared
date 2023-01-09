@@ -1,0 +1,25 @@
+<!--
+ CodeGeneration.targets
+ 
+   Created: 2022-10-30-09:14:40
+   Modified: 2022-10-30-09:14:40
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <!-- <ItemGroup>
+    <ProjectReference 
+      Include="@(CodeGenerator->'%(ProjectPath)')"
+      OutputItemType="Analyzer" ReferenceOutputAssembly="false" 
+      Condition="('$(Configuration)' == 'Local' Or '$(Configuration)' == 'Testing') And (Exists(@(CodeGenerator->'%(ProjectPath)')) Or '@(CodeGenerator->'%(ProjectPath)')' == '')" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference 
+      Include="%(CodeGenerator.PackageName)"
+      IncludeAssets="Analyzers" PrivateAssets="All" 
+      Condition="'$(Configuration)' != 'Local' And '$(Configuration)' != 'Testing'" />
+  </ItemGroup> -->
+</Project>

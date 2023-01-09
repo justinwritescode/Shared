@@ -1,0 +1,29 @@
+<!--
+ * PackageMetadata.props
+ * 
+ *   Created: 2022-10-22-01:38:14
+ *   Modified: 2022-11-19-04:05:24
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <RootNamespace Condition="'$(RootNamespace)' == ''">$(MSBuildProjectName)</RootNamespace>
+    <AssemblyName Condition="'$(AssemblyName)' == ''">$(MSBuildProjectName)</AssemblyName>
+    <AssemblyTitle Condition="'$(AssemblyTitle)' == ''">$(MSBuildProjectName)</AssemblyTitle>
+    <Title Condition="'$(Title)' == ''">$(AssemblyTitle)</Title>
+    <DefaultLanguage>en</DefaultLanguage>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <LangVersion>preview</LangVersion>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <DebugType>portable</DebugType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseJustinWritesCodeNamespace Condition="'$(UseJustinWritesCodeNamespace)' == ''">true</UseJustinWritesCodeNamespace>
+    <UsePackageReferencesForLocalDependencies>false</UsePackageReferencesForLocalDependencies>
+  </PropertyGroup>
+</Project>

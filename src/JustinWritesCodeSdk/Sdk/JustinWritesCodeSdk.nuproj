@@ -1,0 +1,28 @@
+<!--
+ * JustinWritesCodeSdk.nuproj
+ * 
+ *   Created: 2022-12-19-01:11:00
+ *   Modified: 2022-12-19-01:13:25
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.Build.NoTargets">
+  <Import Project="./NuGetizer.props" />
+  <Import Project="./TestingLocal.props" />
+  <Import Project="./PackageVersionOverride.props" />
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageFile Include="./*.props;*.targets" PackagePath="Sdk/%(Filename)%(Extension)" />
+    <PackageReference Include="NuGetizer" Version="[0.9.1,)" />
+    <!-- <PackageFile Include="./Sdk.*" PackagePath="Sdk/%(Filename)%(Extension)" /> -->
+  </ItemGroup>
+  <Import Project="./NuGetPush.targets" />
+  <Import Project="./TestingLocal.targets" />
+  <Import Project="./PackageVersionOverride.targets" />
+</Project>

@@ -1,0 +1,13 @@
+<!--
+ * NuGetPush.targets
+ * 
+ *   Created: 2022-11-27-05:23:44
+ *   Modified: 2022-11-27-05:23:44
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="NuGetPush/0.0.1" />

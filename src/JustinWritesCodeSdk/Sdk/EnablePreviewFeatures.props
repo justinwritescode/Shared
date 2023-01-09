@@ -1,0 +1,16 @@
+<!--
+ * EnablePreviewFeatures.props
+ * 
+ *   Created: 2022-12-21-05:20:38
+ *   Modified: 2022-12-21-05:20:39
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <PropertyGroup>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+  </PropertyGroup>
+</Project>

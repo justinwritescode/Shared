@@ -1,0 +1,24 @@
+<!--
+ CustomAfterCentralPackageVersions.targets
+ 
+   Created: 2022-10-22-06:23:58
+   Modified: 2022-10-29-02:47:24
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<PropertyGroup>	
+		<CustomBeforeCentralPackageVersionsTargets Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeCentralPackageVersions.targets')))">
+			$(CustomBeforeCentralPackageVersionsTargets);
+			$([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeCentralPackageVersions.targets"))
+		</CustomBeforeCentralPackageVersionsTargets>
+		<CustomAfterCentralPackageVersionsTargets Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterCentralPackageVersions.targets')))">
+			$(CustomAfterCentralPackageVersionsTargets);
+			$([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterCentralPackageVersions.targets"))
+		</CustomAfterCentralPackageVersionsTargets>
+	</PropertyGroup>
+</Project>

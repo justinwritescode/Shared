@@ -1,0 +1,20 @@
+<!--
+ * PackageProjectName.targets
+ * 
+ *   Created: 2022-12-02-07:51:53
+ *   Modified: 2022-12-02-07:53:09
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <ItemGroup>
+    <PackageFile 
+      Include="$(MSBuildProjectDirectory)/$(MSBuildProjectName).targets" 
+      PackagePath="build/$(MSBuildProjectName).targets" 
+      Condition="Exists('$(MSBuildProjectDirectory)/$(MSBuildProjectName).targets')" />
+  </ItemGroup>
+</Project>

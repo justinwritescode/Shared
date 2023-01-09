@@ -1,0 +1,26 @@
+<!--
+ MinVer.props
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-10-29-02:47:49
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup Label="MinVer Git Versioning Tool">
+    <MinVerDefaultPreReleasePhase Condition="'$(Configuration)' == 'Testing'">test</MinVerDefaultPreReleasePhase>
+    <MinVerDefaultPreReleasePhase Condition="'$(Configuration)' == 'Local'">Local</MinVerDefaultPreReleasePhase>
+    <MinVerDefaultPreReleasePhase Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Dev'">beta</MinVerDefaultPreReleasePhase>
+    <MinVerDefaultPreReleasePhase Condition="'$(Configuration)' == 'Staging' Or '$(Configuration)' == 'Stage'">rc</MinVerDefaultPreReleasePhase>
+    <MinVerDefaultPreReleasePhase Condition="'$(Configuration)' == 'Release'">preview</MinVerDefaultPreReleasePhase>
+    <MinVerVerbosity>normal</MinVerVerbosity>
+    <MinVerAutoIncrement>patch</MinVerAutoIncrement>
+    <MinVerMinimumMajorMinor>0.0</MinVerMinimumMajorMinor>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

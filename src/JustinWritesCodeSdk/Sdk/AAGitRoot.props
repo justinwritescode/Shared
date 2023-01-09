@@ -1,0 +1,18 @@
+<!--
+ * _GitRoot.props
+ * 
+ *   Created: 2022-12-05-04:26:19
+ *   Modified: 2022-12-05-04:26:19
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <_GitRoot>$(MSBuildThisFileDirectory)/../</_GitRoot>
+    <!-- <_GitRoot Condition="'$(_GitRoot)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), ".git"))</_GitRoot> -->
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,19 @@
+<!--
+ * CodeDocumentation.props
+ * 
+ *   Created: 2022-10-21-11:40:42
+ *   Modified: 2022-11-04-10:17:28
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+   <IntermediateOutputPath Condition="'$(IntermediateOutputPath)' == ''">obj/</IntermediateOutputPath>
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   <DocumentationFile>$(OutputPath)$(MSBuildProjectName).xml</DocumentationFile>
+  </PropertyGroup>
+</Project>

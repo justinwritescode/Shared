@@ -1,0 +1,20 @@
+<!--
+ * BuildFromSource.props
+ * 
+ *   Created: 2022-12-26-10:34:56
+ *   Modified: 2022-12-26-10:34:56
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <TempFile>$([System.IO.Path]::GetTempFileName())</TempFile>
+    <TempPropsFile>$(TempFile).props</TempPropsFile>
+    <TempTargetsFile>$(TempFile).targets</TempTargetsFile>
+    <BuildFromSource>false</BuildFromSource>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,21 @@
+<!--
+ PackageIcon.props
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-10-29-02:48:27
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <PackageIcon Condition="Exists('$(MSBuildProjectDirectory)/Icon.png') And '$(PackageIcon)' == ''">Icon.png</PackageIcon>
+    <PackageIcon Condition="Exists('$(MSBuildProjectDirectory)/Icon.jpg') And '$(PackageIcon)' == ''">Icon.jpg</PackageIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageFile Include="$(PackageIcon)" PackagePath="%(Filename)%(Extension)" Condition="Exists('$(PackageIcon)')" />
+  </ItemGroup>
+</Project>

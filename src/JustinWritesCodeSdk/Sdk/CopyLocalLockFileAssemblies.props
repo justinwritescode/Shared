@@ -1,0 +1,17 @@
+<!--
+ * CopyLocalLockFileAssemblies.props
+ * 
+ *   Created: 2022-11-25-01:40:12
+ *   Modified: 2022-11-25-01:40:12
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <PropertyGroup>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,20 @@
+<!--
+ * PackageBuildPropsFile.props
+ * 
+ *   Created: 2022-11-11-01:13:41
+ *   Modified: 2022-11-12-02:09:27
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <Import Project="$(MSBuildProjectDirectory)/$(MSBuildProjectName).props"
+      Condition="Exists('$(MSBuildProjectDirectory)/$(MSBuildProjectName).props')" />
+  <PropertyGroup>
+    <ProjectReferenceImportProps>@(ProjectReference->'%(RootDir)%(Directory)%(Filename).props')</ProjectReferenceImportProps>
+  </PropertyGroup>
+  <Import Project="$(ProjectReferenceImportProps)" Condition="Exists($(ProjectReferenceImportProps))" />
+</Project>

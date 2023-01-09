@@ -1,0 +1,40 @@
+<!--
+ * GetPackageContents.targets
+ * 
+ *   Created: 2022-11-22-06:30:31
+ *   Modified: 2022-11-22-06:30:32
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<Target Name="_PreparePackageContents" BeforeTargets="GetPackageContents">
+		<ItemGroup>
+			<_PackageFile Include="$(OutputPath)**/*.dll" TargetFramework="%(RecursiveDir)/" />
+			<_PackageFile Include="$(OutputPath)**/*.xml" TargetFramework="%(RecursiveDir)/" />
+			<_PackageFile Include="$(OutputPath)**/*.pdb" TargetFramework="%(RecursiveDir)/" />
+			<!-- <_PackageFile Include="$(OutputPath)*.dll" />
+			<_PackageFile Include="$(OutputPath)*.xml" />
+			<_PackageFile Include="$(OutputPath)*.pdb" /> -->
+			<PackageFile Include="@(_PackageFile)" PackagePath="lib/$(TargetFramework)/%(_PackageFile.RecursiveDir)%(_PackageFile.Filename)%(_PackageFile.Extension)" Condition="Exists(%(_PackageFile.Identity))" />
+      <_PackageFile Remove="@(_PackageFile)" />
+		</ItemGroup>
+	</Target>
+	<!-- <PropertyGroup>
+		<_IsInnerBuild>false</_IsInnerBuild>
+	</PropertyGroup> -->
+	<Target Name="RemoveNonexistentPackageContents" BeforeTargets="Pack;GetPackageContents">
+		<ItemGroup>
+			<!-- <PackageFile Remove="%(PackageFile.Identity)" Condition="!Exists('%(PackageFile.Identity)')" /> -->
+		</ItemGroup>
+	</Target>
+	<PropertyGroup>
+		<PackDependsOn>
+			$(PackDependsOn);
+			RemoveNonexistentPackageContents;
+		</PackDependsOn>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,93 @@
+<!--
+ * PackageMetadata.targets
+ * 
+ *   Created: 2022-10-21-11:40:42
+ *   Modified: 2022-11-19-04:05:11
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<PropertyGroup>
+		<Title Condition="'$(Title)' == ''">$(PackageId)</Title>
+    <Description Condition="'$(Description)' == ''">A package for $(PackageId)</Description>
+    <Summary Condition="'$(Summary)' == ''">$(Description)</Summary>
+	</PropertyGroup>
+	<Target Name="EnsureRepositoryUrl" AfterTargets="GetPackageMetadata">
+		<ItemGroup>
+			<PackageMetadata Update="$(PackageId)" RepositoryUrl="$(RepositoryUrl)" Condition="'%(PackageMetadata.RepositoryUrl)' == ''" />
+			<PackageMetadata Update="$(PackageId)" RepositoryUrl="$(GitRepositoryUrl)" Condition="'%(PackageMetadata.RepositoryUrl)' == ''" />
+		</ItemGroup>
+	</Target>
+  <!--
+   <UsingTask TaskName="FixNamespace" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+      <ParameterGroup>
+        <Namespace Required="true" ParameterType="System.String" />
+        <FixedNamespace ParameterType="System.String" Output="true" />
+      </ParameterGroup>
+      <Task>
+        <Using Namespace="System.Text.RegularExpressions" />
+        <Using Namespace="System.Linq" />
+        <Code Type="Fragment" Language="cs">
+          <![CDATA[
+            // fix namespaces that might have hyphens and replace them with dots
+            FixedNamespace = Regex.Replace(Namespace, @"\-(.)", m => m.Groups[1].Value.ToUpper());
+            // fix namespaces with repeating terms (e.g., replace "Microsoft.Microsoft" with "Microsoft")
+            FixedNamespace = string.Join(".", FixedNamespace.Split('.').Distinct());
+            FixedNamespace = Regex.Replace(FixedNamespace, @"\.(.)", m => "." + m.Groups[1].Value.ToUpper());
+          ]]>
+        </Code>
+      </Task>
+  </UsingTask> 
+
+  <UsingTask TaskName="RemoveDuplicateSegments" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll" >
+      <ParameterGroup>
+        <Value Required="true" ParameterType="System.String" />
+        <FixedValue ParameterType="System.String" Output="true" />
+      </ParameterGroup>
+      <Task>
+        <Using Namespace="System.Linq" />
+        <Code Type="Fragment" Language="cs">
+          <![CDATA[
+            FixedValue = string.Join(".", Value.Split('.').Distinct());
+          ]]>
+        </Code>
+      </Task>
+  </UsingTask> 
+  -->
+
+  <Target Name="SetLastMinutePackageMetadata" BeforeTargets="GetPackageMetadata">
+    <!-- <Message Text="SetLastMinutePackageMetadata" Importance="High" />
+    <PropertyGroup>
+      <RelativePathFromGitRoot>$([System.IO.Path]::GetRelativePath('$(GitRoot)', '$(MSBuildProjectDirectory)'))</RelativePathFromGitRoot>
+      <PreliminaryRelativeNamespace>$([System.IO.Path]::GetFileName($(GitRoot))).$(RelativePathFromGitRoot.Replace("\\", ".").Replace("/", ".").Replace("src.", "")).$([System.IO.Path]::GetFileName('$(MSBuildProjectDirectory)'))</PreliminaryRelativeNamespace>
+      <PreliminaryNamespace Condition="!$(PackageId.StartsWith('JustinWritesCode')) And '$(UseJustinWritesCodeNamespace)' == 'true'">JustinWritesCode.$(PreliminaryRelativeNamespace).$(MSBuildProjectName)</PreliminaryNamespace>
+      <PreliminaryNamespace Condition="'$(UseJustinWritesCodeNamespace)' != 'true'">$(PreliminaryRelativeNamespace).$(MSBuildProjectName)</PreliminaryNamespace>
+    </PropertyGroup>
+    <Message Text="SrcRoot: $(SrcRoot)" Importance="High" />
+    <Message Text="RelativePathFromGitRoot: $(RelativePathFromGitRoot)" Importance="High" />
+    <Message Text="PreliminaryRelativeNamespace: $(PreliminaryRelativeNamespace)" Importance="High" />
+    <Message Text="PreliminaryNamespace: $(PreliminaryNamespace)" Importance="High" />
+    <ItemGroup>
+      <PreliminaryNamespacePiece Include="$(PreliminaryNamespace.Split('.'))" />
+      <PreliminaryNamespacePieceCount Include="@(PreliminaryNamespacePiece->Count())" />
+      <PreliminaryNamespacePieceNoDups Include="@(PreliminaryNamespacePiece->Distinct())" />
+    </ItemGroup>
+    <PropertyGroup>
+      <FixedNamespace>@(PreliminaryNamespacePieceNoDups, '.')</FixedNamespace>
+      <RootNamespace>$(FixedNamespace)</RootNamespace>
+      <PackageId>$(FixedNamespace)</PackageId>
+      <AssemblyName>$(PackageId)</AssemblyName>
+      <TargetFramework Condition="'$(TargetFramework)' == ''">netstandard2.0</TargetFramework>
+      <Title Condition="'$(Title)' == ''">TODO: Add this before you release the code!</Title>
+      <Description Condition="'$(Description)' == ''">TODO: Add this before you release the code!</Description>
+      <PackageTags Condition="'$(PackageTags)' == ''">TODO: Add these before you release the code!</PackageTags>
+      <Summary Condition="'$(Summary)' == ''">$(Description)</Summary>
+      <Summary Condition="'$(Summary)' == ''">TODO: Add this before you release the code!</Summary>
+    </PropertyGroup>
+    <Message Text="RootNamespace: $(RootNamespace)" Importance="High" /> -->
+  </Target>
+</Project>

@@ -1,0 +1,28 @@
+<!--
+ * DevelopmentDependencies.props
+ * 
+ *   Created: 2022-11-11-01:49:17
+ *   Modified: 2022-11-11-01:49:17
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <ItemDefinitionGroup>
+    <LocalPackageReference>
+      <ProjectPath />
+      <PackageName>%(Identity)</PackageName>
+    </LocalPackageReference>
+    <LocalCodeGenerator>
+      <ProjectPath />
+      <PackageName>%(Identity)</PackageName>
+    </LocalCodeGenerator>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <CodeGenerator />
+    <ProjectPath />
+    <PackageName />
+  </ItemDefinitionGroup>
+</Project>

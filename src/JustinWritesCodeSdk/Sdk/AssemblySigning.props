@@ -1,0 +1,18 @@
+<!--
+ * AssemblySigning.props
+ * 
+ *   Created: 2022-10-21-11:40:42
+ *   Modified: 2022-11-04-10:09:52
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), "assets/JustinWritesCode.snk"))/assets/JustinWritesCode.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+</Project>

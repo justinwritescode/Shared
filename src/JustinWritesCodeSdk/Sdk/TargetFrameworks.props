@@ -1,0 +1,18 @@
+<!--
+ * TargetFrameworks.props
+ * 
+ *   Created: 2022-11-19-03:03:12
+ *   Modified: 2022-11-19-03:03:12
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <PropertyGroup>
+      <!-- <TargetFramework Condition="'$(TargetFramework)' == '' And '$(TargetFrameworks)' == ''">netstandard2.0</TargetFramework> -->
+      <!-- <TargetFrameworks Condition="'$(TargetFrameworks)' == ''">$(TargetFramework)</TargetFrameworks> -->
+    </PropertyGroup>
+</Project>

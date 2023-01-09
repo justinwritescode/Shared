@@ -1,0 +1,20 @@
+<!--
+ * AssetTargetFallback.props
+ * 
+ *   Created: 2022-12-10-05:32:34
+ *   Modified: 2022-12-10-05:32:34
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <!-- <PropertyGroup>
+    <AssetTargetFallback Condition="'$(TargetFramework)' == 'net7.0'">$(AssetTargetFallback);net6.0;netcoreapp3.1;netstandard2.1;netstandard2.0;netstandard1.5;netstandard1.3;netstandard1.0</AssetTargetFallback>
+    <AssetTargetFallback Condition="'$(TargetFramework)' == 'net6.0'">$(AssetTargetFallback);netcoreapp3.1;netstandard2.1;netstandard2.0;netstandard1.5;netstandard1.3;netstandard1.0</AssetTargetFallback>
+    <AssetTargetFallback Condition="'$(TargetFramework)' == 'netstandard2.1'">$(AssetTargetFallback);netstandard2.0;netstandard1.5;netstandard1.3;netstandard1.0</AssetTargetFallback>
+    <AssetTargetFallback Condition="'$(TargetFramework)' == 'netstandard2.0'">$(AssetTargetFallback);netstandard1.5;netstandard1.3;netstandard1.0;netstandard1.0</AssetTargetFallback>
+  </PropertyGroup> -->
+</Project>

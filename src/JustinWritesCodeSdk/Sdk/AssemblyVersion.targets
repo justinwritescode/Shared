@@ -1,0 +1,19 @@
+<!--
+ * AssemblyVersion.targets
+ * 
+ *   Created: 2022-11-06-06:02:49
+ *   Modified: 2022-11-06-06:02:49
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+<Project>
+  <Target Name="SetAssemblyVersion" AfterTargets="GetPackageVersion;MinVer" DependsOnTargets="GetPackageVersion" BeforeTargets="CoreBuild;Build;CoreCompile;GetAssemblyVersion">
+    <PropertyGroup>
+      <AssemblyVersion Condition="'$(PackageVersion)' != ''">$([System.Text.RegularExpressions.Regex]::Replace("$(PackageVersion)", "\-.*", "")).0</AssemblyVersion>
+      <Version Condition="'$(PackageVersion)' != ''">$([System.Text.RegularExpressions.Regex]::Replace("$(PackageVersion)", "\-.*", "")).0</Version>
+    </PropertyGroup>
+  </Target>
+</Project>

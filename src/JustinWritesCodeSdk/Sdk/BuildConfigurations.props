@@ -1,0 +1,54 @@
+<!--
+ BuildConfigurations.props
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-10-29-02:46:48
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Local' " Label="Local Configuration">
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>$(DefineConstants);TRACE;DEBUG;LOCAL</DefineConstants>
+		<WarningLevel>4</WarningLevel>
+		<NoStdLib>true</NoStdLib>
+		<DefineTrace>true</DefineTrace>
+		<DefineDebug>true</DefineDebug>
+  </PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Local' " Label="Local Configuration">
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<DefineConstants>$(DefineConstants);TRACE;DEBUG;LOCAL</DefineConstants>
+		<WarningLevel>4</WarningLevel>
+		<NoStdLib>true</NoStdLib>
+		<DefineTrace>true</DefineTrace>
+		<DefineDebug>true</DefineDebug>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' " Label="Development/Debug Configuration">
+		<DebugType>Full</DebugType>
+		<WarningLevel>4</WarningLevel>
+		<DefineConstants>$(DefineConstants);TRACE;DEBUG;LOCAL;DEVELOPMENT</DefineConstants>
+		<Optimize>false</Optimize>
+		<DefineTrace>true</DefineTrace>
+		<DefineDebug>true</DefineDebug>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Staging' " Label="Staging (Release Candidate) Configuration">
+		<DefineConstants>$(DefineConstants);DEBUG;STAGING</DefineConstants>
+		<DebugType>embedded</DebugType>
+    <Optimize>true</Optimize>
+		<DefineDebug>false</DefineDebug>
+		<DefineTrace>false</DefineTrace>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)' == 'Release' " Label="Production / Release Configuration">
+		<DefineConstants>$(DefineConstants);RELEASE;PRODUCTION</DefineConstants>
+		<DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+		<DefineDebug>false</DefineDebug>
+		<DefineTrace>false</DefineTrace>
+	</PropertyGroup>
+</Project>

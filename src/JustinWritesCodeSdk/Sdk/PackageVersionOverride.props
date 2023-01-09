@@ -1,0 +1,30 @@
+<!--
+ PackageVersionOverride.props
+ 
+   Created: 2022-10-30-04:06:15
+   Modified: 2022-10-30-04:06:34
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+    <PropertyGroup>
+      <MinVerVersionOverride Condition="'$(PackageVersionOverride)' != ''">$(PackageVersionOverride)</MinVerVersionOverride>
+      <AssemblyVersion Condition="'$(PackageVersionOverride)' != ''">$([System.Text.RegularExpressions.Regex]::Replace("$(PackageVersionOverride)", "\-.*", ""))</AssemblyVersion>
+      <Version Condition="'$(PackageVersionOverride)' != ''">$([System.Text.RegularExpressions.Regex]::Replace("$(PackageVersionOverride)", "\-.*", ""))</Version>
+      <!-- <PackageVersion Condition="'$(PackageVersionOverride)' != ''">$(PackageVersionOverride)</PackageVersion>
+      <Version Condition="'$(PackageVersionOverride)' != ''">$(PackageVersionOverride)l</Version>
+      <AssemblyVersion Condition="'$(PackageVersionOverride)' != ''">$([System.Text.RegularExpressions.Regex]::Replace("$(PackageVersionOverride)", "\-.*", ""))</AssemblyVersion>
+      <InformationalVersion Condition="'$(PackageVersionOverride)' != ''">$(PackageVersionOverride)</InformationalVersion> -->
+    </PropertyGroup>
+    <PropertyGroup>
+      <InjectThisAssemblyProjectDependsOn>
+        $(InjectThisAssemblyProjectDependsOn);
+        GetPackageVersion;
+        GetPackageMetadata;
+      </InjectThisAssemblyProjectDependsOn>
+    </PropertyGroup>
+</Project>

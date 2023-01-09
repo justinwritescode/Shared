@@ -1,0 +1,32 @@
+<!--
+ ItemDefinitionGroups.props
+
+   Created: 2022-10-24-08:10:51
+   Modified: 2022-10-29-02:47:46
+
+   Author: Justin Chase <justin@justinwritescode.com>
+
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <ItemDefinitionGroup>
+      <Using Visible="false" />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <PackageReference>
+    	<!-- Generate "PKG_Package_Id" properties, which point to the package's restored location on disk -->
+			<GeneratePathProperty>true</GeneratePathProperty>
+			<IncludeAssets>Compile; Runime; Build; BuildMultitargeting; BuildTransitive; Analyzers; Native</IncludeAssets>
+			<ExcludeAssets>ContentFiles</ExcludeAssets>
+		</PackageReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <ProjectReference>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+			<SetConfiguration>Configuration=$(Configuration)</SetConfiguration>
+		</ProjectReference>
+  </ItemDefinitionGroup>
+</Project>

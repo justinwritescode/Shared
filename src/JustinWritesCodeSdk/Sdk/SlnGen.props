@@ -1,0 +1,46 @@
+<!--
+ * SlnGen.props
+ * 
+ *   Created: 2022-11-24-08:46:20
+ *   Modified: 2022-11-24-08:46:20
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+	<PropertyGroup>
+		<IncludeInSolutionFile Condition="'$(MSBuildProjectExtension)' == '.slnproj'">false</IncludeInSolutionFile>
+	</PropertyGroup>
+  <ItemGroup>
+    <SlnGenCustomProjectTypeGuid Include=".proj" ProjectTypeGuid="2ce5b178-8c95-4bdc-a5aa-c9eb6280a366" />
+    <SlnGenCustomProjectTypeGuid Include=".usings" ProjectTypeGuid="dcda4a0a-0a5e-4522-b6c4-80513d0753cd" />
+    <SlnGenCustomProjectTypeGuid Include=".props" ProjectTypeGuid="156a83f1-abef-4e73-abff-c6a1aa437922" />
+    <SlnGenCustomProjectTypeGuid Include=".targets" ProjectTypeGuid="ebca1dae-54cb-40fe-b05b-b52a498fe919" />
+    <SlnGenCustomProjectTypeGuid Include=".pkgs" ProjectTypeGuid="20d1492d-f7b2-41f2-a4e9-74a420cc8cd1" />
+    <SlnGenCustomProjectTypeGuid Include=".restoreproj" ProjectTypeGuid="76eaafad-9fda-4299-b582-8e3c4ced5a18" />
+    <SlnGenCustomProjectTypeGuid Include=".slnproj" ProjectTypeGuid="34eac930-e0ca-420b-bd8c-86042dd9e676" />
+    <SlnGenCustomProjectTypeGuid Include=".mkdocsproj" ProjectTypeGuid="6ed95d8c-b464-479b-83ff-4e1a3cefd207" />
+    <SlnGenCustomProjectTypeGuid Include=".cstestproj" ProjectTypeGuid="FAE04EC0-301F-11D3-BF4B-00C04F79EFBC" />
+    <SlnGenCustomProjectTypeGuid Include=".publishproj" ProjectTypeGuid="35d4bb16-3398-4e2c-8355-2c9c9680e5bd" />
+    <SlnGenCustomProjectTypeGuid Include=".aproj" ProjectTypeGuid="4cd4fd5b-0f23-4623-ba3f-b31cc4ab93ef" />
+    <SlnGenCustomProjectTypeGuid Include=".dwproj" ProjectTypeGuid="013f468b-6b9a-4cbf-a1a7-ae98fe3e05c3" />
+    <SlnGenCustomProjectTypeGuid Include=".dtproj" ProjectTypeGuid="64c8a15c-207e-459d-951d-ad7e7dac7bcf" />
+    <SlnGenCustomProjectTypeGuid Include=".smdlproj" ProjectTypeGuid="ac8c3b70-cd74-4c8e-9ceb-b8d00702bf3e" />
+    <SlnGenCustomProjectTypeGuid Include=".dbproj" ProjectTypeGuid="ac2f40b5-b3bd-4227-938a-6ecfb8c6e06c" />
+    <SlnGenCustomProjectTypeGuid Include=".modelproj" ProjectTypeGuid="cc0c3c51-6a1b-4414-8cd6-9a45a02aec87" />
+    <SlnGenCustomProjectTypeGuid Include=".dxjsproj" ProjectTypeGuid="a9d77286-c18d-461d-83b7-b2fbe1677888" />
+    <SlnGenCustomProjectTypeGuid Include=".cblproj" ProjectTypeGuid="06141aaa-2f82-4232-a3ef-dcb2027764fd" />
+    <SlnGenCustomProjectTypeGuid Include=".dynamicsproj" ProjectTypeGuid="390dbc7b-b3dd-43d4-a958-806d5ce2dd10" />
+    <SlnGenCustomProjectTypeGuid Include=".vfproj" ProjectTypeGuid="aab86bce-e4cc-4bb0-bbc5-83b1a081b6bb" />
+    <SlnGenCustomProjectTypeGuid Include=".isproj" ProjectTypeGuid="f7c9b907-e976-47d6-8ade-5d8c208a472d" />
+    <SlnGenCustomProjectTypeGuid Include=".xsproj" ProjectTypeGuid="60ca03d9-d475-4da7-85b4-dbe70d7f5ae1" />
+    <SlnGenCustomProjectTypeGuid Include=".mkdocsproj" ProjectTypeGuid="0728b154-4ff9-43e1-9619-5e7c5296484f" />
+  </ItemGroup>
+  <PropertyGroup>
+    <SlnGenSolutionFolder Condition="'$(IsTestProject)' == 'true'">tests</SlnGenSolutionFolder>
+    <SlnGenSolutionFolder Condition="'$(IsSourceProject)' == 'true'">src</SlnGenSolutionFolder>
+  </PropertyGroup>
+</Project>

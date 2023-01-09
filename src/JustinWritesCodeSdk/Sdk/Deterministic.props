@@ -1,0 +1,17 @@
+<!--
+ * Deterministic.props
+ * 
+ *   Created: 2022-12-28-05:18:41
+ *   Modified: 2022-12-28-05:18:41
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+</Project>

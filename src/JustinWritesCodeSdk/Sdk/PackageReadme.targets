@@ -1,0 +1,38 @@
+<!--
+ * PackageReadme.targets
+ * 
+ *   Created: 2022-10-21-11:40:42
+ *   Modified: 2022-11-12-03:55:06
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <Target Name="EnsurePackageReadme" BeforeTargets="GetPackageContents" DependsOnTargets="GitInfo;GetPackageMetadata">
+    <!-- Fallback to using the package's description as the README.md contents -->
+    <ItemGroup Condition="!Exists('$(MSBuildProjectDirectory)/README.md')">
+      <ReadmeFileContents Include="# $(PackageId)" />
+      <ReadmeFileContents Include="$(Description)" />
+    </ItemGroup>
+
+    <!-- Fallback to using the package's description as the README.md contents -->
+    <ItemGroup Condition="Exists('$(MSBuildProjectDirectory)/README.md')">
+      <ReadLinesFromFile File="'$(MSBuildProjectDirectory)/README.md'" />
+    </ItemGroup>
+
+    <!-- Write it to the obj/ directory -->
+    <WriteLinesToFile File="$(IntermediateOutputPath)/README.md" Lines="@(ReadmeFileContents)" Overwrite="true" />
+
+    <PropertyGroup>
+      <PackageReadmeFilePath>$(IntermediateOutputPath)/README.md</PackageReadmeFilePath>
+		</PropertyGroup>
+
+
+		<!-- <ItemGroup>
+			<Content Include="$(PackageReadmeFilePath)" PackagePath="README.md" />
+		</ItemGroup> -->
+  </Target> 
+</Project>

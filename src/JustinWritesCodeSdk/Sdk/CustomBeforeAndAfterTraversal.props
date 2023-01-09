@@ -1,0 +1,24 @@
+<!--
+ CustomBeforeAndAfterTraversal.props
+ 
+   Created: 2022-10-21-11:40:42
+   Modified: 2022-10-29-02:47:42
+ 
+   Author: Justin Chase <justin@justinwritescode.com>
+   
+   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+ <PropertyGroup>  
+    <CustomBeforeTraversalProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomBeforeTraversal.props')))">
+      $(CustomBeforeTraversalProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomBeforeTraversal.props"))
+    </CustomBeforeTraversalProps>
+    <CustomAfterTraversalProps Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.CustomAfterTraversal.props')))">
+      $(CustomAfterTraversalProps);
+      $([MSBuild]::GetPathOfFileAbove("Directory.CustomAfterTraversal.props"))
+    </CustomAfterTraversalProps>
+ </PropertyGroup>
+</Project>

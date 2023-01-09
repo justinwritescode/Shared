@@ -1,0 +1,33 @@
+<!--
+ * PackageMetadata.props
+ * 
+ *   Created: 2022-10-22-01:38:14
+ *   Modified: 2022-11-19-04:05:24
+ * 
+ *   Author: Justin Chase <justin@justinwritescode.com>
+ *   
+ *   Copyright © 2022-2023 Justin Chase, All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project>
+  <PropertyGroup>
+    <PackageId Condition="'$(PackageId)' == ''">$(MSBuildProjectName)</PackageId>
+    <Company Condition="'$(Company)' == ''">JustinWritesCode</Company>
+    <Product Condition="'$(Product)' == ''">JustinWritesCode</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <DebugType>portable</DebugType>
+    <IsPackagingFile>true</IsPackagingFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GetPackageMetadataDependsOn>
+      $(GetPackageMetadataDependsOn);
+      SetLastMinutePackageMetadata;
+    </GetPackageMetadataDependsOn>
+  </PropertyGroup>
+</Project>
