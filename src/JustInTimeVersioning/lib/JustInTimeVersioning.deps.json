@@ -37,7 +37,7 @@
     "allowUnsafe": false,
     "warningsAsErrors": false,
     "optimize": true,
-    "keyFile": "/Users/david/.nuget/packages/justinwritescodesdk/0.0.1-local/Build//../ContentFiles/JustinWritesCode.snk",
+    "keyFile": "/Users/david/.nuget/packages/justinwritescodesdk/0.0.3/Build//../ContentFiles/JustinWritesCode.snk",
     "emitEntryPoint": false,
     "xmlDoc": true,
     "debugType": "portable"
